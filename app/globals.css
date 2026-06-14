@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Georgia", serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-50 text-ink-700 antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply text-ink-900;
+    text-wrap: balance;
+  }
+  ::selection {
+    @apply bg-brand-violet/20 text-ink-900;
+  }
+}
+
+@layer components {
+  /* Wiederverwendbarer Container */
+  .container-kl {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+  }
+
+  /* Eyebrow / Kicker-Label über Überschriften */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-brand-violet;
+  }
+
+  /* Gradient-Text für Akzent-Wörter */
+  .text-gradient {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+
+  /* Section-Abstand */
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+}
