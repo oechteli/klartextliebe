@@ -4,6 +4,7 @@ import { PageHero } from "@/components/layout/PageHero";
 export const metadata: Metadata = {
   title: "Impressum",
   description: "Impressum von Klartext Liebe.",
+  alternates: { canonical: "/impressum" },
   robots: { index: false, follow: true },
 };
 

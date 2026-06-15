@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/Badge";
 
 export const metadata: Metadata = {
   title: "Kuratierter Marktplatz",
+  alternates: { canonical: "/marktplatz" },
   description:
     "Kuratiertes Matching statt endlosem Swipen: Profile mit Tiefgang, Werteabgleich, Kommunikationsstil und Lebensphase – Orientierung statt Garantie.",
 };

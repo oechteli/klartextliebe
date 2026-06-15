@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/Card";
 
 export const metadata: Metadata = {
   title: "Coaching",
+  alternates: { canonical: "/coaching" },
   description:
     "Singlecoaching, Profil- & Chat-Analyse, Dating-Klarheit Paket und VIP-Matchklarheit – für reflektierte Singles mit Anspruch.",
 };

@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/Card";
 
 export const metadata: Metadata = {
   title: "Community",
+  alternates: { canonical: "/community" },
   description:
     "Die geschützte Klartext-Liebe-Community für reflektierte Singles, Akademiker und Menschen mit Tiefgang. Jetzt auf die Warteliste.",
 };

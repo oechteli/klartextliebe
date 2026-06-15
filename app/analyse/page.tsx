@@ -4,6 +4,7 @@ import { Questionnaire } from "@/components/questionnaire/Questionnaire";
 
 export const metadata: Metadata = {
   title: "Persönlichkeits- & Resonanzanalyse",
+  alternates: { canonical: "/analyse" },
   description:
     "Verstehe deine Werte, Beziehungsmuster, Kommunikationsstil und Resonanz besser – als Basis für bewusstere Partnerwahl und echte Verbindung.",
 };

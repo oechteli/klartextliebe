@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/Card";
 
 export const metadata: Metadata = {
   title: "Kontakt",
+  alternates: { canonical: "/kontakt" },
   description:
     "Schreib uns – zu Coaching, Community, VIP-Matchklarheit, Events oder Kooperationen.",
 };

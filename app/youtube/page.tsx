@@ -6,6 +6,7 @@ import { videoIdeas } from "@/lib/mock-data";
 
 export const metadata: Metadata = {
   title: "YouTube",
+  alternates: { canonical: "/youtube" },
   description:
     "Der Klartext-Liebe-YouTube-Kanal: Orientierung für reflektierte Singles zu Kommunikation, Selbstwert und echter Verbindung.",
 };

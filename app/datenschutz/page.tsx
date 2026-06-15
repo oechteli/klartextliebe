@@ -4,6 +4,7 @@ import { PageHero } from "@/components/layout/PageHero";
 export const metadata: Metadata = {
   title: "Datenschutz",
   description: "Datenschutzerklärung von Klartext Liebe.",
+  alternates: { canonical: "/datenschutz" },
   robots: { index: false, follow: true },
 };
 

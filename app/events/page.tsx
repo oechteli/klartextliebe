@@ -7,6 +7,7 @@ import { events } from "@/lib/mock-data";
 
 export const metadata: Metadata = {
   title: "Events & Live-Treffen",
+  alternates: { canonical: "/events" },
   description:
     "Moderierte Online-Treffen und lokale Events: Deep-Talk-Abende, Kennenlernabende und Gesprächsformate für reflektierte Singles.",
 };

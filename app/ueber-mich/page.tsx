@@ -6,6 +6,7 @@ import { values } from "@/lib/mock-data";
 
 export const metadata: Metadata = {
   title: "Über mich",
+  alternates: { canonical: "/ueber-mich" },
   description:
     "Warum Klartext Liebe entstanden ist: Viele Singles haben kein Attraktivitätsproblem, sondern ein Kommunikations-, Klarheits- und Resonanzthema.",
 };
