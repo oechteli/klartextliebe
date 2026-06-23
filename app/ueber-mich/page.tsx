@@ -23,21 +23,30 @@ export default function UeberMichPage() {
       <section className="section">
         <div className="container-kl">
           <div className="grid gap-12 lg:grid-cols-[320px,1fr]">
-            {/* Foto-Platzhalter */}
+            {/* Foto */}
             <div>
-              <div className="aspect-[3/4] w-full overflow-hidden rounded-3xl bg-brand-soft shadow-soft">
-                <div className="flex h-full items-center justify-center text-center text-ink-400">
-                  {/* TODO: persönliches Foto der Gründerin einsetzen */}
-                  <span className="px-6 text-sm">
-                    Platz für dein persönliches Foto
+              <div className="aspect-[3/4] w-full overflow-hidden rounded-3xl bg-gradient-to-br from-brand-teal/10 via-brand-blue/10 to-brand-violet/10 shadow-soft ring-2 ring-dashed ring-brand-violet/20">
+                <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
+                  <span className="text-4xl">📸</span>
+                  <span className="px-6 text-sm font-medium text-ink-400">
+                    Foto von Monika Oechtering
+                  </span>
+                  <span className="px-6 text-xs text-ink-300">
+                    → Datei in public/brand/ ablegen
+                    <br />
+                    und hier einbinden
                   </span>
                 </div>
+              </div>
+              <div className="mt-4 text-center">
+                <p className="text-base font-semibold text-ink-900">Monika Oechtering</p>
+                <p className="text-sm text-ink-400">Gründerin · Singlecoach · Datingberaterin</p>
               </div>
             </div>
 
             <div className="prose-kl max-w-none">
               <h2 className="text-2xl font-bold text-ink-900">
-                Warum Klartext Liebe entstanden ist
+                Warum ich Klartext Liebe gegründet habe
               </h2>
               <div className="mt-4 space-y-4 text-lg text-ink-500">
                 <p>
@@ -81,7 +90,27 @@ export default function UeberMichPage() {
             </div>
           </div>
 
-          <div className="mt-14 rounded-3xl bg-brand-soft p-8 text-center sm:p-12">
+          {/* YouTube-Kanal */}
+          <div className="mt-10 rounded-2xl border border-brand-teal/20 bg-brand-teal/5 p-6 sm:p-8">
+            <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
+              <span className="text-4xl">▶️</span>
+              <div className="flex-1">
+                <h3 className="text-lg font-bold text-ink-900">@klartextliebe auf YouTube</h3>
+                <p className="mt-1 text-sm text-ink-500">
+                  Videos zu Dating, Selbstwert, Kommunikation und geistiger Resonanz –
+                  für reflektierte Singles, die mehr wollen als Oberflächlichkeit.
+                </p>
+              </div>
+              <Button
+                href="https://www.youtube.com/@klartextliebe"
+                variant="secondary"
+              >
+                Kanal besuchen
+              </Button>
+            </div>
+          </div>
+
+          <div className="mt-10 rounded-3xl bg-brand-soft p-8 text-center sm:p-12">
             <h2 className="text-2xl font-bold text-ink-900">
               Lust auf echte Klarheit?
             </h2>
