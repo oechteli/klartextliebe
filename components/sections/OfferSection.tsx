@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { offers } from "@/lib/mock-data";
-import { stripeLinks, hasStripeLink } from "@/lib/stripe-links";
+import { stripeLinks } from "@/lib/stripe-links";
 
 interface OfferSectionProps {
   /** Nur die ersten 3 Karten zeigen (Startseiten-Preview) */
@@ -33,7 +33,6 @@ export function OfferSection({
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {items.map((offer) => {
             const url = stripeLinks[offer.stripeKey];
-            const linkReady = hasStripeLink(offer.stripeKey);
 
             return (
               <Card
@@ -69,28 +68,17 @@ export function OfferSection({
                   </ul>
                 )}
 
-                <div className="mt-6 pt-2 mt-auto">
-                  {linkReady ? (
-                    <Button href={url} className="w-full">
-                      {offer.cta}
-                    </Button>
-                  ) : offer.stripeKey === "vipMatchklarheit" ? (
-                    <Button href="/kontakt" variant="outline" className="w-full">
-                      {offer.cta}
-                    </Button>
-                  ) : (
-                    // TODO: Sobald Stripe-Link in lib/stripe-links.ts hinterlegt ist,
-                    // wird hier automatisch der echte Kaufbutton angezeigt.
-                    <Button
-                      type="button"
-                      variant="secondary"
-                      className="w-full"
-                      disabled
-                      title="Stripe-Link folgt"
-                    >
-                      Bald buchbar
-                    </Button>
-                  )}
+                <div className="mt-auto pt-6">
+                  <Button
+                    href={url}
+                    variant={offer.stripeKey === "vipMatchklarheit" ? "outline" : undefined}
+                    className="w-full"
+                  >
+                    {offer.cta}
+                  </Button>
+                  <p className="mt-2 text-center text-xs text-ink-400">
+                    Anfrage per Kontaktformular · Antwort in 24 h
+                  </p>
                 </div>
               </Card>
             );

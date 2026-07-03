@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 
 export const metadata: Metadata = {
-  title: "Kuratierter Marktplatz",
+  title: "Kuratiertes Matching",
   alternates: { canonical: "/marktplatz" },
   description:
-    "Kuratiertes Matching statt endlosem Swipen: Profile mit Tiefgang, Werteabgleich, Kommunikationsstil und Lebensphase – Orientierung statt Garantie.",
+    "Kuratiertes Matching statt endlosem Swipen: Profile mit Tiefgang, Werteabgleich, Kommunikationsstil und Lebensphase.",
 };
 
 const criteria = [
@@ -17,17 +17,16 @@ const criteria = [
   ["Lebensphase", "Wo du gerade stehst und wohin du willst"],
   ["Kommunikationsstil", "Wie du in Kontakt gehst und in Verbindung bleibst"],
   ["Denkstil", "Wie du die Welt betrachtest und reflektierst"],
-  ["Beziehungsziel", "Was du dir von einer Partnerschaft wünschst"],
-  ["Emotionale Reife", "Wie du mit Nähe, Distanz und Konflikt umgehst"],
+  ["Beziehungsziel", "Was du dir von einer Partnerschaft wuenschst"],
+  ["Emotionale Reife", "Wie du mit Naehe, Distanz und Konflikt umgehst"],
 ];
 
 export default function MarktplatzPage() {
   return (
     <>
       <PageHero
-        badge="Bald verfügbar"
-        title="Ein kuratierter Marktplatz – kein Swipe-Karussell"
-        subtitle="Kein Swipe-Marktplatz, sondern eine kuratierte Matching-Plattform für reflektierte Singles mit Tiefe. Profile werden nicht nur nach Foto bewertet."
+        title="Kuratiertes Matching statt Swipe-Karussell"
+        subtitle="Keine Swipe-Plattform, sondern persoenlich ausgewaehlte Begegnungen fuer reflektierte Singles. Profile werden nach Tiefe bewertet, nicht nach Foto."
       />
 
       <section className="section">
@@ -37,9 +36,8 @@ export default function MarktplatzPage() {
               Wonach hier wirklich geschaut wird
             </h2>
             <p className="mt-3 text-ink-500">
-              Statt oberflächlicher Bewertung zählen die Dimensionen, die echte
-              Verbindung tragen. Keine Garantie für perfekte Matches – aber
-              bessere Orientierung und bewusstere Begegnungen.
+              Statt oberflaechlicher Bewertung zaehlen die Dimensionen, die echte
+              Verbindung tragen.
             </p>
           </div>
 
@@ -56,24 +54,38 @@ export default function MarktplatzPage() {
         </div>
       </section>
 
-      {/* Ablauf */}
       <MatchingPreview />
 
       <section className="section">
         <div className="container-kl">
           <div className="rounded-3xl bg-brand-gradient px-6 py-14 text-center text-white shadow-card sm:px-12">
             <h2 className="text-2xl font-bold sm:text-3xl">
-              Sei dabei, wenn der Marktplatz öffnet
+              Profil anlegen und Matches erhalten
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-white/85">
-              Trag dich auf die Warteliste ein – wir informieren dich, sobald du
-              dein Profil mit Tiefgang anlegen kannst.
+              Das Matching laeuft persoenlich und kuratorisch. Schreib uns, wer du
+              bist und was du suchst. Monika schaut sich dein Profil an und schlaegt
+              passende Menschen vor.
             </p>
-            <div className="mt-7">
-              <Button href="/community" variant="secondary" size="lg">
-                Zur Warteliste
+            <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <Button
+                href="/kontakt?thema=Matching-Profil+anlegen"
+                variant="secondary"
+                size="lg"
+              >
+                Profil anlegen
+              </Button>
+              <Button
+                href="/coaching"
+                size="lg"
+                className="bg-white/15 text-white ring-1 ring-white/40 hover:bg-white/25"
+              >
+                Erst Coaching buchen
               </Button>
             </div>
+            <p className="mt-5 text-sm text-white/60">
+              Das VIP-Matchklarheit-Paket beinhaltet Matching inklusive.
+            </p>
           </div>
         </div>
       </section>

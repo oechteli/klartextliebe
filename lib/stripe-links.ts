@@ -1,29 +1,18 @@
 /**
- * Zentrale Stripe-Payment-Links für die Coachingangebote.
- *
- * MVP-Ansatz: Wir nutzen Stripe **Payment Links** (im Stripe-Dashboard
- * unter "Payment Links" erstellen) und tragen die URLs hier ein.
- * Die Buttons in /coaching verlinken einfach auf diese URLs.
- *
- * TODO (echte Integration später):
- *  - Stripe Checkout Sessions serverseitig erzeugen (lib/stripe.ts)
- *  - Webhook /api/stripe/webhook für coaching_orders anlegen
- *  - Erfolg/Abbruch-Seiten /coaching/danke bzw. /coaching/abbruch
- *
- * Solange ein Link "#" ist, zeigt der Button einen dezenten
- * "Bald buchbar"-Hinweis statt eines toten Links.
+ * Buchungs-Links für die Coachingangebote.
+ * Derzeit: Anfrage per Kontaktformular → Monika bestätigt und sendet Zahlungslink.
+ * Später: Stripe Payment Links direkt eintragen, dann läuft die Buchung vollautomatisch.
  */
 export const stripeLinks = {
-  profilChatAnalyse: "#", // TODO: Stripe Payment Link für "Profil- & Chat-Analyse" (79 €)
-  singlecoaching: "#", // TODO: Stripe Payment Link für "Singlecoaching 1:1" (149 €)
-  datingKlarheit: "#", // TODO: Stripe Payment Link für "Dating-Klarheit Paket" (399 €)
-  vipMatchklarheit: "#", // TODO: VIP ist Anfrage -> ggf. Kontaktformular statt Stripe (799 €)
+  profilChatAnalyse: "/kontakt?thema=Buchung+Profil+%26+Chat-Analyse+(79+%E2%82%AC)",
+  singlecoaching: "/kontakt?thema=Buchung+Singlecoaching+1%3A1+(149+%E2%82%AC)",
+  datingKlarheit: "/kontakt?thema=Buchung+Dating-Klarheit-Paket+(399+%E2%82%AC)",
+  vipMatchklarheit: "/kontakt?thema=Buchung+VIP-Matchklarheit+(799+%E2%82%AC)",
 } as const;
 
 export type StripeLinkKey = keyof typeof stripeLinks;
 
-/** Ist für diesen Schlüssel schon ein echter Link hinterlegt? */
-export function hasStripeLink(key: StripeLinkKey): boolean {
-  const url: string = stripeLinks[key];
-  return url.length > 1 && url !== "#";
+/** Immer true – alle Angebote sind buchbar (via Kontaktformular oder direktem Stripe-Link) */
+export function hasStripeLink(_key: StripeLinkKey): boolean {
+  return true;
 }
