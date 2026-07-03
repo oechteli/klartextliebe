@@ -1,8 +1,10 @@
 import { Hero } from "@/components/sections/Hero";
+import { SocialProofBar } from "@/components/sections/SocialProofBar";
 import { WhatIsSection } from "@/components/sections/WhatIsSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { SolutionSection } from "@/components/sections/SolutionSection";
 import { OfferSection } from "@/components/sections/OfferSection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { CommunityPreview } from "@/components/sections/CommunityPreview";
 import { AnalysisPreview } from "@/components/sections/AnalysisPreview";
 import { MatchingPreview } from "@/components/sections/MatchingPreview";
@@ -14,23 +16,27 @@ export default function HomePage() {
     <>
       {/* A) Hero */}
       <Hero />
-      {/* B) Was ist Klartext Liebe? */}
+      {/* B) Social Proof Strip */}
+      <SocialProofBar />
+      {/* C) Was ist Klartext Liebe? */}
       <WhatIsSection />
-      {/* C) Problemsektion */}
+      {/* D) Problemsektion */}
       <ProblemSection />
-      {/* D) Lösungssektion */}
+      {/* E) Lösungssektion */}
       <SolutionSection />
-      {/* E) Coachingangebote Preview (3 Karten) */}
+      {/* F) Coachingangebote Preview (3 Karten) */}
       <OfferSection preview />
-      {/* F) Community Preview */}
+      {/* G) Testimonials */}
+      <TestimonialsSection />
+      {/* H) Community Preview */}
       <CommunityPreview />
-      {/* G) KI-Persönlichkeitsanalyse Preview */}
+      {/* I) KI-Persönlichkeitsanalyse Preview */}
       <AnalysisPreview />
-      {/* H) Kuratiertes Matching Preview */}
+      {/* J) Kuratiertes Matching Preview */}
       <MatchingPreview />
-      {/* I) Live-Treffen Preview */}
+      {/* K) Live-Treffen Preview */}
       <EventPreview preview />
-      {/* J) CTA Abschluss */}
+      {/* L) CTA Abschluss */}
       <CtaSection />
     </>
   );

@@ -49,17 +49,20 @@ export function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button href="/coaching" size="lg">
-              Coaching ansehen
+            <Button
+              href="/kontakt?thema=Kostenloses+Erstgespräch"
+              size="lg"
+            >
+              Kostenloses Erstgespräch →
             </Button>
-            <Button href="/community" variant="secondary" size="lg">
-              Zur Community-Warteliste
+            <Button href="/coaching" variant="secondary" size="lg">
+              Coaching entdecken
             </Button>
           </div>
 
           <p className="mt-6 text-sm text-ink-400">
-            Für Singles, die echte Gespräche, geistige Resonanz und verbindliche
-            Begegnungen suchen.
+            20 Minuten, unverbindlich – für Singles, die wirklich verstehen wollen,
+            was sie aufhält.
           </p>
         </div>
       </div>
