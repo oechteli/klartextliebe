@@ -121,6 +121,8 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        {/* KI-Chat-Widget (selbst-injizierend, spricht mit /api/chat) */}
+        <script src="/chat.js" defer />
       </body>
     </html>
   );

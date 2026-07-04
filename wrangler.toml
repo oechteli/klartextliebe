@@ -1,8 +1,11 @@
 # Cloudflare-Konfiguration: liefert den statischen Next.js-Export (out/)
-# als Worker mit statischen Assets aus.
+# als Worker mit statischen Assets aus. Der Worker (worker.js) beantwortet
+# zusaetzlich POST /api/chat (KI-Assistent), alles andere kommt aus out/.
 name = "klartextliebe"
+main = "worker.js"
 compatibility_date = "2024-11-01"
 
 [assets]
 directory = "./out"
+binding = "ASSETS"
 not_found_handling = "404-page"
