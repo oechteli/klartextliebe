@@ -12,9 +12,16 @@ export function WhatIsSection() {
               kuratierte Community.
             </h2>
             <p className="mt-5 text-lg text-ink-500">
-              Klartext Liebe richtet sich an reflektierte Singles, Akademiker und
-              Menschen mit Tiefgang. Es geht nicht um Masse, sondern um bessere
-              Orientierung, klare Kommunikation und passendere Begegnungen.
+              Klartext Liebe richtet sich an Menschen, die sich über Gedanken
+              verlieben: reflektierte Singles, Akademiker, Sapiosexuelle. Es geht
+              nicht um Masse, sondern um bessere Orientierung, klare
+              Kommunikation und passendere Begegnungen.{" "}
+              <a
+                href="/kluge-koepfe"
+                className="font-semibold text-brand-violet underline-offset-4 hover:underline"
+              >
+                Bist du hier richtig? →
+              </a>
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               <Badge tone="turquoise">YouTube-Kanal</Badge>

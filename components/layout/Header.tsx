@@ -6,8 +6,12 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 
+const LOGIN_URL =
+  process.env.NEXT_PUBLIC_LOGIN_URL ?? "https://appymindo.de";
+
 const navItems = [
   { href: "/", label: "Start" },
+  { href: "/kluge-koepfe", label: "Sapiosexuell?" },
   { href: "/ueber-mich", label: "Über mich" },
   { href: "/coaching", label: "Coaching" },
   { href: "/community", label: "Community" },
@@ -66,7 +70,10 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-2 lg:flex">
+          <Button href={LOGIN_URL} variant="ghost" size="sm">
+            Login
+          </Button>
           <Button href="/coaching" size="sm">
             Coaching ansehen
           </Button>
@@ -101,9 +108,17 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <div className="px-3 pt-3">
-              <Button href="/coaching" size="sm" className="w-full" >
+            <div className="flex flex-col gap-2 px-3 pt-3">
+              <Button href="/coaching" size="sm" className="w-full">
                 Coaching ansehen
+              </Button>
+              <Button
+                href={LOGIN_URL}
+                variant="secondary"
+                size="sm"
+                className="w-full"
+              >
+                Login
               </Button>
             </div>
           </div>
