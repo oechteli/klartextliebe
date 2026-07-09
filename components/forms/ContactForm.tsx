@@ -75,7 +75,7 @@ export function ContactForm() {
             Bitte wählen
           </option>
           <option>Coaching</option>
-          <option>Community / Warteliste</option>
+          <option>Community-Zugang anfragen</option>
           <option>VIP-Matchklarheit anfragen</option>
           <option>Events</option>
           <option>Presse / Kooperation</option>

@@ -63,14 +63,18 @@ export default function DatenschutzPage() {
             </div>
 
             <div className="space-y-3">
-              <h2 className="text-lg font-semibold text-ink-900">5. Warteliste</h2>
+              <h2 className="text-lg font-semibold text-ink-900">5. Community-Anfrage</h2>
               <p className="leading-relaxed">
-                Bei Eintragung in die Warteliste wird die E-Mail-Adresse gespeichert, um über
-                neue Angebote zu informieren. Die Einwilligung kann jederzeit per E-Mail an{" "}
+                Wenn Sie über das Kontaktformular Zugang zur Community anfragen, verarbeiten wir
+                Ihre Angaben (z. B. Name, E-Mail-Adresse und Ihre Nachricht) ausschließlich zur
+                Prüfung und Beantwortung Ihrer Anfrage. Eine Weitergabe an Dritte erfolgt nicht.
+                Die Daten werden gelöscht, sobald sie nicht mehr benötigt werden, sofern keine
+                gesetzliche Aufbewahrungspflicht besteht. Ihre Einwilligung können Sie jederzeit
+                per E-Mail an{" "}
                 <a href="mailto:monika.oechtering@googlemail.com" className="text-brand-teal hover:underline">
                   monika.oechtering@googlemail.com
                 </a>{" "}
-                widerrufen werden. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO.
+                widerrufen. Rechtsgrundlage: Art. 6 Abs. 1 lit. b und f DSGVO.
               </p>
             </div>
 

@@ -9,7 +9,7 @@ export function CommunityPreview() {
           <div className="grid lg:grid-cols-2">
             <div className="p-8 sm:p-12">
               <Badge tone="pink" className="mb-4">
-                In Vorbereitung
+                Aufnahme läuft
               </Badge>
               <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
                 Eine geschützte Community für Singles mit Tiefgang
@@ -19,7 +19,7 @@ export function CommunityPreview() {
                 daten, tiefer kommunizieren und echte Verbindung suchen.
               </p>
               <div className="mt-7">
-                <Button href="/community">Zur Warteliste</Button>
+                <Button href="/community">Zugang anfragen</Button>
               </div>
             </div>
 

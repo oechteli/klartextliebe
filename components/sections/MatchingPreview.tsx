@@ -15,7 +15,7 @@ export function MatchingPreview() {
       <div className="container-kl">
         <div className="mx-auto max-w-2xl text-center">
           <Badge tone="orange" className="mb-4">
-            Bald verfügbar
+            Persönlich kuratiert
           </Badge>
           <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
             Kuratiertes Matching statt endlosem Swipen
