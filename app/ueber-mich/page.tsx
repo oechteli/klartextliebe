@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { values } from "@/lib/mock-data";
 
 export const metadata: Metadata = {
-  title: "Ueber mich",
+  title: "Über mich",
   alternates: { canonical: "/ueber-mich" },
   description:
     "Warum Klartext Liebe entstanden ist: Viele Singles haben kein Attraktivitaetsproblem, sondern ein Kommunikations-, Klarheits- und Resonanzthema.",
@@ -16,14 +16,14 @@ export default function UeberMichPage() {
     "Singlecoaching",
     "Datingberatung",
     "Kommunikationsanalyse",
-    "KI-Persoenlichkeitsanalyse",
+    "KI-Persönlichkeitsanalyse",
     "Kuratiertes Matching",
   ];
 
   return (
     <>
       <PageHero
-        eyebrow="Ueber mich"
+        eyebrow="Über mich"
         title="Hinter Klartext Liebe steht ein klarer Gedanke"
         subtitle="Viele Singles scheitern nicht an Aussehen oder Alter, sondern an Kommunikation, Klarheit, Mustern und fehlender Resonanz."
       />
@@ -56,24 +56,24 @@ export default function UeberMichPage() {
               </h2>
               <div className="mt-4 space-y-4 text-ink-500">
                 <p className="text-lg">
-                  Ueber Jahre habe ich beobachtet, wie kluge, warmherzige und
+                  Über Jahre habe ich beobachtet, wie kluge, warmherzige und
                   reflektierte Menschen im Dating immer wieder an denselben
                   Stellen haengen bleiben. Nicht, weil mit ihnen etwas nicht
-                  stimmt, sondern weil Gespraeche oberflaechlich bleiben,
-                  Unsicherheit wie Desinteresse wirkt und Naehe gewuenscht,
+                  stimmt, sondern weil Gespräche oberflächlich bleiben,
+                  Unsicherheit wie Desinteresse wirkt und Nähe gewuenscht,
                   aber Distanz gesendet wird.
                 </p>
                 <p className="text-lg">
                   Mein Eindruck wurde immer deutlicher: Viele Singles haben kein
                   Attraktivitaetsproblem, sondern ein Kommunikations-,
                   Klarheits-, Resonanz- und Musterproblem. Genau hier setzt
-                  Klartext Liebe an - mit Verstaendnis statt Bewertung und mit
+                  Klartext Liebe an - mit Verständnis statt Bewertung und mit
                   Klarheit statt Tricks.
                 </p>
 
                 <blockquote className="my-6 border-l-4 border-brand-violet pl-5 text-xl font-medium italic text-ink-700">
                   Du musst dich nicht verbiegen, um geliebt zu werden. Du musst
-                  nur klarer werden: ueber dich selbst und ueber das, was du
+                  nur klarer werden: über dich selbst und über das, was du
                   wirklich suchst.
                 </blockquote>
 
@@ -124,7 +124,7 @@ export default function UeberMichPage() {
                 <h3 className="text-lg font-bold text-ink-900">@klartextliebe auf YouTube</h3>
                 <p className="mt-1 text-sm text-ink-500">
                   Videos zu Dating, Selbstwert, Kommunikation und geistiger Resonanz
-                  fuer reflektierte Singles, die mehr wollen als Oberflaechlichkeit.
+                  für reflektierte Singles, die mehr wollen als Oberflaechlichkeit.
                 </p>
               </div>
               <Button
@@ -147,7 +147,7 @@ export default function UeberMichPage() {
             <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button href="/coaching">Coaching ansehen</Button>
               <Button href="/analyse" variant="secondary">
-                Persoenlichkeitsanalyse
+                Persönlichkeitsanalyse
               </Button>
             </div>
           </div>

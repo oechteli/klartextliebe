@@ -18,7 +18,7 @@ const criteria = [
   ["Kommunikationsstil", "Wie du in Kontakt gehst und in Verbindung bleibst"],
   ["Denkstil", "Wie du die Welt betrachtest und reflektierst"],
   ["Beziehungsziel", "Was du dir von einer Partnerschaft wuenschst"],
-  ["Emotionale Reife", "Wie du mit Naehe, Distanz und Konflikt umgehst"],
+  ["Emotionale Reife", "Wie du mit Nähe, Distanz und Konflikt umgehst"],
 ];
 
 export default function MarktplatzPage() {
@@ -26,7 +26,7 @@ export default function MarktplatzPage() {
     <>
       <PageHero
         title="Kuratiertes Matching statt Swipe-Karussell"
-        subtitle="Keine Swipe-Plattform, sondern persoenlich ausgewaehlte Begegnungen fuer reflektierte Singles. Profile werden nach Tiefe bewertet, nicht nach Foto."
+        subtitle="Keine Swipe-Plattform, sondern persönlich ausgewaehlte Begegnungen für reflektierte Singles. Profile werden nach Tiefe bewertet, nicht nach Foto."
       />
 
       <section className="section">
@@ -36,7 +36,7 @@ export default function MarktplatzPage() {
               Wonach hier wirklich geschaut wird
             </h2>
             <p className="mt-3 text-ink-500">
-              Statt oberflaechlicher Bewertung zaehlen die Dimensionen, die echte
+              Statt oberflächlicher Bewertung zaehlen die Dimensionen, die echte
               Verbindung tragen.
             </p>
           </div>
@@ -63,7 +63,7 @@ export default function MarktplatzPage() {
               Profil anlegen und Matches erhalten
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-white/85">
-              Das Matching laeuft persoenlich und kuratorisch. Schreib uns, wer du
+              Das Matching läuft persönlich und kuratorisch. Schreib uns, wer du
               bist und was du suchst. Monika schaut sich dein Profil an und schlaegt
               passende Menschen vor.
             </p>
