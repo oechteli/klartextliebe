@@ -3,23 +3,31 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
 
 const LOGIN_URL =
   process.env.NEXT_PUBLIC_LOGIN_URL ?? "https://appymindo.de";
 
-const navItems = [
+// Hauptnavigation (Desktop sichtbar)
+const primaryItems = [
   { href: "/", label: "Start" },
-  { href: "/kluge-koepfe", label: "Sapiosexuell?" },
-  { href: "/ueber-mich", label: "Über mich" },
   { href: "/coaching", label: "Coaching" },
-  { href: "/community", label: "Community" },
+  { href: "/so-funktionierts", label: "So funktioniert's" },
+  { href: "/blog", label: "Ratgeber" },
+  { href: "/ueber-mich", label: "Über mich" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/kontakt", label: "Kontakt" },
+];
+
+// Weitere Bereiche (Desktop im "Mehr"-Menü, mobil in eigener Gruppe)
+const moreItems = [
   { href: "/analyse", label: "Analyse" },
+  { href: "/community", label: "Community" },
   { href: "/marktplatz", label: "Marktplatz" },
   { href: "/events", label: "Events" },
   { href: "/youtube", label: "YouTube" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: "/kluge-koepfe", label: "Sapiosexuell?" },
 ];
 
 function Logo() {
@@ -40,6 +48,31 @@ function Logo() {
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
+  const moreRef = useRef<HTMLDivElement>(null);
+
+  // Menüs bei Seitenwechsel schließen
+  useEffect(() => {
+    setOpen(false);
+    setMoreOpen(false);
+  }, [pathname]);
+
+  // "Mehr"-Dropdown bei Klick außerhalb schließen
+  useEffect(() => {
+    if (!moreOpen) return;
+    const onClick = (e: MouseEvent) => {
+      if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
+        setMoreOpen(false);
+      }
+    };
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, [moreOpen]);
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+  const moreActive = moreItems.some((item) => isActive(item.href));
 
   return (
     <header className="sticky top-0 z-50 border-b border-cream-200/70 bg-cream-50/85 backdrop-blur-md">
@@ -48,26 +81,60 @@ export function Header() {
 
         {/* Desktop-Navigation */}
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Hauptnavigation">
-          {navItems.map((item) => {
-            const active =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(item.href);
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={[
-                  "rounded-full px-3 py-2 text-sm font-medium transition-colors",
-                  active
-                    ? "text-brand-violet"
-                    : "text-ink-700 hover:text-ink-900 hover:bg-cream-100",
-                ].join(" ")}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+          {primaryItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={[
+                "rounded-full px-3 py-2 text-sm font-medium transition-colors",
+                isActive(item.href)
+                  ? "text-brand-violet"
+                  : "text-ink-700 hover:text-ink-900 hover:bg-cream-100",
+              ].join(" ")}
+            >
+              {item.label}
+            </Link>
+          ))}
+
+          {/* "Mehr"-Dropdown */}
+          <div className="relative" ref={moreRef}>
+            <button
+              type="button"
+              onClick={() => setMoreOpen((v) => !v)}
+              aria-expanded={moreOpen}
+              aria-haspopup="true"
+              className={[
+                "flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium transition-colors",
+                moreActive
+                  ? "text-brand-violet"
+                  : "text-ink-700 hover:text-ink-900 hover:bg-cream-100",
+              ].join(" ")}
+            >
+              Mehr
+              <span aria-hidden className="text-xs">
+                {moreOpen ? "▴" : "▾"}
+              </span>
+            </button>
+            {moreOpen && (
+              <div className="absolute right-0 top-full mt-2 w-52 rounded-2xl border border-cream-200 bg-white p-2 shadow-card">
+                {moreItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMoreOpen(false)}
+                    className={[
+                      "block rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                      isActive(item.href)
+                        ? "text-brand-violet"
+                        : "text-ink-700 hover:bg-cream-100 hover:text-ink-900",
+                    ].join(" ")}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
@@ -98,7 +165,20 @@ export function Header() {
           aria-label="Mobile Navigation"
         >
           <div className="container-kl flex flex-col py-3">
-            {navItems.map((item) => (
+            {primaryItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="rounded-lg px-3 py-3 text-base font-medium text-ink-700 hover:bg-cream-100"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <p className="px-3 pb-1 pt-4 text-xs font-semibold uppercase tracking-wide text-ink-400">
+              Entdecken
+            </p>
+            {moreItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}

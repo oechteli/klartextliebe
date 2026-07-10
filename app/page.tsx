@@ -9,6 +9,7 @@ import { CommunityPreview } from "@/components/sections/CommunityPreview";
 import { AnalysisPreview } from "@/components/sections/AnalysisPreview";
 import { MatchingPreview } from "@/components/sections/MatchingPreview";
 import { EventPreview } from "@/components/sections/EventPreview";
+import { BlogPreview } from "@/components/sections/BlogPreview";
 import { CtaSection } from "@/components/sections/CtaSection";
 
 export default function HomePage() {
@@ -36,7 +37,9 @@ export default function HomePage() {
       <MatchingPreview />
       {/* K) Live-Treffen Preview */}
       <EventPreview preview />
-      {/* L) CTA Abschluss */}
+      {/* L) Ratgeber-Vorschau */}
+      <BlogPreview />
+      {/* M) CTA Abschluss */}
       <CtaSection />
     </>
   );

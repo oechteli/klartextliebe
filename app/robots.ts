@@ -1,8 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://klartextliebe.monika-oechtering.workers.dev";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.klartext-liebe.de";
 
 export default function robots(): MetadataRoute.Robots {
   return {

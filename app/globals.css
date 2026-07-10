@@ -45,4 +45,33 @@
   .section {
     @apply py-16 sm:py-20 lg:py-24;
   }
+
+  /* Fließtext-Layout für Ratgeber-Artikel */
+  .prose-kl {
+    @apply text-ink-700;
+  }
+  .prose-kl > p {
+    @apply mt-5 leading-relaxed;
+  }
+  .prose-kl > h2 {
+    @apply mt-12 text-2xl font-bold text-ink-900;
+  }
+  .prose-kl > h3 {
+    @apply mt-8 text-lg font-semibold text-ink-900;
+  }
+  .prose-kl > ul {
+    @apply mt-5 list-disc space-y-2 pl-6;
+  }
+  .prose-kl > ol {
+    @apply mt-5 list-decimal space-y-2 pl-6;
+  }
+  .prose-kl a {
+    @apply font-medium text-brand-violet underline decoration-brand-violet/40 underline-offset-2 hover:decoration-brand-violet;
+  }
+  .prose-kl strong {
+    @apply text-ink-900;
+  }
+  .prose-kl blockquote {
+    @apply mt-6 border-l-4 border-brand-violet/40 pl-4 italic text-ink-500;
+  }
 }

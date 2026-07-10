@@ -3,11 +3,10 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-// Produktions-URL als Fallback (Cloudflare-Worker). Per NEXT_PUBLIC_SITE_URL
-// überschreibbar, sobald eine eigene Domain angebunden ist.
+// Produktions-URL (eigene Domain, seit 2026-07 live).
+// Per NEXT_PUBLIC_SITE_URL überschreibbar.
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://klartextliebe.monika-oechtering.workers.dev";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.klartext-liebe.de";
 
 const OG_IMAGE = {
   url: "/brand/header.jpg",

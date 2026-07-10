@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
 import { OfferSection } from "@/components/sections/OfferSection";
 import { DiscoveryCallBanner } from "@/components/sections/DiscoveryCallBanner";
@@ -114,7 +115,7 @@ export default function CoachingPage() {
           </div>
 
           <h2 className="mt-16 text-2xl font-bold text-ink-900">
-            Haeufige Fragen
+            Häufige Fragen
           </h2>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {faqs.map((f) => (
@@ -124,6 +125,23 @@ export default function CoachingPage() {
               </Card>
             ))}
           </div>
+          <p className="mt-6 text-sm text-ink-500">
+            Mehr Antworten – auch zu Kosten und Seriosität – findest du auf der{" "}
+            <Link
+              href="/faq"
+              className="font-medium text-brand-violet underline underline-offset-2"
+            >
+              FAQ-Seite
+            </Link>
+            . Den kompletten Ablauf erklärt{" "}
+            <Link
+              href="/so-funktionierts"
+              className="font-medium text-brand-violet underline underline-offset-2"
+            >
+              So funktioniert's
+            </Link>
+            .
+          </p>
         </div>
       </section>
     </>

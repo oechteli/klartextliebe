@@ -27,18 +27,24 @@ export default function YouTubePage() {
         <div className="container-kl">
           <div className="grid gap-10 lg:grid-cols-[1.2fr,1fr] lg:items-center">
             <div>
-              {/* Video-Platzhalter / Einbettung */}
-              <div className="aspect-video w-full overflow-hidden rounded-3xl bg-brand-soft shadow-card">
+              {/* Direkter Absprung zum Kanal */}
+              <a
+                href={YOUTUBE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block aspect-video w-full overflow-hidden rounded-3xl bg-brand-soft shadow-card transition-shadow hover:shadow-lg"
+                aria-label="YouTube-Kanal @klartextliebe öffnen"
+              >
                 <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
-                  {/* TODO: echtes YouTube-iframe oder neueste Videos via API einbetten */}
-                  <span className="grid h-16 w-16 place-items-center rounded-full bg-white/80 text-2xl text-brand-pink shadow-soft">
+                  <span className="grid h-16 w-16 place-items-center rounded-full bg-white/80 text-2xl text-brand-pink shadow-soft transition-transform group-hover:scale-110">
                     ▶
                   </span>
-                  <span className="text-sm text-ink-400">
-                    Video-Einbettung folgt
+                  <span className="text-sm font-semibold text-ink-700">
+                    Jetzt auf YouTube ansehen
                   </span>
+                  <span className="text-xs text-ink-400">@klartextliebe ↗</span>
                 </div>
-              </div>
+              </a>
             </div>
 
             <div>

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Über mich",
   alternates: { canonical: "/ueber-mich" },
   description:
-    "Warum Klartext Liebe entstanden ist: Viele Singles haben kein Attraktivitaetsproblem, sondern ein Kommunikations-, Klarheits- und Resonanzthema.",
+    "Warum Klartext Liebe entstanden ist: Viele Singles haben kein Attraktivitätsproblem, sondern ein Kommunikations-, Klarheits- und Resonanzthema.",
 };
 
 export default function UeberMichPage() {
@@ -46,26 +46,26 @@ export default function UeberMichPage() {
               </div>
               <div className="mt-4 text-center">
                 <p className="text-base font-semibold text-ink-900">Monika Oechtering</p>
-                <p className="text-sm text-ink-400">Gruenderin · Singlecoach · Datingberaterin</p>
+                <p className="text-sm text-ink-400">Gründerin · Singlecoach · Datingberaterin</p>
               </div>
             </div>
 
             <div className="prose-kl max-w-none">
               <h2 className="text-2xl font-bold text-ink-900">
-                Warum ich Klartext Liebe gegruendet habe
+                Warum ich Klartext Liebe gegründet habe
               </h2>
               <div className="mt-4 space-y-4 text-ink-500">
                 <p className="text-lg">
                   Über Jahre habe ich beobachtet, wie kluge, warmherzige und
                   reflektierte Menschen im Dating immer wieder an denselben
-                  Stellen haengen bleiben. Nicht, weil mit ihnen etwas nicht
+                  Stellen hängen bleiben. Nicht, weil mit ihnen etwas nicht
                   stimmt, sondern weil Gespräche oberflächlich bleiben,
-                  Unsicherheit wie Desinteresse wirkt und Nähe gewuenscht,
+                  Unsicherheit wie Desinteresse wirkt und Nähe gewünscht,
                   aber Distanz gesendet wird.
                 </p>
                 <p className="text-lg">
                   Mein Eindruck wurde immer deutlicher: Viele Singles haben kein
-                  Attraktivitaetsproblem, sondern ein Kommunikations-,
+                  Attraktivitätsproblem, sondern ein Kommunikations-,
                   Klarheits-, Resonanz- und Musterproblem. Genau hier setzt
                   Klartext Liebe an - mit Verständnis statt Bewertung und mit
                   Klarheit statt Tricks.
@@ -81,7 +81,7 @@ export default function UeberMichPage() {
                   Klartext Liebe grenzt sich bewusst von manipulativen
                   Datingstrategien ab. Es geht nicht darum, jemanden zu gewinnen
                   oder Spielchen zu spielen, sondern darum, dich selbst besser zu
-                  verstehen, klarer zu kommunizieren und bewusster auszuwaehlen.
+                  verstehen, klarer zu kommunizieren und bewusster auszuwählen.
                   Orientierung statt Garantie - das ist mein Versprechen.
                 </p>
               </div>
@@ -102,7 +102,7 @@ export default function UeberMichPage() {
           {/* Werte */}
           <div className="mt-16">
             <h2 className="text-2xl font-bold text-ink-900">
-              Wofuer Klartext Liebe steht
+              Wofür Klartext Liebe steht
             </h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {values.map((v) => (
@@ -124,7 +124,7 @@ export default function UeberMichPage() {
                 <h3 className="text-lg font-bold text-ink-900">@klartextliebe auf YouTube</h3>
                 <p className="mt-1 text-sm text-ink-500">
                   Videos zu Dating, Selbstwert, Kommunikation und geistiger Resonanz
-                  für reflektierte Singles, die mehr wollen als Oberflaechlichkeit.
+                  für reflektierte Singles, die mehr wollen als Oberflächlichkeit.
                 </p>
               </div>
               <Button

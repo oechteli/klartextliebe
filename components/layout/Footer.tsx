@@ -9,6 +9,7 @@ const columns = [
     title: "Angebot",
     links: [
       { href: "/coaching", label: "Coaching" },
+      { href: "/so-funktionierts", label: "So funktioniert's" },
       { href: "/analyse", label: "Persönlichkeitsanalyse" },
       { href: "/community", label: "Community" },
       { href: "/marktplatz", label: "Marktplatz" },
@@ -16,9 +17,20 @@ const columns = [
     ],
   },
   {
+    title: "Ratgeber",
+    links: [
+      { href: "/blog", label: "Alle Artikel" },
+      { href: "/blog/warum-dating-apps-frustrieren", label: "Dating-App-Frust" },
+      { href: "/blog/kennenlernen-ab-30-40", label: "Kennenlernen ab 30/40" },
+      { href: "/blog/rote-flaggen-beim-kennenlernen", label: "Rote Flaggen erkennen" },
+      { href: "/blog/selbstwert-vor-partnersuche", label: "Selbstwert stärken" },
+    ],
+  },
+  {
     title: "Mehr",
     links: [
       { href: "/ueber-mich", label: "Über mich" },
+      { href: "/faq", label: "FAQ" },
       { href: "/youtube", label: "YouTube" },
       { href: "/kontakt", label: "Kontakt" },
     ],
@@ -36,7 +48,7 @@ export function Footer() {
   return (
     <footer className="mt-8 border-t border-cream-200 bg-cream-100/60">
       <div className="container-kl py-14">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-3 lg:grid-cols-5">
           {/* Marke */}
           <div className="max-w-xs">
             <Image
