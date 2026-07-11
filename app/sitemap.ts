@@ -7,7 +7,9 @@ const SITE_URL =
 // Alle öffentlichen Routen mit grober Priorisierung.
 const routes: { path: string; priority: number; changeFrequency: "weekly" | "monthly" | "yearly" }[] = [
   { path: "/", priority: 1.0, changeFrequency: "weekly" },
+  { path: "/starte-jetzt", priority: 0.9, changeFrequency: "monthly" },
   { path: "/coaching", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/persoenliches-coaching", priority: 0.9, changeFrequency: "monthly" },
   { path: "/so-funktionierts", priority: 0.8, changeFrequency: "monthly" },
   { path: "/blog", priority: 0.8, changeFrequency: "weekly" },
   { path: "/faq", priority: 0.8, changeFrequency: "monthly" },

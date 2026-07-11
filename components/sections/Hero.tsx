@@ -49,20 +49,22 @@ export function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Button href="/starte-jetzt" size="lg">
+              Starte jetzt – 3 Minuten, kostenlos →
+            </Button>
             <Button
               href="/kontakt?thema=Kostenloses+Erstgespräch"
+              variant="secondary"
               size="lg"
             >
-              Kostenloses Erstgespräch →
-            </Button>
-            <Button href="/coaching" variant="secondary" size="lg">
-              Coaching entdecken
+              Kostenloses Erstgespräch
             </Button>
           </div>
 
           <p className="mt-6 text-sm text-ink-400">
-            20 Minuten, unverbindlich – für Singles, die wirklich verstehen wollen,
-            was sie aufhält.
+            4 kurze Fragen, dann ist dein KI-Coach sofort für dich da – ohne
+            Termin, ohne Login. Wenn du tiefer gehen willst, übernimmt Monika
+            persönlich.
           </p>
         </div>
       </div>

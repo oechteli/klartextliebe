@@ -8,7 +8,9 @@ const columns = [
   {
     title: "Angebot",
     links: [
+      { href: "/starte-jetzt", label: "Starte jetzt – kostenlos" },
       { href: "/coaching", label: "Coaching" },
+      { href: "/persoenliches-coaching", label: "Persönliches Coaching" },
       { href: "/so-funktionierts", label: "So funktioniert's" },
       { href: "/analyse", label: "Persönlichkeitsanalyse" },
       { href: "/community", label: "Community" },

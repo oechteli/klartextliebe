@@ -9,6 +9,16 @@
   var TUERKIS   = "#3FB9C7";
   var INK       = "#1f2233";
 
+  // Kopplung an den Coaching-Funnel (/starte-jetzt):
+  // - kl-chat-kontext:  Fragebogen-Antworten, werden als `context` an /api/chat mitgeschickt
+  // - kl-chat-autoopen: einmaliges Flag, Chat nach Funnel-Abschluss automatisch oeffnen
+  var KONTEXT_KEY  = "kl-chat-kontext";
+  var AUTOOPEN_KEY = "kl-chat-autoopen";
+
+  function sessionLesen(key) {
+    try { return sessionStorage.getItem(key) || ""; } catch (e) { return ""; }
+  }
+
   // ---------- Styles ----------
   var css = ''
     + '#kl-chat-btn{position:fixed;right:20px;bottom:20px;z-index:9998;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,' + VIOLETT + ',' + TUERKIS + ');color:#fff;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(31,34,51,.25);font-size:26px;display:flex;align-items:center;justify-content:center;transition:transform .15s ease}'
@@ -79,7 +89,12 @@
     box.classList.add("open");
     if (!greeted) {
       greeted = true;
-      addMsg("Hallo! 👋 Ich bin der Assistent von Klartext Liebe. Frag mich gern zu Coaching, Preisen, dem kostenlosen Erstgespraech oder wie die Zusammenarbeit ablaeuft.", "bot");
+      if (sessionLesen(KONTEXT_KEY)) {
+        // Nutzer kommt aus dem Coaching-Funnel (/starte-jetzt)
+        addMsg("Schoen, dass du da bist! 💙 Ich bin dein KI-Coach von Klartext Liebe – eine KI, sofort und kostenlos fuer dich da. Deine Antworten aus dem Fragebogen habe ich schon gelesen. Erzaehl mir einfach, was dich gerade am meisten beschaeftigt – wir legen direkt los. Und wenn du tiefer gehen willst, uebernimmt Monika persoenlich.", "bot");
+      } else {
+        addMsg("Hallo! 👋 Ich bin der Assistent von Klartext Liebe. Frag mich gern zu Coaching, Preisen, dem kostenlosen Erstgespraech oder wie die Zusammenarbeit ablaeuft.", "bot");
+      }
     }
     inputEl.focus();
   }
@@ -117,10 +132,12 @@
     msgsEl.appendChild(typing);
     msgsEl.scrollTop = msgsEl.scrollHeight;
 
+    // Fragebogen-Kontext (falls vorhanden) mitschicken – rueckwaertskompatibel.
+    var kontext = sessionLesen(KONTEXT_KEY);
     fetch("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ messages: history })
+      body: JSON.stringify(kontext ? { messages: history, context: kontext } : { messages: history })
     })
     .then(function (r) { return r.json(); })
     .then(function (data) {
@@ -141,4 +158,16 @@
       inputEl.focus();
     });
   });
+
+  // ---------- Schnittstelle fuer den Coaching-Funnel (/starte-jetzt) ----------
+  // Der Funnel oeffnet den Chat direkt nach dem letzten Fragebogen-Schritt.
+  window.klChatOpen = openChat;
+  document.addEventListener("kl:chat-open", openChat);
+
+  // Fallback: Funnel wurde abgeschlossen, bevor das Widget geladen war →
+  // Chat beim naechsten Seitenaufbau einmalig automatisch oeffnen.
+  if (sessionLesen(AUTOOPEN_KEY)) {
+    try { sessionStorage.removeItem(AUTOOPEN_KEY); } catch (e) {}
+    openChat();
+  }
 })();

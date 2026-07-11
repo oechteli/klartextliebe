@@ -114,6 +114,26 @@ export default function CoachingPage() {
             Schritten und dem Zahlungslink.
           </div>
 
+          <div className="mt-6 rounded-2xl border border-brand-violet/20 bg-brand-violet/5 p-6 text-sm text-ink-600">
+            <strong className="text-ink-800">Lieber flexibel statt Programm?</strong>{" "}
+            Beim{" "}
+            <Link
+              href="/persoenliches-coaching"
+              className="font-medium text-brand-violet underline underline-offset-2"
+            >
+              Persönlichen Coaching
+            </Link>{" "}
+            buchst du einzelne 60-Minuten-Sessions mit Monika – ohne
+            Mitgliedschaft, ohne Abo. Oder du{" "}
+            <Link
+              href="/starte-jetzt"
+              className="font-medium text-brand-violet underline underline-offset-2"
+            >
+              startest kostenlos mit dem KI-Coach
+            </Link>
+            .
+          </div>
+
           <h2 className="mt-16 text-2xl font-bold text-ink-900">
             Häufige Fragen
           </h2>

@@ -22,6 +22,7 @@ const primaryItems = [
 
 // Weitere Bereiche (Desktop im "Mehr"-Menü, mobil in eigener Gruppe)
 const moreItems = [
+  { href: "/persoenliches-coaching", label: "Persönliches Coaching" },
   { href: "/analyse", label: "Analyse" },
   { href: "/community", label: "Community" },
   { href: "/marktplatz", label: "Marktplatz" },
@@ -141,8 +142,8 @@ export function Header() {
           <Button href={LOGIN_URL} variant="ghost" size="sm">
             Login
           </Button>
-          <Button href="/coaching" size="sm">
-            Coaching ansehen
+          <Button href="/starte-jetzt" size="sm">
+            Starte jetzt – kostenlos
           </Button>
         </div>
 
@@ -189,8 +190,8 @@ export function Header() {
               </Link>
             ))}
             <div className="flex flex-col gap-2 px-3 pt-3">
-              <Button href="/coaching" size="sm" className="w-full">
-                Coaching ansehen
+              <Button href="/starte-jetzt" size="sm" className="w-full">
+                Starte jetzt – kostenlos
               </Button>
               <Button
                 href={LOGIN_URL}

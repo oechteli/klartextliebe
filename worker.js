@@ -30,6 +30,15 @@ WEITERE BEREICHE:
 - Community: Ein geschuetzter Raum fuer reflektierte Singles - ehrlicher Austausch auf Augenhoehe, Deep-Talk-Impulse, Live-Q&As und Stadtgruppen. Zugang auf Anfrage ueber /kontakt.
 - Kuratiertes Matching (Marktplatz): Keine Swipe-Plattform, sondern persoenlich ausgewaehlte Begegnungen. Profile werden nach Tiefe bewertet (Werte, Lebensphase, Kommunikationsstil, Beziehungsziel), nicht nach Foto. Anfrage ueber /kontakt.
 
+PERSOENLICHES COACHING - SESSIONPAKETE (Seite /persoenliches-coaching):
+- Einzelne 1:1-Sessions (je 60 Minuten) mit Monika per Chat, Telefon oder Video - OHNE Mitgliedschaft und OHNE Abo: Einzelsession 89 EUR, 3er-Paket 219 EUR, 10er-Paket 649 EUR.
+- Buchung per Anfrage ueber /kontakt ("Session anfragen"), Antwort innerhalb von 24 Stunden.
+- Bei Fragen zum Unterschied zwischen Sessionpaketen und den Coaching-Paketen oben: nicht spekulieren, sondern freundlich auf das kostenlose Erstgespraech verweisen - dort findet Monika das passende Format.
+
+COACHING-FUNNEL UND KI-COACH:
+- Auf /starte-jetzt gibt es einen kurzen Fragebogen (3 Minuten, kostenlos, ohne Login). Direkt danach oeffnet sich dieser Chat - du bist dann der KI-Coach: kostenlos, sofort, ohne Termin.
+- Du bist eine KI, kein Mensch. Sage das klar, wenn du gefragt wirst oder dich vorstellst. Persoenliche Coachings und alle bezahlten Sessions uebernimmt Monika.
+
 SO LAEUFT EINE BUCHUNG:
 - Ueber das Kontaktformular (/kontakt) eine kurze Nachricht schreiben. Monika meldet sich persoenlich innerhalb von 24 Stunden mit den naechsten Schritten und dem Zahlungslink. Es gibt keine automatische Sofortbuchung.
 
@@ -84,6 +93,18 @@ async function handleChat(request, env) {
   if (verlauf.length === 0) return json({ error: "Keine Nachricht erhalten." }, 400);
 
   const messages = [{ role: "system", content: SYSTEM }, ...verlauf];
+
+  // Optionaler Fragebogen-Kontext aus dem Coaching-Funnel (/starte-jetzt).
+  // Rueckwaertskompatibel: das Feld darf fehlen, alte Clients funktionieren unveraendert.
+  if (typeof data.context === "string" && data.context.trim()) {
+    messages.splice(1, 0, {
+      role: "system",
+      content:
+        "FRAGEBOGEN-KONTEXT (der Nutzer kommt gerade aus dem Coaching-Fragebogen auf /starte-jetzt):\n" +
+        data.context.trim().slice(0, 1200) +
+        "\n\nGehe als KI-Coach empathisch und konkret auf diese Angaben ein, ohne sie wortwoertlich aufzuzaehlen. Stelle jeweils EINE gute Rueckfrage und gib kleine, umsetzbare Impulse. Wenn der Nutzer tiefer gehen moechte, empfiehl die persoenlichen Sessions mit Monika (/persoenliches-coaching, ohne Abo) oder das kostenlose Erstgespraech (/kontakt).",
+    });
+  }
 
   let res;
   try {
