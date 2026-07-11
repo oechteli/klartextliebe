@@ -42,6 +42,7 @@ const columns = [
     links: [
       { href: "/impressum", label: "Impressum" },
       { href: "/datenschutz", label: "Datenschutz" },
+      { href: "/agb", label: "AGB" },
     ],
   },
 ];

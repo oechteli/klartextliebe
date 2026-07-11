@@ -23,6 +23,7 @@ const routes: { path: string; priority: number; changeFrequency: "weekly" | "mon
   { path: "/kontakt", priority: 0.6, changeFrequency: "yearly" },
   { path: "/impressum", priority: 0.2, changeFrequency: "yearly" },
   { path: "/datenschutz", priority: 0.2, changeFrequency: "yearly" },
+  { path: "/agb", priority: 0.2, changeFrequency: "yearly" },
   // Ratgeber-Artikel (aus lib/blog-posts.tsx, bleibt automatisch synchron)
   ...blogPosts.map((post) => ({
     path: `/blog/${post.slug}`,
