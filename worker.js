@@ -6,7 +6,8 @@
 // (Dashboard -> Worker "klartextliebe" -> Settings -> Variables -> Secret,
 //  oder:  npx wrangler secret put OPENROUTER_KEY)
 
-const MODEL = "google/gemini-2.0-flash-001";
+const MODEL = "google/gemini-2.5-flash";
+const ERSATZMODELLE = ["google/gemini-2.5-flash-lite", "openai/gpt-4o-mini"];
 const MAX_TOKENS = 400;
 
 const SYSTEM = `Du bist der freundliche Assistent von Klartext Liebe. Antworte kurz (max. ~6 Saetze), warmherzig, klar und in der Sprache des Nutzers (Standard: Deutsch). Erfinde nichts. Du gibst KEINE Therapie und KEINE Rechtsberatung. Bei konkreten Buchungswuenschen, sensiblen persoenlichen Themen oder Unsicherheit verweise freundlich auf das kostenlose Erstgespraech oder das Kontaktformular (Seite "Kontakt", /kontakt).
@@ -106,23 +107,29 @@ async function handleChat(request, env) {
     });
   }
 
-  let res;
-  try {
-    res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${env.OPENROUTER_KEY}`,
-        "Content-Type": "application/json",
-        "HTTP-Referer": "https://klartext-liebe.de",
-        "X-Title": "Klartext Liebe Chatbot",
-      },
-      body: JSON.stringify({ model: MODEL, messages, max_tokens: MAX_TOKENS, temperature: 0.4 }),
-    });
-  } catch {
-    return json({ error: "Der Assistent ist gerade nicht erreichbar. Bitte nutze /kontakt." }, 502);
+  // Hauptmodell + Ersatzmodelle nacheinander probieren (Modelle werden bei
+  // OpenRouter gelegentlich abgeschaltet — so bleibt der Chat trotzdem erreichbar).
+  let res = null;
+  for (const modell of [MODEL, ...ERSATZMODELLE]) {
+    try {
+      res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${env.OPENROUTER_KEY}`,
+          "Content-Type": "application/json",
+          "HTTP-Referer": "https://klartext-liebe.de",
+          "X-Title": "Klartext Liebe Chatbot",
+        },
+        body: JSON.stringify({ model: modell, messages, max_tokens: MAX_TOKENS, temperature: 0.4 }),
+      });
+    } catch {
+      res = null;
+      continue;
+    }
+    if (res.ok) break;
   }
 
-  if (!res.ok) {
+  if (!res || !res.ok) {
     return json({ error: "Der Assistent ist gerade nicht erreichbar. Bitte nutze /kontakt." }, 502);
   }
 
