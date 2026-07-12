@@ -48,7 +48,7 @@
   // ---------- HTML ----------
   var btn = document.createElement("button");
   btn.id = "kl-chat-btn";
-  btn.setAttribute("aria-label", "Chat oeffnen");
+  btn.setAttribute("aria-label", "Chat öffnen");
   btn.innerHTML = "💬";
 
   var box = document.createElement("div");
@@ -56,7 +56,7 @@
   box.innerHTML =
       '<div id="kl-chat-head">'
     +   '<div><strong>Klartext Liebe</strong><small>Deine Fragen, ehrlich beantwortet</small></div>'
-    +   '<button id="kl-chat-close" aria-label="Chat schliessen">&times;</button>'
+    +   '<button id="kl-chat-close" aria-label="Chat schließen">&times;</button>'
     + '</div>'
     + '<div id="kl-chat-msgs" role="log" aria-live="polite"></div>'
     + '<form id="kl-chat-form">'
@@ -91,9 +91,9 @@
       greeted = true;
       if (sessionLesen(KONTEXT_KEY)) {
         // Nutzer kommt aus dem Coaching-Funnel (/starte-jetzt)
-        addMsg("Schoen, dass du da bist! 💙 Ich bin dein KI-Coach von Klartext Liebe – eine KI, sofort und kostenlos fuer dich da. Deine Antworten aus dem Fragebogen habe ich schon gelesen. Erzaehl mir einfach, was dich gerade am meisten beschaeftigt – wir legen direkt los. Und wenn du tiefer gehen willst, uebernimmt Monika persoenlich.", "bot");
+        addMsg("Schön, dass du da bist! 💙 Ich bin dein KI-Coach von Klartext Liebe – eine KI, sofort und kostenlos für dich da. Deine Antworten aus dem Fragebogen habe ich schon gelesen. Erzähl mir einfach, was dich gerade am meisten beschäftigt – wir legen direkt los. Und wenn du tiefer gehen willst, übernimmt Monika persönlich.", "bot");
       } else {
-        addMsg("Hallo! 👋 Ich bin der Assistent von Klartext Liebe. Frag mich gern zu Coaching, Preisen, dem kostenlosen Erstgespraech oder wie die Zusammenarbeit ablaeuft.", "bot");
+        addMsg("Hallo! 👋 Ich bin der Assistent von Klartext Liebe. Frag mich gern zu Coaching, Preisen, dem kostenlosen Erstgespräch oder wie die Zusammenarbeit abläuft.", "bot");
       }
     }
     inputEl.focus();
@@ -146,12 +146,12 @@
         addMsg(data.reply, "bot");
         history.push({ role: "assistant", content: data.reply });
       } else {
-        addMsg((data && data.error) ? data.error : "Entschuldigung, das hat nicht geklappt. Schreib uns gern ueber das Kontaktformular.", "bot");
+        addMsg((data && data.error) ? data.error : "Entschuldigung, das hat nicht geklappt. Schreib uns gern über das Kontaktformular.", "bot");
       }
     })
     .catch(function () {
       typing.remove();
-      addMsg("Verbindung nicht moeglich. Bitte nutze das Kontaktformular unter /kontakt.", "bot");
+      addMsg("Verbindung nicht möglich. Bitte nutze das Kontaktformular unter /kontakt.", "bot");
     })
     .finally(function () {
       sendEl.disabled = false;

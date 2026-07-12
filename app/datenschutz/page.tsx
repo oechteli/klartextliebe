@@ -21,7 +21,9 @@ export default function DatenschutzPage() {
               <p className="leading-relaxed">
                 Diese Website verwendet <strong>keine Tracking-Cookies</strong>, kein Google
                 Analytics und keine sozialen Plugins. Es werden nur technisch notwendige Daten
-                durch den Hosting-Anbieter verarbeitet.
+                durch den Hosting-Anbieter verarbeitet. Nur wenn Sie den freiwilligen KI-Chat
+                nutzen, werden Ihre Chat-Eingaben an einen KI-Dienst übermittelt (Details in
+                Abschnitt 6).
               </p>
             </div>
 
@@ -55,10 +57,12 @@ export default function DatenschutzPage() {
             <div className="space-y-3">
               <h2 className="text-lg font-semibold text-ink-900">4. Kontaktformular</h2>
               <p className="leading-relaxed">
-                Beim Kontaktformular werden Name, E-Mail-Adresse und Nachricht zur Bearbeitung
-                der Anfrage verarbeitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO. Die
-                Daten werden nicht an Dritte weitergegeben und nach Abschluss der Kommunikation
-                gelöscht, sofern keine gesetzliche Aufbewahrungspflicht besteht.
+                Das Kontaktformular übergibt Ihre Angaben (Name, E-Mail-Adresse, Nachricht)
+                an Ihr eigenes E-Mail-Programm; der Versand erfolgt per E-Mail an uns. Die
+                Angaben werden zur Bearbeitung der Anfrage verarbeitet. Rechtsgrundlage:
+                Art. 6 Abs. 1 lit. b DSGVO. Die Daten werden nicht an Dritte weitergegeben
+                und nach Abschluss der Kommunikation gelöscht, sofern keine gesetzliche
+                Aufbewahrungspflicht besteht.
               </p>
             </div>
 
@@ -79,8 +83,28 @@ export default function DatenschutzPage() {
             </div>
 
             <div className="space-y-3">
+              <h2 className="text-lg font-semibold text-ink-900">6. KI-Chat (Sofort-Assistent)</h2>
+              <p className="leading-relaxed">
+                Auf dieser Website steht ein KI-Chat zur Verfügung (als KI gekennzeichnet).
+                Wenn Sie den Chat nutzen, werden Ihre Chat-Nachrichten – und, falls Sie den
+                Fragebogen auf „Starte jetzt“ ausgefüllt haben, Ihre dortigen Antworten – zur
+                Erzeugung der Antwort an <strong>OpenRouter, Inc.</strong> (San Francisco,
+                USA) übermittelt und dort durch KI-Modelle (z. B. Google Gemini) verarbeitet.
+                Die Nutzung ist freiwillig; bitte geben Sie im Chat keine besonders sensiblen
+                Daten (z. B. Gesundheitsdaten) ein. Wir speichern die Chat-Verläufe nicht auf
+                unseren Servern; die Fragebogen-Antworten verbleiben nur für die Dauer der
+                Browser-Sitzung auf Ihrem Gerät. Rechtsgrundlage: Art. 6 Abs. 1 lit. a und f
+                DSGVO.{" "}
+                <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer"
+                  className="text-brand-teal hover:underline">
+                  Datenschutzerklärung OpenRouter
+                </a>
+              </p>
+            </div>
+
+            <div className="space-y-3">
               <h2 className="text-lg font-semibold text-ink-900">
-                6. Zahlungsabwicklung – Stripe{" "}
+                7. Zahlungsabwicklung – Stripe{" "}
                 <span className="ml-1 rounded bg-cream-200 px-2 py-0.5 text-xs font-normal text-ink-400">
                   aktiv sobald Buchungen möglich sind
                 </span>
@@ -99,7 +123,7 @@ export default function DatenschutzPage() {
 
             <div className="space-y-3">
               <h2 className="text-lg font-semibold text-ink-900">
-                7. Nutzerkonto &amp; Datenbank – Supabase{" "}
+                8. Nutzerkonto &amp; Datenbank – Supabase{" "}
                 <span className="ml-1 rounded bg-cream-200 px-2 py-0.5 text-xs font-normal text-ink-400">
                   aktiv sobald Konten möglich sind
                 </span>
@@ -115,7 +139,7 @@ export default function DatenschutzPage() {
 
             <div className="space-y-3">
               <h2 className="text-lg font-semibold text-ink-900">
-                8. KI-gestützte Persönlichkeitsanalyse{" "}
+                9. KI-gestützte Persönlichkeitsanalyse{" "}
                 <span className="ml-1 rounded bg-cream-200 px-2 py-0.5 text-xs font-normal text-ink-400">
                   aktiv sobald KI-Analyse integriert ist
                 </span>
@@ -133,7 +157,7 @@ export default function DatenschutzPage() {
             </div>
 
             <div className="space-y-3">
-              <h2 className="text-lg font-semibold text-ink-900">9. Deine Rechte</h2>
+              <h2 className="text-lg font-semibold text-ink-900">10. Deine Rechte</h2>
               <p className="leading-relaxed">Du hast jederzeit das Recht auf:</p>
               <ul className="list-disc space-y-1 pl-6 leading-relaxed">
                 <li>Auskunft über gespeicherte Daten (Art. 15 DSGVO)</li>
@@ -143,6 +167,7 @@ export default function DatenschutzPage() {
                 <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
                 <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
                 <li>Widerruf erteilter Einwilligungen (Art. 7 Abs. 3 DSGVO)</li>
+                <li>Beschwerde bei einer Datenschutz-Aufsichtsbehörde (Art. 77 DSGVO)</li>
               </ul>
               <p className="leading-relaxed">
                 Kontakt:{" "}
@@ -153,7 +178,7 @@ export default function DatenschutzPage() {
             </div>
 
             <div className="space-y-3">
-              <h2 className="text-lg font-semibold text-ink-900">10. Cookies</h2>
+              <h2 className="text-lg font-semibold text-ink-900">11. Cookies</h2>
               <p className="leading-relaxed">
                 Diese Website setzt ausschließlich technisch notwendige Cookies ein. Es werden
                 keine Werbe-Cookies, Tracking-Pixel oder Third-Party-Cookies verwendet.
@@ -161,7 +186,7 @@ export default function DatenschutzPage() {
             </div>
 
             <p className="text-xs text-ink-300">
-              Stand: Juni 2026 · Diese Erklärung wird bei Änderungen der Datenverarbeitung aktualisiert.
+              Stand: Juli 2026 · Diese Erklärung wird bei Änderungen der Datenverarbeitung aktualisiert.
             </p>
           </div>
         </div>

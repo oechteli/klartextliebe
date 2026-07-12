@@ -181,8 +181,8 @@ export default function AgbPage() {
                 ihnen dadurch nicht der Schutz zwingender Bestimmungen des Staates ihres
                 gewöhnlichen Aufenthalts entzogen wird. Sollten einzelne Bestimmungen
                 dieser AGB unwirksam sein, bleibt der Vertrag im Übrigen wirksam. Die
-                Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung
-                bereit (siehe Impressum); zur Teilnahme an einem
+                frühere EU-Plattform zur Online-Streitbeilegung wurde zum 20. Juli 2025
+                eingestellt (siehe Impressum); zur Teilnahme an einem
                 Verbraucherschlichtungsverfahren ist die Anbieterin nicht verpflichtet
                 und nicht bereit.
               </p>

@@ -103,8 +103,9 @@ export function Questionnaire() {
       </div>
 
       <p className="mt-5 text-center text-xs text-ink-400">
-        Deine Angaben werden im MVP nur in deinem Browser verarbeitet und nicht
-        gespeichert. Sensible Felder behandeln wir besonders vertraulich.
+        Deine Angaben werden nur in deinem Browser verarbeitet und nicht auf
+        unseren Servern gespeichert. Sensible Felder behandeln wir besonders
+        vertraulich.
       </p>
     </div>
   );

@@ -33,14 +33,14 @@ export default function UeberMichPage() {
           <div className="grid gap-12 lg:grid-cols-2" style={{ gridTemplateColumns: "320px 1fr" }}>
             {/* Foto */}
             <div>
-              <div className="aspect-[3/4] w-full overflow-hidden rounded-3xl bg-gradient-to-br from-brand-teal/10 via-brand-blue/10 to-brand-violet/10 shadow-soft ring-2 ring-dashed ring-brand-violet/20">
-                <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
-                  <span className="text-4xl">📸</span>
-                  <span className="px-6 text-sm font-medium text-ink-400">
-                    Foto von Monika Oechtering
+              <div className="aspect-[3/4] w-full overflow-hidden rounded-3xl bg-gradient-to-br from-brand-teal/15 via-brand-blue/10 to-brand-violet/20 shadow-soft ring-1 ring-brand-violet/10">
+                <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
+                  <span className="grid h-24 w-24 place-items-center rounded-full bg-brand-gradient text-4xl font-bold text-white shadow-soft">
+                    M
                   </span>
-                  <span className="px-6 text-xs text-ink-300">
-                    Datei in public/brand/ ablegen und hier einbinden
+                  <span className="px-8 text-sm font-medium leading-relaxed text-ink-500">
+                    „Orientierung statt Garantie –<br />
+                    echte Verbindung statt Masse.“
                   </span>
                 </div>
               </div>
