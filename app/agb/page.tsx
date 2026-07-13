@@ -20,7 +20,7 @@ export default function AgbPage() {
               <h2 className="text-lg font-semibold text-ink-900">1. Geltungsbereich und Anbieterin</h2>
               <p className="leading-relaxed">
                 Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge über
-                Coaching- und Beratungsleistungen, die zwischen Monika Oechtering,
+                Coaching- und Beratungsleistungen, die zwischen Monika Oechtering-Sorg,
                 Klartext Liebe – Singlecoaching &amp; Datingberatung (nachfolgend
                 &bdquo;Anbieterin&ldquo;, Kontaktdaten siehe{" "}
                 <a href="/impressum" className="text-brand-teal hover:underline">Impressum</a>)
@@ -110,7 +110,8 @@ export default function AgbPage() {
                 Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen
                 Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag
                 des Vertragsabschlusses. Um Ihr Widerrufsrecht auszuüben, müssen Sie mir
-                (Monika Oechtering, Klartext Liebe, E-Mail:{" "}
+                (Monika Oechtering-Sorg, Klartext Liebe, Amthausstraße 33, 76227 Karlsruhe,
+                E-Mail:{" "}
                 <a href="mailto:monika.oechtering@googlemail.com" className="text-brand-teal hover:underline">
                   monika.oechtering@googlemail.com
                 </a>

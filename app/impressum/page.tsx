@@ -19,17 +19,15 @@ export default function ImpressumPage() {
             <div className="space-y-2">
               <h2 className="text-lg font-semibold text-ink-900">Angaben gemäß § 5 DDG</h2>
               <p className="leading-relaxed">
-                Monika Oechtering
+                Monika Oechtering-Sorg
                 <br />
                 Klartext Liebe – Singlecoaching &amp; Datingberatung
                 <br />
-                <span className="rounded bg-brand-orange/10 px-1 text-brand-orange text-sm">
-                  [Straße und Hausnummer – bitte ergänzen]
-                </span>
+                Amthausstraße 33
                 <br />
-                <span className="rounded bg-brand-orange/10 px-1 text-brand-orange text-sm">
-                  [PLZ und Ort – bitte ergänzen]
-                </span>
+                76227 Karlsruhe
+                <br />
+                Deutschland
               </p>
             </div>
 
@@ -53,10 +51,10 @@ export default function ImpressumPage() {
             </div>
 
             <div className="space-y-2">
-              <h2 className="text-lg font-semibold text-ink-900">Umsatzsteuer-Identifikationsnummer</h2>
-              <p className="leading-relaxed text-ink-400">
-                Eine USt-IdNr. liegt derzeit nicht vor. Sofern Leistungen umsatzsteuerpflichtig
-                erbracht werden, wird diese Angabe ergänzt.
+              <h2 className="text-lg font-semibold text-ink-900">Umsatzsteuer</h2>
+              <p className="leading-relaxed">
+                Kleinunternehmerin gemäß § 19 UStG – es wird keine Umsatzsteuer berechnet
+                und ausgewiesen.
               </p>
             </div>
 
@@ -64,7 +62,7 @@ export default function ImpressumPage() {
               <h2 className="text-lg font-semibold text-ink-900">
                 Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
               </h2>
-              <p className="leading-relaxed">Monika Oechtering (Anschrift s. o.)</p>
+              <p className="leading-relaxed">Monika Oechtering-Sorg (Anschrift s. o.)</p>
             </div>
 
             <div className="space-y-2">

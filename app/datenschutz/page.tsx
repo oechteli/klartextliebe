@@ -30,7 +30,9 @@ export default function DatenschutzPage() {
             <div className="space-y-3">
               <h2 className="text-lg font-semibold text-ink-900">2. Verantwortliche Stelle</h2>
               <p className="leading-relaxed">
-                Monika Oechtering · Klartext Liebe – Singlecoaching &amp; Datingberatung
+                Monika Oechtering-Sorg · Klartext Liebe – Singlecoaching &amp; Datingberatung
+                <br />
+                Amthausstraße 33, 76227 Karlsruhe
                 <br />
                 E-Mail:{" "}
                 <a href="mailto:monika.oechtering@googlemail.com" className="text-brand-teal hover:underline">
