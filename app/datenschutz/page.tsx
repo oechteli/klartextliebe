@@ -59,12 +59,19 @@ export default function DatenschutzPage() {
             <div className="space-y-3">
               <h2 className="text-lg font-semibold text-ink-900">4. Kontaktformular</h2>
               <p className="leading-relaxed">
-                Das Kontaktformular übergibt Ihre Angaben (Name, E-Mail-Adresse, Nachricht)
-                an Ihr eigenes E-Mail-Programm; der Versand erfolgt per E-Mail an uns. Die
-                Angaben werden zur Bearbeitung der Anfrage verarbeitet. Rechtsgrundlage:
-                Art. 6 Abs. 1 lit. b DSGVO. Die Daten werden nicht an Dritte weitergegeben
-                und nach Abschluss der Kommunikation gelöscht, sofern keine gesetzliche
-                Aufbewahrungspflicht besteht.
+                Beim Kontaktformular werden Name, E-Mail-Adresse, das gewählte Anliegen und
+                Ihre Nachricht zur Bearbeitung der Anfrage verarbeitet. Für den zuverlässigen
+                Versand dieser Formular-E-Mail an uns setzen wir den Dienstleister{" "}
+                <strong>Resend (Resend, Inc., San Francisco, USA)</strong> ein; dabei werden
+                die genannten Angaben übertragen. Sollte der Versanddienst nicht erreichbar
+                sein, öffnet sich ersatzweise Ihr eigenes E-Mail-Programm mit der Nachricht.
+                Rechtsgrundlage: Art. 6 Abs. 1 lit. b und f DSGVO. Die Daten werden nicht zu
+                Werbezwecken weitergegeben und nach Abschluss der Kommunikation gelöscht,
+                sofern keine gesetzliche Aufbewahrungspflicht besteht.{" "}
+                <a href="https://resend.com/legal/privacy-policy" target="_blank"
+                  rel="noopener noreferrer" className="text-brand-teal hover:underline">
+                  Datenschutzerklärung Resend
+                </a>
               </p>
             </div>
 
