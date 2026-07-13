@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/layout/PageHero";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
@@ -33,16 +34,15 @@ export default function UeberMichPage() {
           <div className="grid gap-12 lg:grid-cols-2" style={{ gridTemplateColumns: "320px 1fr" }}>
             {/* Foto */}
             <div>
-              <div className="aspect-[3/4] w-full overflow-hidden rounded-3xl bg-gradient-to-br from-brand-teal/15 via-brand-blue/10 to-brand-violet/20 shadow-soft ring-1 ring-brand-violet/10">
-                <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
-                  <span className="grid h-24 w-24 place-items-center rounded-full bg-brand-gradient text-4xl font-bold text-white shadow-soft">
-                    M
-                  </span>
-                  <span className="px-8 text-sm font-medium leading-relaxed text-ink-500">
-                    „Orientierung statt Garantie –<br />
-                    echte Verbindung statt Masse.“
-                  </span>
-                </div>
+              <div className="aspect-[3/4] w-full overflow-hidden rounded-3xl shadow-soft ring-1 ring-brand-violet/10">
+                <Image
+                  src="/brand/monika.png"
+                  alt="Monika Oechtering, Gründerin von Klartext Liebe"
+                  width={640}
+                  height={853}
+                  priority
+                  className="h-full w-full object-cover object-top"
+                />
               </div>
               <div className="mt-4 text-center">
                 <p className="text-base font-semibold text-ink-900">Monika Oechtering</p>
