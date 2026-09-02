@@ -139,3 +139,14 @@ Alles **live verifiziert** (Status 200, Header aktiv, 404 korrekt).
 ## 8. Empfohlener Projektname für den neuen Chat
 
 **`Klartext Liebe – Website`**  (VS-Code-Ordner: `C:\Users\mail\klartext-liebe`, Repo: `klartextliebe`)
+
+---
+
+## 9. Nachtrag 02.09.2026 – Professionalisierung (ergänzend, ersetzt nichts oben)
+
+- **Deploy-Wahrheit heute:** Live-Domain www.klartext-liebe.de hängt am **Cloudflare-Pages-Projekt `klartext-liebe`** (Produktions-Branch `main`), nicht am Worker. Ablauf: `npm run build` → `npx wrangler pages deploy out --project-name klartext-liebe --branch main`. Die Pages Functions `functions/api/kontakt.js` (Resend) und `functions/api/chat.js` (OpenRouter) werden dabei mit hochgeladen. Der Worker (`worker.js`, wrangler.toml) bedient nur noch workers.dev.
+- **Erfundene Testimonials entfernt** → `components/sections/HowIWorkSection.tsx`; Archiv als Kommentar in `TestimonialsSection.tsx`.
+- **Community / Events / Marktplatz** sind ehrlich „in Vorbereitung, startet mit unserer Lernplattform" und haben ein Vormerkformular (`ContactForm` mit Props). Keine Funktion dahinter.
+- **Coaching-Seite** hat eine Leistungsübersicht je Format; Preise unverändert (79/149/399/799 € bzw. Sessions 89/219/649 €).
+- **Krisenhinweis** (Telefonseelsorge 0800 111 0 111) im Footer, auf den Coaching-Seiten und im Impressum.
+- Offene Entscheidungen und Marktvergleich: `C:\Users\mail\Desktop\fahrplan\berichte\klartext-liebe.md`.
