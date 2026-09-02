@@ -138,9 +138,10 @@ export default function PersoenlichesCoachingPage() {
                 interactive
                 className="flex flex-col"
               >
+                {/* Archiv: Badge hieß „Beliebt" – seit 02.09.2026 „Empfehlung" (keine Verkaufszahlen). */}
                 {paket.highlight && (
                   <Badge tone="brand" className="absolute -top-3 left-6">
-                    Beliebt
+                    Empfehlung
                   </Badge>
                 )}
                 <h3 className="text-lg font-semibold text-ink-900">
@@ -238,7 +239,9 @@ export default function PersoenlichesCoachingPage() {
             <p className="mt-4 text-xs text-ink-400">
               Hinweis: Coaching ersetzt keine Psychotherapie. Bei akuten
               seelischen Krisen wende dich bitte an ärztliche oder
-              therapeutische Hilfe.
+              therapeutische Hilfe – oder rund um die Uhr und kostenlos an die
+              Telefonseelsorge: 0800 111 0 111 oder 0800 111 0 222. In
+              Notfällen: 112.
             </p>
           </div>
         </div>

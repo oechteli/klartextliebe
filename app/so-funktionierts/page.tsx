@@ -35,7 +35,7 @@ const schritte = [
     nr: "4",
     title: "Klarheit & Umsetzung",
     zeit: "dein Alltag, deine Schritte",
-    text: "Du gehst mit konkreten Erkenntnissen und nächsten Schritten in dein Dating-Leben – und entscheidest selbst, ob du zusätzlich Community, Events oder das kuratierte Matching nutzen möchtest. Kein Abo, keine versteckten Verlängerungen.",
+    text: "Du gehst mit konkreten Erkenntnissen und nächsten Schritten in dein Dating-Leben. Community, Live-Treffen und kuratiertes Matching sind in Vorbereitung – wer möchte, merkt sich unverbindlich vor. Kein Abo, keine versteckten Verlängerungen.",
   },
 ];
 
@@ -54,7 +54,7 @@ const prinzipien = [
   },
   {
     title: "Coaching ist keine Therapie",
-    text: "Wir arbeiten an Dating, Kommunikation und Selbstwert im Alltag. Bei tieferliegenden seelischen Belastungen sagen wir das offen und empfehlen professionelle therapeutische Unterstützung.",
+    text: "Wir arbeiten an Dating, Kommunikation und Selbstwert im Alltag. Bei tieferliegenden seelischen Belastungen sagen wir das offen und empfehlen professionelle therapeutische Unterstützung. In einer akuten Krise: Telefonseelsorge 0800 111 0 111 oder 0800 111 0 222 (kostenlos, rund um die Uhr), in Notfällen die 112.",
   },
 ];
 

@@ -81,6 +81,8 @@ export default function ImpressumPage() {
                 Die Inhalte dieser Seite wurden sorgfältig erstellt. Für die Richtigkeit,
                 Vollständigkeit und Aktualität kann jedoch keine Gewähr übernommen werden.
                 Das Coaching ersetzt keine psychologische oder therapeutische Fachbehandlung.
+                In akuten Krisen: Telefonseelsorge 0800 111 0 111 oder 0800 111 0 222
+                (kostenlos, rund um die Uhr), in Notfällen 112.
               </p>
             </div>
 
@@ -94,7 +96,7 @@ export default function ImpressumPage() {
               </p>
             </div>
 
-            <p className="text-xs text-ink-300">Stand: Juli 2026</p>
+            <p className="text-xs text-ink-300">Stand: September 2026</p>
           </div>
         </div>
       </section>

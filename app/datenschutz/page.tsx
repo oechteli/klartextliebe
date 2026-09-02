@@ -76,14 +76,19 @@ export default function DatenschutzPage() {
             </div>
 
             <div className="space-y-3">
-              <h2 className="text-lg font-semibold text-ink-900">5. Community-Anfrage</h2>
+              <h2 className="text-lg font-semibold text-ink-900">
+                5. Vormerkungen (Community, Live-Treffen, Matching)
+              </h2>
               <p className="leading-relaxed">
-                Wenn Sie über das Kontaktformular Zugang zur Community anfragen, verarbeiten wir
-                Ihre Angaben (z. B. Name, E-Mail-Adresse und Ihre Nachricht) ausschließlich zur
-                Prüfung und Beantwortung Ihrer Anfrage. Eine Weitergabe an Dritte erfolgt nicht.
-                Die Daten werden gelöscht, sobald sie nicht mehr benötigt werden, sofern keine
-                gesetzliche Aufbewahrungspflicht besteht. Ihre Einwilligung können Sie jederzeit
-                per E-Mail an{" "}
+                Community, Live-Treffen und kuratiertes Matching befinden sich in Vorbereitung.
+                Wenn Sie sich über das Kontaktformular dafür vormerken, verarbeiten wir Ihre
+                Angaben (Name, E-Mail-Adresse und Ihre Nachricht) ausschließlich, um Sie zu
+                benachrichtigen, sobald das jeweilige Angebot startet, und um Ihre Nachricht zu
+                beantworten. Es wird kein Nutzerprofil angelegt und kein Newsletter versendet;
+                eine Weitergabe an Dritte erfolgt nicht (Versand der Formular-E-Mail über Resend,
+                siehe Abschnitt 4). Die Daten werden gelöscht, sobald sie nicht mehr benötigt
+                werden, sofern keine gesetzliche Aufbewahrungspflicht besteht. Ihre Einwilligung
+                können Sie jederzeit per E-Mail an{" "}
                 <a href="mailto:monika.oechtering@googlemail.com" className="text-brand-teal hover:underline">
                   monika.oechtering@googlemail.com
                 </a>{" "}
@@ -154,10 +159,13 @@ export default function DatenschutzPage() {
                 </span>
               </h2>
               <p className="leading-relaxed">
-                Die Auswertung des Fragebogens erfolgt mit Unterstützung der KI von{" "}
-                <strong>Anthropic, PBC</strong> (San Francisco, USA). Die Übertragung erfolgt
-                ausschließlich mit ausdrücklicher Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
-                Ergebnisse werden nur im persönlichen Bereich gespeichert.{" "}
+                <strong>Derzeit:</strong> Der Fragebogen auf der Seite „Analyse“ wird
+                ausschließlich lokal in Ihrem Browser ausgewertet. Ihre Antworten werden weder an
+                uns noch an Dritte übertragen und nicht gespeichert.{" "}
+                <strong>Geplant:</strong> Eine spätere KI-gestützte Auswertung (z. B. mit
+                Unterstützung von <strong>Anthropic, PBC</strong>, San Francisco, USA) würde nur
+                mit Ihrer ausdrücklichen Einwilligung erfolgen (Art. 6 Abs. 1 lit. a DSGVO); diese
+                Erklärung wird vorher entsprechend aktualisiert.{" "}
                 <a href="https://www.anthropic.com/legal/privacy" target="_blank"
                   rel="noopener noreferrer" className="text-brand-teal hover:underline">
                   Datenschutzerklärung Anthropic
@@ -166,12 +174,12 @@ export default function DatenschutzPage() {
             </div>
 
             <div className="space-y-3">
-              <h2 className="text-lg font-semibold text-ink-900">10. Deine Rechte</h2>
-              <p className="leading-relaxed">Du hast jederzeit das Recht auf:</p>
+              <h2 className="text-lg font-semibold text-ink-900">10. Ihre Rechte</h2>
+              <p className="leading-relaxed">Sie haben jederzeit das Recht auf:</p>
               <ul className="list-disc space-y-1 pl-6 leading-relaxed">
                 <li>Auskunft über gespeicherte Daten (Art. 15 DSGVO)</li>
                 <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
-                <li>Löschung deiner Daten (Art. 17 DSGVO)</li>
+                <li>Löschung Ihrer Daten (Art. 17 DSGVO)</li>
                 <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
                 <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
                 <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
@@ -195,7 +203,7 @@ export default function DatenschutzPage() {
             </div>
 
             <p className="text-xs text-ink-300">
-              Stand: Juli 2026 · Diese Erklärung wird bei Änderungen der Datenverarbeitung aktualisiert.
+              Stand: September 2026 · Diese Erklärung wird bei Änderungen der Datenverarbeitung aktualisiert.
             </p>
           </div>
         </div>

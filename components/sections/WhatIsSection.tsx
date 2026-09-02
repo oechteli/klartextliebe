@@ -26,8 +26,8 @@ export function WhatIsSection() {
             <div className="mt-6 flex flex-wrap gap-2">
               <Badge tone="turquoise">YouTube-Kanal</Badge>
               <Badge tone="brand">Singlecoaching</Badge>
-              <Badge tone="pink">Community (geplant)</Badge>
-              <Badge tone="orange">Kuratiertes Matching (geplant)</Badge>
+              <Badge tone="soon">Community (in Vorbereitung)</Badge>
+              <Badge tone="soon">Kuratiertes Matching (in Vorbereitung)</Badge>
             </div>
           </div>
 
@@ -38,7 +38,7 @@ export function WhatIsSection() {
                   ["Orientierung", "statt endloser Auswahl ohne Verbindung"],
                   ["Klare Kommunikation", "statt Rätselraten und Spielchen"],
                   ["Geistige Resonanz", "statt oberflächlichem Swipen"],
-                  ["Echte Begegnung", "online und in Städten"],
+                  ["Echte Begegnung", "online und in Städten (in Vorbereitung)"],
                 ].map(([t, s]) => (
                   <div
                     key={t}

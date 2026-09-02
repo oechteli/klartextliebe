@@ -12,7 +12,9 @@ import { Button } from "@/components/ui/Button";
  * zurück – so geht nie eine Anfrage verloren.
  *
  * Vorbelegung: liest ?thema=… aus der URL (kommt von den Buchungs-Buttons)
- * und setzt Anliegen + Nachricht entsprechend.
+ * und setzt Anliegen + Nachricht entsprechend. Zusätzlich kann eine Seite
+ * das Formular direkt einbetten und per Props vorbelegen (Vormerkungen für
+ * Community, Events, Matching – seit 02.09.2026).
  */
 
 const EMPFAENGER = "info@klartext-liebe.de";
@@ -20,6 +22,9 @@ const EMPFAENGER = "info@klartext-liebe.de";
 const ANLIEGEN_OPTIONEN = [
   "Kostenloses Erstgespräch",
   "Coaching",
+  "Vormerkung Community",
+  "Vormerkung Events",
+  "Vormerkung Matching",
   "Community-Zugang anfragen",
   "VIP-Matchklarheit anfragen",
   "Events",
@@ -27,7 +32,12 @@ const ANLIEGEN_OPTIONEN = [
   "Sonstiges",
 ] as const;
 
+export type Anliegen = (typeof ANLIEGEN_OPTIONEN)[number];
+
 function anliegenAusThema(thema: string): string {
+  if (/vormerk.*community/i.test(thema)) return "Vormerkung Community";
+  if (/vormerk.*event/i.test(thema)) return "Vormerkung Events";
+  if (/vormerk.*match/i.test(thema)) return "Vormerkung Matching";
   if (/erstgespräch/i.test(thema)) return "Kostenloses Erstgespräch";
   if (/community/i.test(thema)) return "Community-Zugang anfragen";
   if (/vip/i.test(thema)) return "VIP-Matchklarheit anfragen";
@@ -42,13 +52,29 @@ const labelClass = "block text-sm font-medium text-ink-700 mb-1.5";
 
 type Ergebnis = "gesendet" | "mailto";
 
-export function ContactForm() {
+interface ContactFormProps {
+  /** Anliegen vorbelegen (z. B. „Vormerkung Community") */
+  standardAnliegen?: Anliegen;
+  /** Nachricht vorbelegen */
+  standardNachricht?: string;
+  /** Beschriftung des Absende-Buttons */
+  buttonText?: string;
+  /** Text der Erfolgsmeldung */
+  erfolgText?: string;
+}
+
+export function ContactForm({
+  standardAnliegen,
+  standardNachricht,
+  buttonText = "Nachricht senden",
+  erfolgText = "Deine Anfrage ist bei uns angekommen. Wir melden uns in der Regel innerhalb von 24 Stunden bei dir.",
+}: ContactFormProps = {}) {
   const [ergebnis, setErgebnis] = useState<Ergebnis | null>(null);
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState<string>(standardAnliegen ?? "");
+  const [message, setMessage] = useState(standardNachricht ?? "");
   const [firma, setFirma] = useState(""); // Honeypot – bleibt für Menschen leer
 
   // ?thema=… aus der URL übernehmen (z. B. „Buchung Singlecoaching 1:1 (149 €)“)
@@ -104,10 +130,7 @@ export function ContactForm() {
           ✓
         </div>
         <h3 className="text-xl font-semibold text-ink-900">Danke für deine Nachricht!</h3>
-        <p className="mt-2 text-sm text-ink-500">
-          Deine Anfrage ist bei uns angekommen. Wir melden uns in der Regel innerhalb
-          von 24 Stunden bei dir.
-        </p>
+        <p className="mt-2 text-sm text-ink-500">{erfolgText}</p>
       </div>
     );
   }
@@ -137,7 +160,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="relative space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label className={labelClass} htmlFor="c-name">
@@ -147,6 +170,7 @@ export function ContactForm() {
             id="c-name"
             name="name"
             required
+            autoComplete="name"
             className={inputClass}
             placeholder="Dein Name"
             value={name}
@@ -162,6 +186,7 @@ export function ContactForm() {
             name="email"
             type="email"
             required
+            autoComplete="email"
             className={inputClass}
             placeholder="du@beispiel.de"
             value={email}
@@ -232,7 +257,7 @@ export function ContactForm() {
       </label>
 
       <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={loading}>
-        {loading ? "Wird gesendet …" : "Nachricht senden"}
+        {loading ? "Wird gesendet …" : buttonText}
       </Button>
       <p className="text-xs text-ink-400">
         Wir antworten in der Regel innerhalb von 24 Stunden. Keine Werbung, kein Spam.

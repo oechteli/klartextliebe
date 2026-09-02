@@ -63,13 +63,13 @@ const steps = [
   },
   {
     step: "2",
-    title: "Persönliches Matching & Coaching",
-    desc: "Kein anonymer Algorithmus, sondern von Hand ausgewählte Begegnungen plus Begleitung, damit sie gelingen.",
+    title: "Persönliches Coaching",
+    desc: "Wir schauen auf deine Muster, deine Kommunikation und deine Auswahl – damit Begegnungen gelingen, wenn sie kommen.",
   },
   {
     step: "3",
-    title: "Echte Verbindung",
-    desc: "Du triffst Menschen auf deiner Wellenlänge und gehst bewusster in Beziehung.",
+    title: "Bewusster in Verbindung",
+    desc: "Du erkennst schneller, wer zu dir passt, und gehst klarer in Beziehung. Ein kuratiertes Matching ist in Vorbereitung.",
   },
 ];
 
@@ -209,17 +209,19 @@ export default function KlugeKoepfePage() {
           <div className="rounded-3xl bg-brand-soft p-8 shadow-soft sm:p-12">
             <div className="grid gap-8 lg:grid-cols-[1.3fr,1fr] lg:items-center">
               <div>
+                {/* Archiv: „Täglich neu auf YouTube" / „Jeden Tag ein ehrlicher Impuls" –
+                    ein täglicher Rhythmus ist nicht belegt, darum seit 02.09.2026 „regelmäßig". */}
                 <Badge tone="pink" className="mb-4">
-                  Täglich neu auf YouTube
+                  Auf YouTube
                 </Badge>
                 <h2 className="text-2xl font-bold text-ink-900 sm:text-3xl">
-                  Jeden Tag ein ehrlicher Impuls für deine Partnersuche
+                  Ehrliche Impulse für deine Partnersuche
                 </h2>
                 <p className="mt-4 text-ink-500">
-                  Auf dem Klartext-Liebe-Kanal bekommst du täglich konkrete
-                  Beratung: wie du klüger kommunizierst, dich selbstbewusster
-                  zeigst und leichter Menschen auf deiner Wellenlänge findest.
-                  Ohne Flirt-Tricks, ohne Spielchen.
+                  Auf dem Klartext-Liebe-Kanal bekommst du konkrete Beratung:
+                  wie du klüger kommunizierst, dich selbstbewusster zeigst und
+                  leichter Menschen auf deiner Wellenlänge findest. Ohne
+                  Flirt-Tricks, ohne Spielchen.
                 </p>
                 <div className="mt-6">
                   <Button href={YOUTUBE_URL} variant="secondary">
@@ -227,14 +229,20 @@ export default function KlugeKoepfePage() {
                   </Button>
                 </div>
               </div>
-              <div className="aspect-video w-full overflow-hidden rounded-2xl bg-white/70 shadow-soft">
+              <a
+                href={YOUTUBE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube-Kanal @klartextliebe öffnen"
+                className="group block aspect-video w-full overflow-hidden rounded-2xl bg-white/70 shadow-soft"
+              >
                 <div className="flex h-full flex-col items-center justify-center gap-2 text-center">
-                  <span className="grid h-14 w-14 place-items-center rounded-full bg-white text-2xl text-brand-pink shadow-soft">
+                  <span className="grid h-14 w-14 place-items-center rounded-full bg-white text-2xl text-brand-pink shadow-soft transition-transform group-hover:scale-110">
                     ▶
                   </span>
-                  <span className="text-sm text-ink-400">Neueste Folge folgt</span>
+                  <span className="text-sm text-ink-500">Zum Kanal @klartextliebe ↗</span>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

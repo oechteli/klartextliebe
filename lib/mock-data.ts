@@ -134,19 +134,21 @@ export const solutions: FeatureItem[] = [
     description: "Werte, Muster und Resonanz sichtbar machen.",
     icon: "🧠",
   },
+  // Die drei folgenden Bausteine sind in Vorbereitung (Stand 02.09.2026) und
+  // werden auf der Website so gekennzeichnet – nichts davon läuft heute.
   {
-    title: "Community für Tiefgang",
-    description: "Austausch mit reflektierten Singles auf Augenhöhe.",
+    title: "Community für Tiefgang (in Vorbereitung)",
+    description: "Geplant: Austausch mit reflektierten Singles auf Augenhöhe.",
     icon: "🤝",
   },
   {
-    title: "Kuratierte Matchvorschläge",
-    description: "Orientierung statt endlosem Swipen – werte- und resonanzbasiert.",
+    title: "Kuratierte Matchvorschläge (in Vorbereitung)",
+    description: "Geplant: Orientierung statt endlosem Swipen – werte- und resonanzbasiert.",
     icon: "✨",
   },
   {
-    title: "Deep-Talk-Events",
-    description: "Echte Begegnungen online und in Städten.",
+    title: "Deep-Talk-Events (in Vorbereitung)",
+    description: "Geplant: echte Begegnungen online und in Städten.",
     icon: "🏙️",
   },
   {

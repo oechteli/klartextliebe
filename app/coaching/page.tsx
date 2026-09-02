@@ -4,12 +4,13 @@ import { PageHero } from "@/components/layout/PageHero";
 import { OfferSection } from "@/components/sections/OfferSection";
 import { DiscoveryCallBanner } from "@/components/sections/DiscoveryCallBanner";
 import { Card } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
 
 export const metadata: Metadata = {
-  title: "Coaching",
+  title: "Coaching – Formate, Ablauf & Preise",
   alternates: { canonical: "/coaching" },
   description:
-    "Singlecoaching, Profil- & Chat-Analyse, Dating-Klarheit Paket und VIP-Matchklarheit für reflektierte Singles mit Anspruch.",
+    "Singlecoaching bei Klartext Liebe: schriftliche Profil- & Chat-Analyse (79 €), Einzelgespräch (149 €), Dating-Klarheit-Programm (399 €) und Intensivbegleitung (799 €). Ablauf, Dauer und Buchung transparent erklärt.",
 };
 
 const faqs = [
@@ -18,8 +19,8 @@ const faqs = [
     a: "Das kostenlose 20-Minuten-Gespräch ist ein unverbindliches Kennenlernen. Wir schauen gemeinsam, wo du gerade stehst, was dich aufhält und ob Coaching sinnvoll ist. Kein Druck, kein Verkaufsgespräch.",
   },
   {
-    q: "Welches Paket ist das Richtige für mich?",
-    a: "Wenn du schnell Feedback zu deinem Profil oder einer Konversation brauchst, ist die Profil- & Chat-Analyse ein guter Einstieg. Für tiefgehende Begleitung empfehle ich das Singlecoaching 1:1 oder das Dating-Klarheit-Paket. Im Erstgespräch finden wir das gemeinsam heraus.",
+    q: "Welches Format ist das Richtige für mich?",
+    a: "Wenn du schnell Feedback zu deinem Profil oder einer Konversation brauchst, ist die schriftliche Profil- & Chat-Analyse ein guter Einstieg. Für ein konkretes Thema passt das Einzelgespräch, für Muster, die sich wiederholen, das Dating-Klarheit-Programm. Im Erstgespräch finden wir das gemeinsam heraus.",
   },
   {
     q: "Ist das Coaching auch für Männer?",
@@ -35,7 +36,7 @@ const faqs = [
   },
   {
     q: "Gibt es eine Garantie, dass ich jemanden finde?",
-    a: "Nein, und das wäre unserios. Wir bieten Orientierung, bessere Passung und bewusstere Partnerwahl, keine Erfolgsgarantie.",
+    a: "Nein, und das wäre unseriös. Wir bieten Orientierung, bessere Passung und bewusstere Partnerwahl, keine Erfolgsgarantie.",
   },
 ];
 
@@ -53,17 +54,62 @@ const steps = [
   {
     step: "1",
     title: "Kostenloses Erstgespräch",
-    desc: "20 Minuten kennenlernen, unverbindlich. Wir klären, was dich aufhält und welches Angebot passt.",
+    desc: "20 Minuten kennenlernen, unverbindlich. Wir klären, was dich aufhält und welches Format passt.",
   },
   {
     step: "2",
     title: "Persönliche Begleitung",
-    desc: "Im Coaching oder Analyse-Paket schauen wir gemeinsam hin: Muster, Kommunikation, Auswahl.",
+    desc: "Im Gespräch oder in der schriftlichen Analyse schauen wir gemeinsam hin: Muster, Kommunikation, Auswahl.",
   },
   {
     step: "3",
     title: "Klarheit & Umsetzung",
     desc: "Du gehst mit konkreten Erkenntnissen und nächsten Schritten in deinen Alltag.",
+  },
+];
+
+/**
+ * Leistungsübersicht je Format (seit 02.09.2026).
+ * Preise sind die bestehenden Preise der Website – nichts Neues erfunden.
+ * Dauer/Umfang nur dort, wo sie bereits auf der Website standen.
+ */
+const formate = [
+  {
+    format: "Schriftliche Analyse",
+    name: "Profil- & Chat-Analyse",
+    fuerWen: "Wenn Gespräche immer wieder abbrechen oder dein Profil nicht die Richtigen anzieht.",
+    ablauf: "Du reichst dein Datingprofil oder einen anonymisierten Chatverlauf ein. Du bekommst schriftliches Feedback: was gut wirkt, wo es kippt, was du konkret ändern kannst.",
+    dauer: "Schriftlich, ohne Termin",
+    preis: "79 €",
+    thema: "Buchung Profil & Chat-Analyse (79 €)",
+  },
+  {
+    format: "Einzelgespräch",
+    name: "Singlecoaching 1:1",
+    fuerWen: "Ein konkretes Thema: Kennenlernphase, Kommunikation, Selbstwert, Partnerwahl.",
+    ablauf: "60 Minuten persönliches Gespräch mit Monika, online per Video. Fokus auf dein Thema, am Ende klare nächste Schritte.",
+    dauer: "1 × 60 Minuten",
+    preis: "149 €",
+    thema: "Buchung Singlecoaching 1:1 (149 €)",
+    empfohlen: true,
+  },
+  {
+    format: "Programm",
+    name: "Dating-Klarheit-Paket",
+    fuerWen: "Wenn sich Muster wiederholen und du sie wirklich verändern willst.",
+    ablauf: "Drei Coachinggespräche, verteilt über mehrere Wochen: Muster verstehen, klarer kommunizieren, bewusster auswählen – mit rotem Faden zwischen den Terminen.",
+    dauer: "3 Gespräche über mehrere Wochen",
+    preis: "399 €",
+    thema: "Buchung Dating-Klarheit-Paket (399 €)",
+  },
+  {
+    format: "Intensivbegleitung",
+    name: "VIP-Matchklarheit",
+    fuerWen: "Für reflektierte Singles mit Anspruch, die alles in einer Begleitung wollen.",
+    ablauf: "Persönlichkeits- & Resonanzanalyse, Profil- und Chatfeedback und eine individuelle Datingstrategie – Gespräche nach Vereinbarung. Umfang klären wir im Erstgespräch.",
+    dauer: "Mehrere Wochen, individuell",
+    preis: "799 €",
+    thema: "Buchung VIP-Matchklarheit (799 €)",
   },
 ];
 
@@ -77,7 +123,7 @@ export default function CoachingPage() {
       <PageHero
         eyebrow="Coaching"
         title="Begleitung für bewusstere Partnersuche"
-        subtitle="Vier Angebote, vom schnellen Feedback bis zur intensiven Begleitung. Persönlich, klar und ohne manipulative Datingtricks."
+        subtitle="Vier Formate, vom schnellen schriftlichen Feedback bis zur intensiven Begleitung. Persönlich, klar und ohne manipulative Datingtricks – Preise und Ablauf stehen offen hier."
       />
 
       <DiscoveryCallBanner />
@@ -103,19 +149,70 @@ export default function CoachingPage() {
         </div>
       </section>
 
-      <OfferSection withHeading={false} />
-
-      <section className="section pt-0">
+      {/* Leistungsübersicht je Format */}
+      <section className="section pb-0">
         <div className="container-kl">
-          <div className="rounded-2xl border border-brand-teal/20 bg-brand-teal/5 p-6 text-sm text-ink-600">
-            <strong className="text-ink-800">So läuft die Buchung ab:</strong>{" "}
-            Klick auf den Button, kurze Nachricht über das Kontaktformular. Monika
-            meldet sich persönlich innerhalb von 24 Stunden mit den nächsten
-            Schritten und dem Zahlungslink.
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="eyebrow mb-3">Formate im Überblick</p>
+            <h2 className="text-3xl font-bold text-ink-900 sm:text-4xl">
+              Welches Format passt zu dir?
+            </h2>
+            <p className="mt-4 text-ink-500">
+              Jedes Format hat einen klaren Zweck, eine klare Dauer und einen
+              klaren Preis. Buchung immer persönlich über das Kontaktformular –
+              bewusst ohne Sofortkauf.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 lg:grid-cols-2">
+            {formate.map((f) => (
+              <Card
+                key={f.name}
+                highlight={f.empfohlen}
+                className="flex flex-col !p-6 sm:!p-7"
+              >
+                <div className="flex flex-wrap items-center gap-2">
+                  <Badge tone="brand">{f.format}</Badge>
+                  {f.empfohlen && <Badge tone="turquoise">Guter Einstieg</Badge>}
+                </div>
+                <div className="mt-3 flex items-baseline justify-between gap-4">
+                  <h3 className="text-lg font-semibold text-ink-900">{f.name}</h3>
+                  <p className="shrink-0 text-2xl font-bold text-ink-900">{f.preis}</p>
+                </div>
+                <dl className="mt-4 space-y-3 text-sm">
+                  <div>
+                    <dt className="font-semibold text-ink-800">Für wen</dt>
+                    <dd className="mt-0.5 text-ink-500">{f.fuerWen}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-semibold text-ink-800">Ablauf</dt>
+                    <dd className="mt-0.5 text-ink-500">{f.ablauf}</dd>
+                  </div>
+                  <div className="flex flex-wrap gap-x-6 gap-y-1">
+                    <div>
+                      <dt className="inline font-semibold text-ink-800">Dauer: </dt>
+                      <dd className="inline text-ink-500">{f.dauer}</dd>
+                    </div>
+                    <div>
+                      <dt className="inline font-semibold text-ink-800">Buchung: </dt>
+                      <dd className="inline text-ink-500">per Kontaktformular</dd>
+                    </div>
+                  </div>
+                </dl>
+                <div className="mt-5">
+                  <Link
+                    href={`/kontakt?thema=${encodeURIComponent(f.thema)}`}
+                    className="text-sm font-semibold text-brand-violet underline-offset-4 hover:underline"
+                  >
+                    {f.name} anfragen →
+                  </Link>
+                </div>
+              </Card>
+            ))}
           </div>
 
           <div className="mt-6 rounded-2xl border border-brand-violet/20 bg-brand-violet/5 p-6 text-sm text-ink-600">
-            <strong className="text-ink-800">Lieber flexibel statt Programm?</strong>{" "}
+            <strong className="text-ink-800">Lieber einzelne Sessions statt Programm?</strong>{" "}
             Beim{" "}
             <Link
               href="/persoenliches-coaching"
@@ -123,8 +220,9 @@ export default function CoachingPage() {
             >
               Persönlichen Coaching
             </Link>{" "}
-            buchst du einzelne 60-Minuten-Sessions mit Monika – ohne
-            Mitgliedschaft, ohne Abo. Oder du{" "}
+            buchst du 60-Minuten-Sessions mit Monika per Chat, Telefon oder
+            Video – einzeln (89 €) oder im 3er- (219 €) bzw. 10er-Paket (649 €),
+            ohne Mitgliedschaft, ohne Abo. Oder du{" "}
             <Link
               href="/starte-jetzt"
               className="font-medium text-brand-violet underline underline-offset-2"
@@ -132,6 +230,31 @@ export default function CoachingPage() {
               startest kostenlos mit dem KI-Coach
             </Link>
             .
+          </div>
+        </div>
+      </section>
+
+      <OfferSection withHeading={false} />
+
+      <section className="section pt-0">
+        <div className="container-kl">
+          <div className="rounded-2xl border border-brand-teal/20 bg-brand-teal/5 p-6 text-sm text-ink-600">
+            <strong className="text-ink-800">So läuft die Buchung ab:</strong>{" "}
+            Klick auf den Button, kurze Nachricht über das Kontaktformular. Monika
+            meldet sich persönlich, in der Regel innerhalb von 24 Stunden, mit
+            den nächsten Schritten und dem Zahlungslink. Der Vertrag kommt erst
+            mit ihrer Bestätigung zustande – keine automatische Sofortbuchung,
+            keine Verlängerung.
+          </div>
+
+          <div className="mt-6 rounded-2xl border border-cream-200 bg-white p-6 text-sm text-ink-600">
+            <strong className="text-ink-800">Coaching ist keine Therapie.</strong>{" "}
+            Wir arbeiten an Dating, Kommunikation und Selbstwert im Alltag. Bei
+            tieferliegenden seelischen Belastungen sagen wir das offen und
+            empfehlen ärztliche oder psychotherapeutische Hilfe. In einer akuten
+            Krise: Telefonseelsorge <strong>0800 111 0 111</strong> oder{" "}
+            <strong>0800 111 0 222</strong> (kostenlos, rund um die Uhr), in
+            Notfällen die 112.
           </div>
 
           <h2 className="mt-16 text-2xl font-bold text-ink-900">
@@ -158,7 +281,7 @@ export default function CoachingPage() {
               href="/so-funktionierts"
               className="font-medium text-brand-violet underline underline-offset-2"
             >
-              So funktioniert's
+              So funktioniert&apos;s
             </Link>
             .
           </p>

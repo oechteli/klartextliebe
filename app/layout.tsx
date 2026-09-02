@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s · Klartext Liebe",
   },
   description:
-    "Klartext Liebe verbindet Singlecoaching, Datingberatung, Persönlichkeitsanalyse, Community und kuratierte Begegnungen für reflektierte Singles, Akademiker und Menschen mit Tiefgang.",
+    "Klartext Liebe: Singlecoaching, Datingberatung und Persönlichkeitsanalyse für reflektierte Singles, Akademiker und Menschen mit Tiefgang. Ehrlich, ohne Datingtricks, ohne Erfolgsgarantie. Community und kuratiertes Matching in Vorbereitung.",
   alternates: { canonical: "/" },
   keywords: [
     "Singlecoaching",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "Klartext Liebe",
     title: "Klartext Liebe – Dating für reflektierte Singles mit Tiefe",
     description:
-      "Singlecoaching, Persönlichkeitsanalyse, Community und kuratierte Begegnungen für Menschen, die mehr suchen als Smalltalk und Swipen.",
+      "Singlecoaching und Persönlichkeitsanalyse für Menschen, die mehr suchen als Smalltalk und Swipen. Orientierung statt Garantie.",
     images: [OG_IMAGE],
   },
   twitter: {
@@ -83,7 +83,24 @@ const jsonLd = {
       url: SITE_URL,
       logo: `${SITE_URL}/brand/logo.jpg`,
       description:
-        "Singlecoaching, Datingberatung, Persönlichkeitsanalyse und kuratierte Begegnungen für reflektierte Singles.",
+        "Singlecoaching, Datingberatung und Persönlichkeitsanalyse für reflektierte Singles. Orientierung statt Garantie.",
+      founder: { "@id": `${SITE_URL}/#person` },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Karlsruhe",
+        addressCountry: "DE",
+      },
+      sameAs: ["https://youtube.com/@klartextliebe"],
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
+      name: "Monika Oechtering-Sorg",
+      alternateName: "Monika Oechtering",
+      jobTitle: "Singlecoach & Datingberaterin",
+      url: `${SITE_URL}/ueber-mich`,
+      image: `${SITE_URL}/brand/monika.png`,
+      worksFor: { "@id": `${SITE_URL}/#organization` },
       sameAs: ["https://youtube.com/@klartextliebe"],
     },
     {

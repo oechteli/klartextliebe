@@ -41,9 +41,11 @@ export function OfferSection({
                 interactive
                 className="flex flex-col"
               >
+                {/* Archiv: Badge hieß „Beliebt" – ohne Verkaufszahlen nicht belegbar,
+                    darum seit 02.09.2026 „Empfehlung". */}
                 {offer.highlight && (
                   <Badge tone="brand" className="absolute -top-3 left-6">
-                    Beliebt
+                    Empfehlung
                   </Badge>
                 )}
                 <h3 className="text-lg font-semibold text-ink-900">
@@ -77,7 +79,7 @@ export function OfferSection({
                     {offer.cta}
                   </Button>
                   <p className="mt-2 text-center text-xs text-ink-400">
-                    Anfrage per Kontaktformular · Antwort in 24 h
+                    Anfrage per Kontaktformular · Antwort in der Regel innerhalb von 24 h
                   </p>
                 </div>
               </Card>

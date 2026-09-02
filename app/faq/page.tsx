@@ -22,7 +22,7 @@ const gruppen: { titel: string; fragen: Faq[] }[] = [
     fragen: [
       {
         q: "Was genau ist Klartext Liebe?",
-        a: "Klartext Liebe verbindet Singlecoaching, Datingberatung, Profil- und Chat-Analyse, eine Community und kuratiertes Matching – für reflektierte Singles, die mehr suchen als Swipen und Smalltalk. Der Ansatz: Klarheit, Selbstwert und ehrliche Kommunikation statt Dating-Tricks.",
+        a: "Klartext Liebe ist Singlecoaching und Datingberatung mit schriftlicher Profil- und Chat-Analyse – für reflektierte Singles, die mehr suchen als Swipen und Smalltalk. Der Ansatz: Klarheit, Selbstwert und ehrliche Kommunikation statt Dating-Tricks. Community, Live-Treffen und kuratiertes Matching sind in Vorbereitung und starten mit unserer Lernplattform.",
       },
       {
         q: "Wie läuft die Zusammenarbeit ab?",
@@ -51,7 +51,7 @@ const gruppen: { titel: string; fragen: Faq[] }[] = [
       },
       {
         q: "Ist das nicht teuer?",
-        a: "Zur Einordnung: Seriöses Einzelcoaching kostet in Deutschland üblicherweise zwischen 100 und 200 € pro Sitzung, Tagesformate oft deutlich mehr. Klartext Liebe liegt bewusst im mittleren Bereich – und du startest klein: Erstgespräch kostenlos, Analyse ab 79 €. Du musst kein teures Paket kaufen, um herauszufinden, ob es dir hilft.",
+        a: "Zur Einordnung: Einzelcoaching zu Beziehungs- und Datingthemen liegt bei vielen Anbieterinnen und Anbietern in Deutschland im Bereich von etwa 90 bis 150 € pro Stunde, Intensivprogramme deutlich darüber. Klartext Liebe bewegt sich in diesem Rahmen – und du startest klein: Erstgespräch kostenlos, Analyse ab 79 €. Du musst kein teures Paket kaufen, um herauszufinden, ob es dir hilft.",
       },
       {
         q: "Wie buche und bezahle ich?",
@@ -80,7 +80,7 @@ const gruppen: { titel: string; fragen: Faq[] }[] = [
       },
       {
         q: "Was unterscheidet euch von Dating-Apps und Partnervermittlungen?",
-        a: "Apps liefern Kontakte, Partnervermittlungen liefern Vorschläge – beides scheitert oft daran, wie danach kommuniziert und ausgewählt wird. Klartext Liebe setzt genau dort an: an dir, deiner Wirkung und deinen Entscheidungen. Das kuratierte Matching ergänzt das für Mitglieder, ersetzt aber nicht die eigentliche Arbeit.",
+        a: "Apps liefern Kontakte, Partnervermittlungen liefern Vorschläge – beides scheitert oft daran, wie danach kommuniziert und ausgewählt wird. Klartext Liebe setzt genau dort an: an dir, deiner Wirkung und deinen Entscheidungen. Ein kuratiertes Matching ist in Vorbereitung; es soll die Arbeit an dir ergänzen, nicht ersetzen.",
       },
       {
         q: "Was unterscheidet euch von typischen Flirt- und Pick-up-Coaches?",
@@ -96,8 +96,12 @@ const gruppen: { titel: string; fragen: Faq[] }[] = [
     titel: "Community, Analyse & Matching",
     fragen: [
       {
-        q: "Was bietet die Community?",
-        a: "Einen geschützten Raum für reflektierte Singles: ehrlicher Austausch auf Augenhöhe, Deep-Talk-Impulse, Live-Fragerunden und Stadtgruppen. Der Zugang läuft auf Anfrage über das Kontaktformular – so bleibt die Qualität des Austauschs hoch.",
+        q: "Gibt es die Community schon?",
+        a: "Noch nicht. Geplant ist ein geschützter Raum für reflektierte Singles: ehrlicher Austausch auf Augenhöhe, Deep-Talk-Impulse, Live-Fragerunden und Stadtgruppen. Die Community startet mit unserer Lernplattform; bis dahin kannst du dich auf der Community-Seite unverbindlich vormerken.",
+      },
+      {
+        q: "Wann finden Live-Treffen statt?",
+        a: "Termine gibt es noch keine. Welche Formate zuerst starten – online oder vor Ort – hängt davon ab, wer sich vormerkt. Sobald ein erster Termin feststeht, melden wir uns bei allen Vorgemerkten persönlich.",
       },
       {
         q: "Wie funktioniert die Profil- & Chat-Analyse?",
@@ -105,7 +109,7 @@ const gruppen: { titel: string; fragen: Faq[] }[] = [
       },
       {
         q: "Was ist das kuratierte Matching?",
-        a: "Keine Swipe-Plattform: Profile werden persönlich nach Tiefe bewertet – Werte, Lebensphase, Kommunikationsstil, Beziehungsziel – und passende Menschen einander vorgestellt. Es ist Teil der VIP-Matchklarheit und bewusst klein und persönlich gehalten.",
+        a: "Der Plan: keine Swipe-Plattform, sondern Profile, die persönlich nach Tiefe bewertet werden – Werte, Lebensphase, Kommunikationsstil, Beziehungsziel – und passende Menschen, die einander vorgestellt werden. Das Matching ist in Vorbereitung und startet erst, wenn genug Menschen vorgemerkt sind, damit es ehrlich funktioniert. Die VIP-Matchklarheit ist bis dahin ein reines Coaching-Paket.",
       },
     ],
   },

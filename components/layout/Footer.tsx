@@ -13,9 +13,9 @@ const columns = [
       { href: "/persoenliches-coaching", label: "Persönliches Coaching" },
       { href: "/so-funktionierts", label: "So funktioniert's" },
       { href: "/analyse", label: "Persönlichkeitsanalyse" },
-      { href: "/community", label: "Community" },
-      { href: "/marktplatz", label: "Marktplatz" },
-      { href: "/events", label: "Events" },
+      { href: "/community", label: "Community (in Vorbereitung)" },
+      { href: "/marktplatz", label: "Matching (in Vorbereitung)" },
+      { href: "/events", label: "Events (in Vorbereitung)" },
     ],
   },
   {
@@ -100,7 +100,23 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-cream-200 pt-6 sm:flex-row sm:items-center">
+        {/* Abgrenzung + Krisenhinweis (seit 02.09.2026 auf jeder Seite) */}
+        <div className="mt-12 rounded-2xl border border-cream-200 bg-white/70 p-5 text-xs leading-relaxed text-ink-500">
+          <strong className="text-ink-700">Wichtig:</strong> Coaching ist keine
+          Psychotherapie und ersetzt keine ärztliche oder therapeutische
+          Behandlung. Wenn es dir akut schlecht geht, ist die Telefonseelsorge
+          rund um die Uhr kostenlos für dich da:{" "}
+          <a href="tel:08001110111" className="font-semibold text-ink-700 hover:text-brand-violet">
+            0800 111 0 111
+          </a>{" "}
+          oder{" "}
+          <a href="tel:08001110222" className="font-semibold text-ink-700 hover:text-brand-violet">
+            0800 111 0 222
+          </a>
+          . In Notfällen wähle die 112.
+        </div>
+
+        <div className="mt-6 flex flex-col items-start justify-between gap-4 border-t border-cream-200 pt-6 sm:flex-row sm:items-center">
           <p className="text-xs text-ink-400">
             © {new Date().getFullYear()} Klartext Liebe. Alle Rechte vorbehalten.
           </p>

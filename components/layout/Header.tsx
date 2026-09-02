@@ -24,9 +24,9 @@ const primaryItems = [
 const moreItems = [
   { href: "/persoenliches-coaching", label: "Persönliches Coaching" },
   { href: "/analyse", label: "Analyse" },
-  { href: "/community", label: "Community" },
-  { href: "/marktplatz", label: "Marktplatz" },
-  { href: "/events", label: "Events" },
+  { href: "/community", label: "Community (bald)" },
+  { href: "/marktplatz", label: "Matching (bald)" },
+  { href: "/events", label: "Events (bald)" },
   { href: "/youtube", label: "YouTube" },
   { href: "/kluge-koepfe", label: "Sapiosexuell?" },
 ];
@@ -86,6 +86,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={isActive(item.href) ? "page" : undefined}
               className={[
                 "rounded-full px-3 py-2 text-sm font-medium transition-colors",
                 isActive(item.href)
@@ -171,7 +172,13 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-medium text-ink-700 hover:bg-cream-100"
+                aria-current={isActive(item.href) ? "page" : undefined}
+                className={[
+                  "rounded-lg px-3 py-3 text-base font-medium",
+                  isActive(item.href)
+                    ? "bg-brand-violet/10 text-brand-violet"
+                    : "text-ink-700 hover:bg-cream-100",
+                ].join(" ")}
               >
                 {item.label}
               </Link>
@@ -184,7 +191,13 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-medium text-ink-700 hover:bg-cream-100"
+                aria-current={isActive(item.href) ? "page" : undefined}
+                className={[
+                  "rounded-lg px-3 py-3 text-base font-medium",
+                  isActive(item.href)
+                    ? "bg-brand-violet/10 text-brand-violet"
+                    : "text-ink-700 hover:bg-cream-100",
+                ].join(" ")}
               >
                 {item.label}
               </Link>

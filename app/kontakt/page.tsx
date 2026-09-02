@@ -16,7 +16,7 @@ export default function KontaktPage() {
       <PageHero
         eyebrow="Kontakt"
         title="Lass uns ins Gespräch kommen"
-        subtitle="Ob Coaching, Community, VIP-Anfrage oder eine Frage zu einem Event – schreib uns einfach."
+        subtitle="Ob Coaching-Anfrage, kostenloses Erstgespräch, Vormerkung für Community, Events oder Matching – schreib uns einfach. Monika antwortet persönlich."
       />
 
       <section className="section">

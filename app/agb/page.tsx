@@ -34,8 +34,11 @@ export default function AgbPage() {
               <p className="leading-relaxed">
                 Die Anbieterin bietet Singlecoaching und Datingberatung an, insbesondere:
                 schriftliche Profil- und Chat-Analysen, 1:1-Coachinggespräche (per Chat,
-                Telefon oder Video), Coaching-Pakete mit mehreren Sitzungen, Sessionpakete
-                ohne Mitgliedschaft, Zugang zur Community sowie kuratiertes Matching.
+                Telefon oder Video), Coaching-Pakete mit mehreren Sitzungen sowie Sessionpakete
+                ohne Mitgliedschaft. Community, Live-Treffen und kuratiertes Matching befinden
+                sich in Vorbereitung und sind erst dann Vertragsgegenstand, wenn sie auf der
+                Website als verfügbar gekennzeichnet sind; Vormerkungen sind unverbindlich und
+                begründen keinen Anspruch.
                 Inhalt, Umfang und Preis der jeweiligen Leistung ergeben sich aus der
                 Beschreibung auf der Website zum Zeitpunkt der Anfrage sowie aus der
                 individuellen Auftragsbestätigung.
@@ -162,9 +165,9 @@ export default function AgbPage() {
             </div>
 
             <div className="space-y-2">
-              <h2 className="text-lg font-semibold text-ink-900">9. Community und kuratiertes Matching</h2>
+              <h2 className="text-lg font-semibold text-ink-900">9. Community und kuratiertes Matching (sobald verfügbar)</h2>
               <p className="leading-relaxed">
-                Für die Community und das kuratierte Matching gelten ergänzend: respektvoller
+                Sobald Community und kuratiertes Matching starten, gilt ergänzend: respektvoller
                 Umgang, keine Weitergabe fremder persönlicher Daten, kein kommerzielles
                 Anwerben. Die Anbieterin kann Teilnehmende bei Verstößen ausschließen;
                 bereits bezahlte, noch nicht erbrachte Leistungen werden in diesem Fall
@@ -189,7 +192,7 @@ export default function AgbPage() {
               </p>
             </div>
 
-            <p className="text-xs text-ink-300">Stand: Juli 2026</p>
+            <p className="text-xs text-ink-300">Stand: September 2026</p>
           </div>
         </div>
       </section>

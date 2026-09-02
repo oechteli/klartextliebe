@@ -1,6 +1,14 @@
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 
+/**
+ * Startseiten-Teaser kuratiertes Matching.
+ * Stand 02.09.2026: Es gibt noch keinen Teilnehmerpool und keine
+ * Matching-Funktion. Darum „in Vorbereitung" statt „Persönlich kuratiert",
+ * und der Ablauf ist als Plan gekennzeichnet.
+ *
+ * Archiv: Badge "Persönlich kuratiert" · Button "Mehr zum Marktplatz"
+ */
 const steps = [
   ["Fragebogen", "Werte, Kommunikation & Resonanz erfassen"],
   ["Resonanzprofil", "Persönlichkeits- und Resonanzprofil erhalten"],
@@ -14,17 +22,18 @@ export function MatchingPreview() {
     <section className="section bg-brand-soft">
       <div className="container-kl">
         <div className="mx-auto max-w-2xl text-center">
-          <Badge tone="orange" className="mb-4">
-            Persönlich kuratiert
+          <Badge tone="soon" className="mb-4">
+            In Vorbereitung
           </Badge>
           <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
             Kuratiertes Matching statt endlosem Swipen
           </h2>
           <p className="mt-4 text-lg text-ink-500">
-            Profile werden nicht nur nach Foto bewertet, sondern nach Werten,
-            Lebensphase, Kommunikationsstil, Denkstil und Beziehungsziel. Keine
-            Garantie für perfekte Matches – aber bessere Orientierung und
-            bewusstere Begegnungen.
+            So soll es einmal funktionieren: Profile werden nicht nach Foto
+            bewertet, sondern nach Werten, Lebensphase, Kommunikationsstil,
+            Denkstil und Beziehungsziel. Keine Garantie für perfekte Matches –
+            aber bessere Orientierung und bewusstere Begegnungen. Das Matching
+            startet mit unserer Lernplattform.
           </p>
         </div>
 
@@ -47,7 +56,7 @@ export function MatchingPreview() {
 
         <div className="mt-10 text-center">
           <Button href="/marktplatz" variant="secondary">
-            Mehr zum Marktplatz
+            Fürs Matching vormerken
           </Button>
         </div>
       </div>

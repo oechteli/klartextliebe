@@ -17,8 +17,8 @@ export default function UeberMichPage() {
     "Singlecoaching",
     "Datingberatung",
     "Kommunikationsanalyse",
-    "KI-Persönlichkeitsanalyse",
-    "Kuratiertes Matching",
+    "Persönlichkeitsanalyse",
+    "Kuratiertes Matching (in Vorbereitung)",
   ];
 
   return (
@@ -31,10 +31,12 @@ export default function UeberMichPage() {
 
       <section className="section">
         <div className="container-kl">
-          <div className="grid gap-12 lg:grid-cols-2" style={{ gridTemplateColumns: "320px 1fr" }}>
+          {/* Vorher: style={{ gridTemplateColumns: "320px 1fr" }} – erzwang auch auf
+              Handys 320 px + 1fr und lief bei 375 px über. Seit 02.09.2026 responsiv. */}
+          <div className="grid gap-12 lg:grid-cols-[320px,1fr]">
             {/* Foto */}
             <div>
-              <div className="aspect-[3/4] w-full overflow-hidden rounded-3xl shadow-soft ring-1 ring-brand-violet/10">
+              <div className="mx-auto aspect-[3/4] w-full max-w-[320px] overflow-hidden rounded-3xl shadow-soft ring-1 ring-brand-violet/10 lg:mx-0">
                 <Image
                   src="/brand/monika.png"
                   alt="Monika Oechtering, Gründerin von Klartext Liebe"

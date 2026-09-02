@@ -42,10 +42,13 @@ export function Hero() {
             mit Tiefe.
           </h1>
 
+          {/* Archiv (bis 02.09.2026): „… Persönlichkeitsanalyse und kuratierte
+              Begegnungen für Menschen, …" – Begegnungen/Matching sind noch in
+              Vorbereitung, darum hier nur, was es heute gibt. */}
           <p className="mx-auto mt-6 max-w-2xl text-lg text-ink-500 sm:text-xl">
-            Klartext Liebe verbindet Singlecoaching, Kommunikation,
-            Persönlichkeitsanalyse und kuratierte Begegnungen für Menschen, die
-            mehr suchen als Smalltalk, Swipen und Spielchen.
+            Klartext Liebe verbindet Singlecoaching, klare Kommunikation und
+            Persönlichkeitsanalyse für Menschen, die mehr suchen als Smalltalk,
+            Swipen und Spielchen.
           </p>
 
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
