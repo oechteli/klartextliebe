@@ -150,3 +150,7 @@ Alles **live verifiziert** (Status 200, Header aktiv, 404 korrekt).
 - **Coaching-Seite** hat eine Leistungsübersicht je Format; Preise unverändert (79/149/399/799 € bzw. Sessions 89/219/649 €).
 - **Krisenhinweis** (Telefonseelsorge 0800 111 0 111) im Footer, auf den Coaching-Seiten und im Impressum.
 - Offene Entscheidungen und Marktvergleich: `C:\Users\mail\Desktop\fahrplan\berichte\klartext-liebe.md`.
+
+### 9a. Nachtrag 02.09.2026 abends – Preise und Deploy-Blocker
+- Preisentscheidung der Inhaberin umgesetzt (Commit 0d24e0c): Einzelgespräch 60 Min einheitlich 119 € (vorher 149 € / 89 €), schriftliche Profil- & Chat-Analyse 79 € unverändert, **neu Paargespräch 90 Min 169 €** (Karte + Anker `/coaching#paargespraech`), Programme 399/799 € unverändert. Sessionpakete 219/649 € noch nicht angepasst (offen).
+- **Deploy dieses Stands steht noch aus:** Laufwerk C: war voll, dadurch ist `%USERPROFILE%\.wrangler\config\default.toml` leer (0 Byte) – Cloudflare-Login verloren. Einmal `npx wrangler login`, dann `npx wrangler pages deploy out --project-name klartext-liebe --branch main`. `out/` ist aktuell gebaut.
