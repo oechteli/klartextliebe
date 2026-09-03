@@ -30,7 +30,8 @@ export function OfferSection({
           />
         )}
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {/* Vorher lg:grid-cols-4 (4 Angebote); seit dem Paargespräch sind es 5 → 3 Spalten */}
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {items.map((offer) => {
             const url = stripeLinks[offer.stripeKey];
 

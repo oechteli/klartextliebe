@@ -47,11 +47,16 @@ const gruppen: { titel: string; fragen: Faq[] }[] = [
     fragen: [
       {
         q: "Was kostet das Coaching?",
-        a: "Die Profil- & Chat-Analyse kostet 79 €, eine Einzelsitzung Singlecoaching (60 Minuten) 149 €, das Dating-Klarheit-Paket mit drei Sitzungen 399 € und die intensive VIP-Matchklarheit 799 €. Das Erstgespräch ist kostenlos. Alle Preise stehen transparent auf der Coaching-Seite – es gibt keine versteckten Kosten und kein Abo.",
+        a: "Die schriftliche Profil- & Chat-Analyse kostet 79 €, ein Einzelgespräch (60 Minuten) 119 €, ein Paargespräch zu zweit (90 Minuten) 169 €, das Dating-Klarheit-Paket mit drei Gesprächen 399 € und die intensive VIP-Matchklarheit 799 €. Das Erstgespräch (20 Minuten) ist kostenlos. Alle Preise stehen transparent auf der Coaching-Seite – es gibt keine versteckten Kosten und kein Abo.",
+        // Altwerte bis 02.09.2026: Einzelsitzung 149 € (bzw. 89 € als Einzelsession); kein Paargespräch
+      },
+      {
+        q: "Gibt es auch ein Gespräch für Paare?",
+        a: "Ja. Das Paargespräch dauert 90 Minuten, findet online per Video statt und kostet 169 €. Es ist für Paare gedacht, die aneinander vorbeireden, im Kreis streiten oder klären wollen, wie es weitergeht. Moderiert, ohne Schuldzuweisung – aber kein Ersatz für Paartherapie. Anfrage wie bei allen Formaten über das Kontaktformular.",
       },
       {
         q: "Ist das nicht teuer?",
-        a: "Zur Einordnung: Einzelcoaching zu Beziehungs- und Datingthemen liegt bei vielen Anbieterinnen und Anbietern in Deutschland im Bereich von etwa 90 bis 150 € pro Stunde, Intensivprogramme deutlich darüber. Klartext Liebe bewegt sich in diesem Rahmen – und du startest klein: Erstgespräch kostenlos, Analyse ab 79 €. Du musst kein teures Paket kaufen, um herauszufinden, ob es dir hilft.",
+        a: "Zur Einordnung: Einzelcoaching zu Beziehungs- und Datingthemen liegt bei vielen Anbieterinnen und Anbietern in Deutschland im Bereich von etwa 90 bis 150 € pro Stunde, Intensivprogramme deutlich darüber. Klartext Liebe liegt mit 119 € für 60 Minuten mittendrin – und du startest klein: Erstgespräch kostenlos, schriftliche Analyse 79 €. Du musst kein teures Paket kaufen, um herauszufinden, ob es dir hilft.",
       },
       {
         q: "Wie buche und bezahle ich?",

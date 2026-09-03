@@ -5,7 +5,10 @@
  */
 export const stripeLinks = {
   profilChatAnalyse: "/kontakt?thema=Buchung+Profil+%26+Chat-Analyse+(79+%E2%82%AC)",
-  singlecoaching: "/kontakt?thema=Buchung+Singlecoaching+1%3A1+(149+%E2%82%AC)",
+  // Altwert bis 02.09.2026: "…Singlecoaching+1%3A1+(149+%E2%82%AC)"
+  singlecoaching: "/kontakt?thema=Buchung+Singlecoaching+1%3A1+(119+%E2%82%AC)",
+  // Neu seit 02.09.2026
+  paargespraech: "/kontakt?thema=Buchung+Paargespr%C3%A4ch+90+Minuten+(169+%E2%82%AC)",
   datingKlarheit: "/kontakt?thema=Buchung+Dating-Klarheit-Paket+(399+%E2%82%AC)",
   vipMatchklarheit: "/kontakt?thema=Buchung+VIP-Matchklarheit+(799+%E2%82%AC)",
 } as const;

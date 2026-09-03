@@ -22,6 +22,7 @@ const EMPFAENGER = "info@klartext-liebe.de";
 const ANLIEGEN_OPTIONEN = [
   "Kostenloses Erstgespräch",
   "Coaching",
+  "Paargespräch",
   "Vormerkung Community",
   "Vormerkung Events",
   "Vormerkung Matching",
@@ -39,6 +40,7 @@ function anliegenAusThema(thema: string): string {
   if (/vormerk.*event/i.test(thema)) return "Vormerkung Events";
   if (/vormerk.*match/i.test(thema)) return "Vormerkung Matching";
   if (/erstgespräch/i.test(thema)) return "Kostenloses Erstgespräch";
+  if (/paar/i.test(thema)) return "Paargespräch";
   if (/community/i.test(thema)) return "Community-Zugang anfragen";
   if (/vip/i.test(thema)) return "VIP-Matchklarheit anfragen";
   if (/event/i.test(thema)) return "Events";
@@ -77,7 +79,7 @@ export function ContactForm({
   const [message, setMessage] = useState(standardNachricht ?? "");
   const [firma, setFirma] = useState(""); // Honeypot – bleibt für Menschen leer
 
-  // ?thema=… aus der URL übernehmen (z. B. „Buchung Singlecoaching 1:1 (149 €)“)
+  // ?thema=… aus der URL übernehmen (z. B. „Buchung Singlecoaching 1:1 (119 €)“)
   useEffect(() => {
     const thema = new URLSearchParams(window.location.search).get("thema");
     if (!thema) return;

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Persönliches Coaching – Sessions ohne Abo",
   alternates: { canonical: "/persoenliches-coaching" },
   description:
-    "Persönliche 60-Minuten-Sessions mit Monika per Chat, Telefon oder Video. Keine Mitgliedschaft, kein Abo – du kaufst nur, was du brauchst. Einzelsession 89 €, 3er-Paket 219 €, 10er-Paket 649 €.",
+    "Persönliche 60-Minuten-Sessions mit Monika per Chat, Telefon oder Video. Keine Mitgliedschaft, kein Abo – du kaufst nur, was du brauchst. Einzelsession 119 €, 3er-Paket 219 €, 10er-Paket 649 €.",
 };
 
 /**
@@ -21,7 +21,10 @@ const pakete = [
   {
     id: "einzel",
     title: "Einzelsession",
-    price: "89 €",
+    // Altwert bis 02.09.2026: "89 €" – Einzelgespräch 60 Min jetzt einheitlich 119 €
+    // (identisch mit Singlecoaching 1:1 auf /coaching). 3er/10er-Paket unverändert
+    // gelassen (nicht Teil der Entscheidung), siehe Bericht.
+    price: "119 €",
     einheit: "60 Minuten",
     description:
       "Ein Thema, ein Gespräch, klare nächste Schritte. Ideal, um Monika und die Arbeitsweise kennenzulernen.",
@@ -31,7 +34,7 @@ const pakete = [
       "Konkrete nächste Schritte zum Mitnehmen",
     ],
     highlight: false,
-    thema: "Session anfragen – Einzelsession (89 €)",
+    thema: "Session anfragen – Einzelsession (119 €)", // Altwert: 89 €
   },
   {
     id: "dreier",

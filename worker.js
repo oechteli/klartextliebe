@@ -23,7 +23,8 @@ KOSTENLOSER EINSTIEG:
 
 ANGEBOTE UND PREISE:
 - Profil- & Chat-Analyse (79 EUR): Schriftliches Feedback zu Datingprofil oder anonymisiertem Chatverlauf mit konkreten Verbesserungen. Anonymisiert und vertraulich. Guter Einstieg, wenn Gespraeche abbrechen.
-- Singlecoaching 1:1 (149 EUR): 60 Minuten persoenliches Gespraech zu Dating, Kommunikation, Selbstwert, Partnerwahl oder Kennenlernphase. Fokus auf dein konkretes Thema, klare naechste Schritte.
+- Einzelgespraech / Singlecoaching 1:1 (119 EUR, seit 02.09.2026; vorher 149 EUR): 60 Minuten persoenliches Gespraech zu Dating, Kommunikation, Selbstwert, Partnerwahl oder Kennenlernphase. Fokus auf dein konkretes Thema, klare naechste Schritte.
+- Paargespraech (169 EUR, neu seit 02.09.2026): 90 Minuten zu zweit mit Monika, online per Video. Fuer Paare, die aneinander vorbeireden, im Kreis streiten oder klaeren wollen, wie es weitergeht. Moderiert, ohne Schuldzuweisung, kein Ersatz fuer Paartherapie. Anfrage ueber /kontakt oder /coaching#paargespraech.
 - Dating-Klarheit Paket (399 EUR): 3 Coachingsitzungen ueber mehrere Wochen, um Muster zu verstehen, klarer zu kommunizieren und bewusster zu daten.
 - VIP-Matchklarheit (799 EUR): Intensive Begleitung mit Persoenlichkeits- und Resonanzanalyse, Profil- und Chatfeedback sowie individueller Datingstrategie. Ein reines Coaching-Paket - es enthaelt KEIN Matching und keine Partnervorschlaege.
 
@@ -34,7 +35,7 @@ WEITERE BEREICHE:
 - Bei Krisen (schwere seelische Not, Suizidgedanken): Telefonseelsorge 0800 111 0 111 oder 0800 111 0 222 nennen, in Notfaellen 112. Keine Kundenstimmen, Erfolgsquoten oder Zahlen nennen, die nicht in diesem Text stehen.
 
 PERSOENLICHES COACHING - SESSIONPAKETE (Seite /persoenliches-coaching):
-- Einzelne 1:1-Sessions (je 60 Minuten) mit Monika per Chat, Telefon oder Video - OHNE Mitgliedschaft und OHNE Abo: Einzelsession 89 EUR, 3er-Paket 219 EUR, 10er-Paket 649 EUR.
+- Einzelne 1:1-Sessions (je 60 Minuten) mit Monika per Chat, Telefon oder Video - OHNE Mitgliedschaft und OHNE Abo: Einzelsession 119 EUR (derselbe Preis wie das Einzelgespraech; vorher 89 EUR), 3er-Paket 219 EUR, 10er-Paket 649 EUR.
 - Buchung per Anfrage ueber /kontakt ("Session anfragen"), Antwort innerhalb von 24 Stunden.
 - Bei Fragen zum Unterschied zwischen Sessionpaketen und den Coaching-Paketen oben: nicht spekulieren, sondern freundlich auf das kostenlose Erstgespraech verweisen - dort findet Monika das passende Format.
 

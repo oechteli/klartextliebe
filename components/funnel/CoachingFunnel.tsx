@@ -52,7 +52,10 @@ const SCHRITTE: Schritt[] = [
       { label: "Neue Liebe finden" },
       { label: "Ex zurück / Trennung verarbeiten" },
       { label: "Dating-Frust" },
-      { label: "Beziehung retten" },
+      {
+        label: "Beziehung retten",
+        hinweis: "allein oder zu zweit – es gibt auch ein Paargespräch (90 Min, 169 €)",
+      },
     ],
   },
   {
@@ -176,6 +179,11 @@ export function CoachingFunnel() {
     waehlen(SCHRITTE[schritt].key, wunschText.trim());
   }
 
+  // Paar-Themen erkennen → auf das Paargespräch hinweisen (seit 02.09.2026).
+  const paarThema =
+    antworten.thema === "Beziehung retten" ||
+    antworten.status === "Beziehung mit Problemen";
+
   if (fertig) {
     return (
       <div className="mx-auto max-w-xl animate-fade-up">
@@ -193,11 +201,31 @@ export function CoachingFunnel() {
             gekennzeichnet, ohne Termin, so lange du magst. Wenn du tiefer
             gehen willst, übernimmt <strong>Monika persönlich</strong>.
           </p>
+          {paarThema && (
+            <div className="mt-5 rounded-xl border border-brand-pink/20 bg-brand-pink/5 p-4 text-left text-sm text-ink-600">
+              <strong className="text-ink-800">Ihr wollt zu zweit sprechen?</strong>{" "}
+              Für Paare gibt es das{" "}
+              <Link
+                href="/coaching#paargespraech"
+                className="font-medium text-brand-violet underline underline-offset-2"
+              >
+                Paargespräch
+              </Link>{" "}
+              – 90 Minuten mit Monika, online per Video, 169 €. Moderiert, ohne
+              Schuldzuweisung. Anfrage über das Kontaktformular.
+            </div>
+          )}
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button onClick={() => chatOeffnen()}>Chat öffnen 💬</Button>
-            <Button href="/persoenliches-coaching" variant="secondary">
-              Persönliches Coaching ansehen
-            </Button>
+            {paarThema ? (
+              <Button href="/coaching#paargespraech" variant="secondary">
+                Paargespräch ansehen
+              </Button>
+            ) : (
+              <Button href="/persoenliches-coaching" variant="secondary">
+                Persönliches Coaching ansehen
+              </Button>
+            )}
           </div>
           <p className="mt-5 text-xs text-ink-400">
             Lieber direkt mit Monika sprechen?{" "}
@@ -280,6 +308,18 @@ export function CoachingFunnel() {
               Weiter →
             </Button>
           </form>
+        )}
+
+        {aktuell.key === "thema" && (
+          <p className="mt-5 text-xs text-ink-400">
+            Es geht um euch beide?{" "}
+            <Link
+              href="/coaching#paargespraech"
+              className="text-brand-violet underline underline-offset-2"
+            >
+              Zum Paargespräch (90 Min, 169 €)
+            </Link>
+          </p>
         )}
 
         {schritt > 0 && (

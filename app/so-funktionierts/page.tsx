@@ -23,7 +23,8 @@ const schritte = [
     nr: "2",
     title: "Passendes Angebot wählen",
     zeit: "gemeinsam im Gespräch",
-    text: "Auf Basis des Erstgesprächs empfehlen wir das Format, das wirklich zu deinem Thema passt – von der schriftlichen Profil- & Chat-Analyse (79 €) über das Singlecoaching 1:1 (149 €) bis zum Dating-Klarheit-Paket (399 €) oder der VIP-Matchklarheit (799 €). Du entscheidest in Ruhe; den Zahlungslink bekommst du erst danach.",
+    // Altwert bis 02.09.2026: Singlecoaching 1:1 (149 €); Paargespräch neu
+    text: "Auf Basis des Erstgesprächs empfehlen wir das Format, das wirklich zu deinem Thema passt – von der schriftlichen Profil- & Chat-Analyse (79 €) über das Einzelgespräch (60 Min, 119 €) und das Paargespräch (90 Min, 169 €) bis zum Dating-Klarheit-Paket (399 €) oder der VIP-Matchklarheit (799 €). Du entscheidest in Ruhe; den Zahlungslink bekommst du erst danach.",
   },
   {
     nr: "3",

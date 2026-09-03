@@ -23,7 +23,7 @@ const ablauf = [
   {
     step: "3",
     title: "Monika übernimmt",
-    desc: "Wenn du tiefer gehen willst: persönliche Sessions – ohne Abo, ohne Mitgliedschaft.",
+    desc: "Wenn du tiefer gehen willst: persönliche Sessions (60 Min, 119 €) oder – wenn es um euch beide geht – ein Paargespräch (90 Min, 169 €). Ohne Abo, ohne Mitgliedschaft.",
   },
 ];
 

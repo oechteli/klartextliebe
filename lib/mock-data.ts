@@ -32,7 +32,8 @@ export const offers: Offer[] = [
   {
     id: "singlecoaching-1-1",
     title: "Singlecoaching 1:1",
-    price: "149 €",
+    // Altwert bis 02.09.2026: "149 €" (Einzelgespräch einheitlich 119 €, Entscheidung Inhaberin)
+    price: "119 €",
     description:
       "Ein persönliches Coachinggespräch zu Dating, Kommunikation, Selbstwert, Partnerwahl, geistiger Resonanz oder Kennenlernphase.",
     cta: "Coaching buchen",
@@ -42,6 +43,21 @@ export const offers: Offer[] = [
       "60 Minuten persönliches Gespräch",
       "Fokus auf dein konkretes Thema",
       "Klare nächste Schritte",
+    ],
+  },
+  {
+    // Neu seit 02.09.2026 (Entscheidung Inhaberin): Paargespräch 90 Minuten, 169 €
+    id: "paargespraech",
+    title: "Paargespräch",
+    price: "169 €",
+    description:
+      "90 Minuten zu zweit mit Monika, online per Video: wenn ihr aneinander vorbeiredet, im Kreis streitet oder klären wollt, wie es weitergeht. Moderiert, ohne Schuldzuweisung, mit klaren nächsten Schritten.",
+    cta: "Paargespräch anfragen",
+    stripeKey: "paargespraech",
+    features: [
+      "90 Minuten für euch beide",
+      "Moderiertes Gespräch, beide kommen zu Wort",
+      "Kein Ersatz für Paartherapie",
     ],
   },
   {

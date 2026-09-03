@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s · Klartext Liebe",
   },
   description:
-    "Klartext Liebe: Singlecoaching, Datingberatung und Persönlichkeitsanalyse für reflektierte Singles, Akademiker und Menschen mit Tiefgang. Ehrlich, ohne Datingtricks, ohne Erfolgsgarantie. Community und kuratiertes Matching in Vorbereitung.",
+    "Klartext Liebe: Singlecoaching, Paargespräch, Datingberatung und Persönlichkeitsanalyse für reflektierte Menschen mit Tiefgang. Ehrlich, ohne Datingtricks, ohne Erfolgsgarantie. Community und kuratiertes Matching in Vorbereitung.",
   alternates: { canonical: "/" },
   keywords: [
     "Singlecoaching",

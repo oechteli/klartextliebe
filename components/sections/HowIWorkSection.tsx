@@ -32,6 +32,7 @@ const anliegen = [
   "Nach der Trennung möchte ich wieder daten – aber diesmal bewusster.",
   "Ich habe klare Vorstellungen und frage mich, ob ich zu anspruchsvoll bin.",
   "Mir fehlt geistige Resonanz – die meisten Kontakte bleiben oberflächlich.",
+  "Wir reden aneinander vorbei – und wollen das zu zweit klären.",
 ];
 
 export function HowIWorkSection() {
