@@ -4,7 +4,31 @@ import { Badge } from "@/components/ui/Badge";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden band-flaeche">
+      {/* Geschwungenes Farbband der Klartext-Familie (Stufe 3, 04.09.2026).
+          Selbst gezeichnet, liegt hinter dem Inhalt und ist fuer Vorlesegeraete
+          unsichtbar. */}
+      <svg
+        className="band band-warm"
+        viewBox="0 0 1440 620"
+        preserveAspectRatio="xMidYMid slice"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <defs>
+          <linearGradient id="kl-hero" x1="0" y1="0" x2="1" y2="1">
+            <stop className="b1" offset="0" />
+            <stop className="b2" offset=".55" />
+            <stop className="b3" offset="1" />
+          </linearGradient>
+        </defs>
+        <g>
+          <path
+            d="M0 232C168 150 372 118 566 158c184 38 316 122 508 122 132 0 246-32 366-96v436H0Z"
+            fill="url(#kl-hero)"
+          />
+        </g>
+      </svg>
       {/* dezenter Marken-Hintergrund */}
       <div
         aria-hidden
@@ -37,9 +61,12 @@ export function Hero() {
             ✨ Bewusste Partnerwahl statt oberflächlichem Dating
           </Badge>
 
+          {/* alt (bis 04.09.2026): <span className="text-gradient">reflektierte Singles</span>
+              mit dem Tuerkis-Verlauf der frueheren Palette. Jetzt zwei Farben der
+              Klartext-Familie: Rose und Pflaume. */}
           <h1 className="text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">
-            Dating für <span className="text-gradient">reflektierte Singles</span>{" "}
-            mit Tiefe.
+            Dating für <span className="akzentwort">reflektierte Singles</span>{" "}
+            mit <span className="akzentwort-3">Tiefe</span>.
           </h1>
 
           {/* Archiv (bis 02.09.2026): „… Persönlichkeitsanalyse und kuratierte

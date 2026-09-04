@@ -68,7 +68,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#7C6BC4",
+  // alt: themeColor "#7C6BC4" (Violett der frueheren Palette)
+  themeColor: "#10334A",
   colorScheme: "light",
 };
 
@@ -121,6 +122,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
+      <head>
+        {/* Schriften der Klartext-Familie, selbst gehostet. Kein Abruf bei Google. */}
+        <link
+          rel="preload"
+          href="/fonts/fraunces-latin.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link rel="stylesheet" href="/fonts/klartext-schriften.css" />
+      </head>
       <body className="flex min-h-screen flex-col">
         <script
           type="application/ld+json"

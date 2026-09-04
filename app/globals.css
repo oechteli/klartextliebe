@@ -2,23 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Schriften der Klartext-Familie, selbst gehostet unter /fonts/ (eingebunden in
+   app/layout.tsx). Vorher stand hier Inter, ohne dass die Schrift je geladen wurde:
+   die Seite lief faktisch auf der Systemschrift. Ueberschriften tragen jetzt Fraunces
+   wie bei Klartext Auswandern und Klartext Bordleben.
+   alt: --font-sans: "Inter", system-ui, sans-serif;  --font-serif: "Georgia", serif; */
 :root {
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-serif: "Georgia", serif;
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
+  /* alt: @apply bg-cream-50 text-ink-700 antialiased;  ohne Schriftgroesse lief die
+     Seite auf den 16 px des Browsers. Die Klartext-Familie setzt 14,2 px
+     (Vorgabe Monika, awork-Vorbild); text-base traegt diesen Wert seit 3.2. */
   body {
     @apply bg-cream-50 text-ink-700 antialiased;
+    /* Direkt gesetzt statt ueber @apply text-base: in @layer base hat Tailwind die
+       Schriftgroesse neben der Textfarbe nicht ausgegeben (geprueft im erzeugten CSS). */
+    font-size: 0.889rem;
+    line-height: 1.65;
   }
+  /* alt: nur @apply text-ink-900 - die Ueberschriften liefen in der Grotesk mit.
+     Die Klartext-Familie setzt Fraunces mit optischer Groesse und weicher Achse. */
   h1,
   h2,
   h3 {
-    @apply text-ink-900;
+    @apply font-serif font-semibold text-ink-900;
+    letter-spacing: -0.015em;
+    line-height: 1.12;
     text-wrap: balance;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+  }
+  h1 {
+    line-height: 1.08;
+    letter-spacing: -0.02em;
   }
   ::selection {
     @apply bg-brand-violet/20 text-ink-900;
@@ -74,4 +95,138 @@
   .prose-kl blockquote {
     @apply mt-6 border-l-4 border-brand-violet/40 pl-4 italic text-ink-500;
   }
+}
+
+
+/* ==========================================================================
+   Stufe 3 der Klartext-Familie (04.09.2026)
+   --------------------------------------------------------------------------
+   Dieselben Bausteine wie in assets/klartext.css bei Klartext Auswandern und
+   Klartext Bordleben, hier als reines CSS, weil dieses Projekt mit Tailwind
+   arbeitet und keine zweite Grunddatei laden soll.
+   Vorbild awork.com/de, ausschliesslich als Gestaltungsprinzip: kein Code, keine
+   Texte, keine Illustrationen, keine Schrift von dort. Jedes SVG ist selbst
+   gezeichnet.
+   ========================================================================== */
+
+/* --- Geschwungene Farbbaender ---------------------------------------------- */
+.band-flaeche { position: relative; overflow: hidden; }
+.band-flaeche { isolation: isolate; }
+/* Kinder ueber das Band heben - aber nur die, die nicht schon selbst absolut liegen.
+   Ohne diese Ausnahme hat die Regel die dekorativen Ebenen im Hero (Tailwind
+   "absolute inset-0 -z-10") in den Textfluss gezogen; darueber standen dann rund
+   860 px Leere (gefunden am 04.09.2026 in der Sichtpruefung). */
+.band-flaeche > :not(.band):not([class*="absolute"]):not([class*="fixed"]) {
+  position: relative;
+  z-index: 1;
+}
+.band {
+  position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%;
+  pointer-events: none; opacity: 0.16;
+}
+.band .b1 { stop-color: var(--band-1); }
+.band .b2 { stop-color: var(--band-2); }
+.band .b3 { stop-color: var(--band-3); }
+.band-warm  { --band-1: #DD7F86; --band-2: #E8A13D; --band-3: #F6CB8A; }
+.band-kuehl { --band-1: #10334A; --band-2: #7B3F62; --band-3: #8FB4FF; }
+.section-dunkel .band { opacity: 0.18; }
+.section-dunkel .band-warm { --band-1: #EDA3AA; }
+.section-dunkel .band-kuehl { --band-1: #3C6E93; }
+@keyframes band-schimmer {
+  from { transform: translate3d(-1.6%, 0.5%, 0) scale(1.02); }
+  to   { transform: translate3d(1.6%, -0.5%, 0) scale(1.05); }
+}
+.band > g { transform-origin: 50% 50%; animation: band-schimmer 28s ease-in-out infinite alternate; }
+
+/* --- Mehrfarbige Ueberschrift ---------------------------------------------- */
+.akzentwort   { color: #A5464D; }   /* Rose als Schrift,  5,60:1 auf Papier */
+.akzentwort-2 { color: #10334A; }   /* Navy,             12,32:1 */
+.akzentwort-3 { color: #7B3F62; }   /* Pflaume,           7,20:1 */
+.section-dunkel .akzentwort   { color: #EDA3AA; }
+.section-dunkel .akzentwort-2 { color: #9CC3DE; }
+.section-dunkel .akzentwort-3 { color: #E2A8C8; }
+
+/* --- Schwebende Kachel in der Ueberschrift ---------------------------------
+   Schriftgroesse max(1rem, .4em): nie kleiner als 16 px. */
+.hero-kachel {
+  display: inline-flex; align-items: center; gap: 0.45em;
+  padding: 0.3em 0.72em; margin-inline: 0.14em;
+  background: #FFFFFF; color: #22303A;
+  border: 1px solid rgba(16, 51, 74, 0.07); border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(16,51,74,.04), 0 6px 16px rgba(16,51,74,.06), 0 16px 36px rgba(16,51,74,.06);
+  font-family: var(--font-sans);
+  font-size: max(1rem, 0.4em); font-weight: 700; letter-spacing: -0.01em;
+  line-height: 1.3; vertical-align: middle; white-space: nowrap;
+  transform: rotate(-2.2deg);
+}
+.hero-kachel .punkt { width: 0.55em; height: 0.55em; border-radius: 999px; background: #DD7F86; flex: none; }
+@media (max-width: 860px) { .hero-kachel { display: none; } }
+
+/* --- Sehr dunkler Abschnitt mit leuchtenden Kartenraendern -----------------
+   Weiss auf dem Grund 17,72:1, Nebentext 11,46:1, auf der Karte 8,86:1. */
+.section-dunkel { position: relative; overflow: hidden; background: #071A26; color: #FFFFFF; }
+.section-dunkel > :not(.band) { position: relative; z-index: 1; }
+.section-dunkel h1, .section-dunkel h2, .section-dunkel h3, .section-dunkel h4 { color: #FFFFFF; }
+.section-dunkel p, .section-dunkel li, .section-dunkel dd { color: #C3D2DC; }
+.section-dunkel .eyebrow { color: #EDA3AA; }
+.section-dunkel::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(60% 55% at 12% 0%, rgba(237, 163, 170, 0.26) 0%, transparent 70%),
+    radial-gradient(55% 60% at 92% 100%, rgba(226, 168, 200, 0.26) 0%, transparent 72%);
+  opacity: 0.45;
+}
+/* Karten in diesem Abschnitt: dunkle Flaeche, feiner leuchtender Rand. */
+.section-dunkel .karte-dunkel {
+  position: relative; background: #123044; border-color: rgba(255, 255, 255, 0.12); color: #C3D2DC;
+  box-shadow: 0 2px 8px rgba(0,0,0,.45), 0 20px 48px rgba(0,0,0,.55);
+}
+.section-dunkel .karte-dunkel::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: linear-gradient(145deg, rgba(237,163,170,.8) 0%, rgba(255,255,255,.16) 44%, rgba(226,168,200,.66) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0.5; transition: opacity 160ms ease;
+}
+.section-dunkel .karte-dunkel:hover::after { opacity: 0.85; }
+
+/* --- Gekippter Rahmen ------------------------------------------------------ */
+.mockup {
+  position: relative; border-radius: 26px; overflow: hidden; background: #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(16,51,74,.07), 0 0 0 10px rgba(255,255,255,.62), 0 20px 48px rgba(16,51,74,.14);
+  transform: rotate(-1.6deg); transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.mockup > svg, .mockup > img { display: block; width: 100%; height: auto; }
+.mockup:hover { transform: rotate(-0.8deg) translateY(-4px); }
+.mockup-rechts { transform: rotate(1.6deg); }
+@media (max-width: 860px) { .mockup, .mockup-rechts { transform: none; } }
+
+/* --- Freigestellte Objekte (Dateien folgen von Monika, /objekte/) ---------- */
+.objekt {
+  display: block; width: clamp(84px, 10vw, 148px); height: auto;
+  filter: drop-shadow(0 16px 26px rgba(16, 51, 74, 0.2));
+  animation: objekt-schweben 8s ease-in-out infinite alternate;
+}
+.objekt-frei { position: absolute; z-index: 2; pointer-events: none; }
+@keyframes objekt-schweben {
+  from { transform: translateY(0) rotate(-1.4deg); }
+  to   { transform: translateY(-11px) rotate(1.8deg); }
+}
+@media (max-width: 860px) { .objekt-frei { display: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .band > g, .objekt { animation: none; }
+  .mockup, .mockup-rechts { transform: none; }
+}
+
+@media print {
+  .band, .objekt { display: none !important; }
+  .section-dunkel { background: none !important; color: #000 !important; }
+  .section-dunkel::before { display: none !important; }
+  .section-dunkel h1, .section-dunkel h2, .section-dunkel h3,
+  .section-dunkel p, .section-dunkel li { color: #000 !important; }
+  .section-dunkel .karte-dunkel::after { display: none !important; }
+  .hero-kachel { box-shadow: none; border: 1px solid #999; transform: none; }
+  .mockup, .mockup-rechts { transform: none; box-shadow: none; border: 1px solid #999; }
 }
