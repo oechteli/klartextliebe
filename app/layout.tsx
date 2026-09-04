@@ -126,12 +126,12 @@ export default function RootLayout({
         {/* Schriften der Klartext-Familie, selbst gehostet. Kein Abruf bei Google. */}
         <link
           rel="preload"
-          href="/fonts/fraunces-latin.woff2"
+          href="/fonts/nunito-latin.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
-        <link rel="stylesheet" href="/fonts/klartext-schriften.css" />
+        <link rel="stylesheet" href="/fonts/mindo-schriften.css" />
       </head>
       <body className="flex min-h-screen flex-col">
         <script

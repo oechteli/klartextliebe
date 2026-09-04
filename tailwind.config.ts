@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 /**
- * Klartext Liebe · Designsystem der Klartext-Familie, Fassung 3.2 (04.09.2026)
+ * Klartext Liebe · Designsystem der Klartext-Familie, Fassung 3.3 (04.09.2026)
  *
  * Bis zum 04.09.2026 hatte diese Seite eine eigene Palette aus Türkis, Blau,
  * Violett, Pink und Orange mit einem Regenbogen-Verlauf. Zwei Gründe für die
@@ -9,7 +9,7 @@ import type { Config } from "tailwindcss";
  *   1. Türkis ist in allen Marken verboten (Wunsch von Peter).
  *   2. Klartext Liebe gehört zur Klartext-Familie (Auswandern, Bordleben) und
  *      soll wie sie aussehen: Navy #10334A als tragende Farbe, Rosé als Akzent,
- *      Fraunces für Überschriften, Inter für den Text, warmes Papier als Grund.
+ *      Nunito als Schrift (wie teachymindo), warmes Papier als Grund.
  *
  * Die alten Werte stehen als Kommentar daneben, gelöscht wurde nichts.
  *
@@ -66,9 +66,13 @@ const config: Config = {
         },
       },
       fontFamily: {
-        // alt: sans var(--font-sans) mit Inter, serif Georgia
-        sans: ["var(--font-sans)", "Inter", "system-ui", "sans-serif"],
-        serif: ["var(--font-serif)", "Fraunces", "Georgia", "serif"],
+        // 04.09.2026: dieselbe Schrift wie teachymindo und die ganze Klartext-Familie.
+        // awork setzt Sofia Pro, eine geometrische Groteske - Nunito liegt dort naeher
+        // als eine Serifenschrift. "serif" zeigt bewusst auf dieselbe Schrift, damit
+        // alle bestehenden font-serif-Klassen ohne Aenderung mitziehen.
+        // alt: sans var(--font-sans) mit Inter, serif var(--font-serif) mit Fraunces
+        sans: ["var(--font-sans)", "Nunito", "system-ui", "sans-serif"],
+        serif: ["var(--font-sans)", "Nunito", "system-ui", "sans-serif"],
       },
       fontSize: {
         // Fließtext 14,2 px wie in der ganzen Familie (Vorgabe Monika, awork-Vorbild).
