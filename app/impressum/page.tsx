@@ -36,7 +36,7 @@ export default function ImpressumPage() {
               <h2 className="text-lg font-semibold text-ink-900">Kontakt</h2>
               <p className="leading-relaxed">
                 E-Mail:{" "}
-                <EmailSchutz nutzer="monika.oechtering" domain="googlemail.com" />
+                <EmailSchutz nutzer="info" domain="klartextliebe.de" />
               </p>
             </div>
 

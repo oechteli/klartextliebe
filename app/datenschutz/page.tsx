@@ -36,7 +36,7 @@ export default function DatenschutzPage() {
                 Amthausstraße 33, 76227 Karlsruhe
                 <br />
                 E-Mail:{" "}
-                <EmailSchutz nutzer="monika.oechtering" domain="googlemail.com" />
+                <EmailSchutz nutzer="info" domain="klartextliebe.de" />
               </p>
             </div>
 
@@ -88,7 +88,7 @@ export default function DatenschutzPage() {
                 siehe Abschnitt 4). Die Daten werden gelöscht, sobald sie nicht mehr benötigt
                 werden, sofern keine gesetzliche Aufbewahrungspflicht besteht. Ihre Einwilligung
                 können Sie jederzeit per E-Mail an{" "}
-                <EmailSchutz nutzer="monika.oechtering" domain="googlemail.com" />{" "}
+                <EmailSchutz nutzer="info" domain="klartextliebe.de" />{" "}
                 widerrufen. Rechtsgrundlage: Art. 6 Abs. 1 lit. b und f DSGVO.
               </p>
             </div>
@@ -185,7 +185,7 @@ export default function DatenschutzPage() {
               </ul>
               <p className="leading-relaxed">
                 Kontakt:{" "}
-                <EmailSchutz nutzer="monika.oechtering" domain="googlemail.com" />
+                <EmailSchutz nutzer="info" domain="klartextliebe.de" />
               </p>
             </div>
 

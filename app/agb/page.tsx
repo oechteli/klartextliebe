@@ -116,7 +116,7 @@ export default function AgbPage() {
                 des Vertragsabschlusses. Um Ihr Widerrufsrecht auszuüben, müssen Sie mir
                 (Monika Oechtering-Sorg, Klartext Liebe, Amthausstraße 33, 76227 Karlsruhe,
                 E-Mail:{" "}
-                <EmailSchutz nutzer="monika.oechtering" domain="googlemail.com" />
+                <EmailSchutz nutzer="info" domain="klartextliebe.de" />
                 ) mittels einer eindeutigen Erklärung (z. B. per E-Mail) über Ihren
                 Entschluss, diesen Vertrag zu widerrufen, informieren. Zur Wahrung der
                 Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung
