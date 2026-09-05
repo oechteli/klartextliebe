@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
+import { EmailSchutz } from "@/components/ui/EmailSchutz";
 
 export const metadata: Metadata = {
   title: "Impressum",
@@ -35,9 +36,7 @@ export default function ImpressumPage() {
               <h2 className="text-lg font-semibold text-ink-900">Kontakt</h2>
               <p className="leading-relaxed">
                 E-Mail:{" "}
-                <a href="mailto:monika.oechtering@googlemail.com" className="text-brand-teal hover:underline">
-                  monika.oechtering@googlemail.com
-                </a>
+                <EmailSchutz nutzer="monika.oechtering" domain="googlemail.com" />
               </p>
             </div>
 

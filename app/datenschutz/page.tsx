@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
+import { EmailSchutz } from "@/components/ui/EmailSchutz";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
@@ -35,9 +36,7 @@ export default function DatenschutzPage() {
                 Amthausstraße 33, 76227 Karlsruhe
                 <br />
                 E-Mail:{" "}
-                <a href="mailto:monika.oechtering@googlemail.com" className="text-brand-teal hover:underline">
-                  monika.oechtering@googlemail.com
-                </a>
+                <EmailSchutz nutzer="monika.oechtering" domain="googlemail.com" />
               </p>
             </div>
 
@@ -89,9 +88,7 @@ export default function DatenschutzPage() {
                 siehe Abschnitt 4). Die Daten werden gelöscht, sobald sie nicht mehr benötigt
                 werden, sofern keine gesetzliche Aufbewahrungspflicht besteht. Ihre Einwilligung
                 können Sie jederzeit per E-Mail an{" "}
-                <a href="mailto:monika.oechtering@googlemail.com" className="text-brand-teal hover:underline">
-                  monika.oechtering@googlemail.com
-                </a>{" "}
+                <EmailSchutz nutzer="monika.oechtering" domain="googlemail.com" />{" "}
                 widerrufen. Rechtsgrundlage: Art. 6 Abs. 1 lit. b und f DSGVO.
               </p>
             </div>
@@ -188,9 +185,7 @@ export default function DatenschutzPage() {
               </ul>
               <p className="leading-relaxed">
                 Kontakt:{" "}
-                <a href="mailto:monika.oechtering@googlemail.com" className="text-brand-teal hover:underline">
-                  monika.oechtering@googlemail.com
-                </a>
+                <EmailSchutz nutzer="monika.oechtering" domain="googlemail.com" />
               </p>
             </div>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
+import { EmailSchutz } from "@/components/ui/EmailSchutz";
 
 export const metadata: Metadata = {
   title: "AGB",
@@ -115,9 +116,7 @@ export default function AgbPage() {
                 des Vertragsabschlusses. Um Ihr Widerrufsrecht auszuüben, müssen Sie mir
                 (Monika Oechtering-Sorg, Klartext Liebe, Amthausstraße 33, 76227 Karlsruhe,
                 E-Mail:{" "}
-                <a href="mailto:monika.oechtering@googlemail.com" className="text-brand-teal hover:underline">
-                  monika.oechtering@googlemail.com
-                </a>
+                <EmailSchutz nutzer="monika.oechtering" domain="googlemail.com" />
                 ) mittels einer eindeutigen Erklärung (z. B. per E-Mail) über Ihren
                 Entschluss, diesen Vertrag zu widerrufen, informieren. Zur Wahrung der
                 Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung
