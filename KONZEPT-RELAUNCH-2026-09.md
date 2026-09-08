@@ -120,6 +120,51 @@ Drei Wege, sortiert nach Aufwand:
 
 Empfehlung: **A**, weil die Website schon auf Next.js und Supabase vorbereitet ist (Supabase-Migration liegt im Repo) und weil Klartext Liebe ein eigenes Gesicht behalten soll. Kurs 1 startet ohnehin als Live-Kohorte per Zoom, die Plattform muss also erst in vier bis sechs Wochen fertig sein.
 
+## 8a. Nachtrag 07.09.2026: Das LMS-/Community-Modul existiert bereits (Option B wird gewählt)
+
+Gefunden in `C:\Users\mail\appiverse-core-local` (GitHub oechteli/appiverse-core, interner Name „LandingDesk", Peters Plattform, live als appymindo.de). Es ist eine Mandanten-Plattform: Jede Marke bekommt einen eigenen Mandanten mit eigener Farbe, Schrift, Rechtsseiten, Kursen, Community und Rechnungen.
+
+Was für Klartext Liebe fertig ist:
+
+| Baustein | Stand |
+|---|---|
+| Kurse (Module, Lektionen, Quiz, Kursbewertungen, Zertifikate/Teilnahmebestätigung) | vorhanden (`src/features/lms`) |
+| Community (Spaces, Beiträge, Anwesenheit, Live-Räume) | vorhanden (`src/features/community`) |
+| Live-Termine mit Online-Link, Aufzeichnung, Erinnerung, Anwesenheitsliste | vorhanden (Commit f781613) |
+| 1:1-Terminbuchung im Cal.com-Stil (Wochenraster, Bestätigung per Mail, 24-h-Storno) | Modul `booking` vorhanden |
+| Kurs-Checkout über Stripe Connect je Mandant | vorhanden (Phase 13) |
+| Rechnungs-PDF je Mandant mit Kleinunternehmer-Hinweis | vorhanden (Commit d96ecb5) |
+| Rechtsseiten je Mandant (Impressum, Datenschutz, AGB, Widerruf) | vorhanden |
+| Mandant per Skript anlegen | `npm run tenant:anlegen -- --slug=klartext-liebe --name="Klartext Liebe" --owner=<E-Mail> --preset=<Preset> --module=lms,community --legal=generic --kleinunternehmer=1` |
+| Eigene Domain je Mandant | Feld `customDomain` vorhanden, Vorschlag `lernen.klartext-liebe.de` |
+
+Was fehlt: ein Theme-Preset „klartext-liebe" (rosé/warm, Nunito) in `src/lib/theme-presets.ts`. Bisher gibt es default, acamindo, teachymindo, elektronik-akademie. Aufwand: eine Stunde.
+
+Konsequenz: Die Website klartext-liebe.de bleibt das Schaufenster (statisch, Cloudflare Pages). Kurse, Community, Live-Termine und Buchung laufen im Mandanten auf der Plattform. Der Login-Button im Header zeigt schon heute auf appymindo.de.
+
+Regeln aus dem Plattform-Briefing, die gelten: Peters `main` nicht anfassen, Feature-Branch verwenden, appymindo.de-Produktion ist tabu ohne Peters Freigabe. Der lokale Stand steht auf Branch `acamindo-launch` mit 37 nicht eingecheckten Änderungen, die nicht angerührt werden.
+
+## 8b. Entscheidungen (von Monika an Claude delegiert am 07.09.2026)
+
+| # | Frage | Entscheidung | Begründung |
+|---|---|---|---|
+| 1 | Konzept | So umsetzen | Struktur von chrissurel.com ist bewährt und passt zu Coaching mit Gesicht |
+| 2 | Kurstitel | Wie in Abschnitt 4 | Bauen aufeinander auf, jeder Titel nennt das Ergebnis |
+| 3 | Kurs 1 | Zuerst als Live-Kohorte | Sofort verkaufbar, Aufzeichnung wird zum Videokurs, echte Stimmen entstehen |
+| 4 | Lernplattform | Option B: Mandant „klartext-liebe" auf appiverse-core | Alles ist gebaut, nur Preset und Mandant fehlen |
+| 5 | Newsletter | Brevo | Deutsch, DSGVO-konform, kostenloser Einstieg, Double-Opt-in eingebaut |
+| 6 | Claim | „Klartext Liebe. Damit aus Suchen Finden wird." | Nennt Marke und Ergebnis in einem Satz |
+| 7 | Startseite | Community/Events/Marktplatz-Vorschauen ausblenden | Nur zeigen, was es gibt; Code bleibt |
+| 8 | Kurspreise | Kurs 1: 149 €, Kurs 2: 199 €, Kurs 3: 199 €, Bundle 449 € | Unter dem 1:1-Programm (399 €), über der Analyse (79 €) |
+
+Monika kann jede Entscheidung jederzeit ändern. Zweitmeinung: Diese Datei lässt sich als Ganzes in ChatGPT einfügen.
+
+## 8c. Was nur Monika oder Peter freigeben können
+
+1. **Peter:** Mandant „klartext-liebe" auf appymindo.de anlegen (Produktion) und Domain `lernen.klartext-liebe.de` darauf zeigen lassen. Alternativ zuerst lokal auf der Dev-Datenbank testen.
+2. **Peter:** Plattenplatz auf C: freigeben (1,1 GB frei, Builds brauchen mehr).
+3. **Monika:** Stripe Connect für den Mandanten im Dashboard verbinden (Zahlungsdaten gibt Claude nie ein).
+
 ## 9. Fahrplan
 
 | Phase | Zeitraum | Inhalt | Ergebnis |
