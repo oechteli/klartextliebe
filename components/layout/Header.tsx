@@ -9,26 +9,29 @@ import { Button } from "@/components/ui/Button";
 const LOGIN_URL =
   process.env.NEXT_PUBLIC_LOGIN_URL ?? "https://appymindo.de";
 
-// Hauptnavigation (Desktop sichtbar)
+// Hauptnavigation (Desktop sichtbar). Seit dem Relaunch 07.09.2026 nach dem
+// Vorbild chrissurel.com: Über · Kurse · 1:1 · Partnervermittlung · YouTube · Ratgeber.
+// Archiv bis 07.09.2026: Start · Coaching · So funktioniert's · Ratgeber ·
+// Über mich · FAQ · Kontakt.
 const primaryItems = [
-  { href: "/", label: "Start" },
-  { href: "/coaching", label: "Coaching" },
-  { href: "/so-funktionierts", label: "So funktioniert's" },
-  { href: "/blog", label: "Ratgeber" },
   { href: "/ueber-mich", label: "Über mich" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: "/kurse", label: "Kurse" },
+  { href: "/coaching", label: "1:1 Coaching" },
+  { href: "/partnervermittlung", label: "Partnervermittlung" },
+  { href: "/youtube", label: "YouTube" },
+  { href: "/blog", label: "Ratgeber" },
 ];
 
 // Weitere Bereiche (Desktop im "Mehr"-Menü, mobil in eigener Gruppe)
 const moreItems = [
-  { href: "/persoenliches-coaching", label: "Persönliches Coaching" },
+  { href: "/so-funktionierts", label: "So funktioniert's" },
+  { href: "/persoenliches-coaching", label: "Einzelne Sessions" },
   { href: "/analyse", label: "Analyse" },
-  { href: "/community", label: "Community (bald)" },
-  { href: "/marktplatz", label: "Matching (bald)" },
-  { href: "/events", label: "Events (bald)" },
-  { href: "/youtube", label: "YouTube" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/kontakt", label: "Kontakt" },
   { href: "/kluge-koepfe", label: "Sapiosexuell?" },
+  // Archiv bis 07.09.2026: Community (bald), Matching (bald), Events (bald).
+  // Die Seiten bleiben erreichbar (Footer), nur nicht mehr im Menü.
 ];
 
 function Logo() {
@@ -143,8 +146,8 @@ export function Header() {
           <Button href={LOGIN_URL} variant="ghost" size="sm">
             Login
           </Button>
-          <Button href="/starte-jetzt" size="sm">
-            Starte jetzt – kostenlos
+          <Button href="/kostenlos-starten" size="sm">
+            Kostenlos starten
           </Button>
         </div>
 
@@ -203,8 +206,8 @@ export function Header() {
               </Link>
             ))}
             <div className="flex flex-col gap-2 px-3 pt-3">
-              <Button href="/starte-jetzt" size="sm" className="w-full">
-                Starte jetzt – kostenlos
+              <Button href="/kostenlos-starten" size="sm" className="w-full">
+                Kostenlos starten
               </Button>
               <Button
                 href={LOGIN_URL}

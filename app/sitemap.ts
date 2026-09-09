@@ -7,6 +7,10 @@ const SITE_URL =
 // Alle öffentlichen Routen mit grober Priorisierung.
 const routes: { path: string; priority: number; changeFrequency: "weekly" | "monthly" | "yearly" }[] = [
   { path: "/", priority: 1.0, changeFrequency: "weekly" },
+  { path: "/kostenlos-starten", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/kurse", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/kurse/klartext-start", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/partnervermittlung", priority: 0.8, changeFrequency: "monthly" },
   { path: "/starte-jetzt", priority: 0.9, changeFrequency: "monthly" },
   { path: "/coaching", priority: 0.9, changeFrequency: "monthly" },
   { path: "/persoenliches-coaching", priority: 0.9, changeFrequency: "monthly" },

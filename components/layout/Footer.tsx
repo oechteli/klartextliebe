@@ -8,13 +8,14 @@ const columns = [
   {
     title: "Angebot",
     links: [
-      { href: "/starte-jetzt", label: "Starte jetzt – kostenlos" },
-      { href: "/coaching", label: "Coaching" },
-      { href: "/persoenliches-coaching", label: "Persönliches Coaching" },
+      { href: "/kostenlos-starten", label: "Kostenlos starten" },
+      { href: "/kurse", label: "Kurse" },
+      { href: "/coaching", label: "1:1 Coaching" },
+      { href: "/persoenliches-coaching", label: "Einzelne Sessions" },
+      { href: "/partnervermittlung", label: "Partnervermittlung" },
       { href: "/so-funktionierts", label: "So funktioniert's" },
       { href: "/analyse", label: "Persönlichkeitsanalyse" },
       { href: "/community", label: "Community (in Vorbereitung)" },
-      { href: "/marktplatz", label: "Matching (in Vorbereitung)" },
       { href: "/events", label: "Events (in Vorbereitung)" },
     ],
   },
@@ -61,11 +62,13 @@ export function Footer() {
               height={160}
               className="h-14 w-auto"
             />
+            {/* alt (bis 07.09.2026): „Dating für reflektierte Singles mit Tiefe." /
+                „Singlecoaching für echte Verbindung." */}
             <p className="mt-4 text-sm text-ink-500">
-              Dating für reflektierte Singles mit Tiefe.
+              Damit aus Suchen Finden wird.
             </p>
             <p className="mt-1 text-sm text-ink-400">
-              Singlecoaching für echte Verbindung.
+              Singlecoaching, Kurse und persönliche Vermittlung.
             </p>
           </div>
 

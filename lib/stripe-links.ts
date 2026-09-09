@@ -11,6 +11,8 @@ export const stripeLinks = {
   paargespraech: "/kontakt?thema=Buchung+Paargespr%C3%A4ch+90+Minuten+(169+%E2%82%AC)",
   datingKlarheit: "/kontakt?thema=Buchung+Dating-Klarheit-Paket+(399+%E2%82%AC)",
   vipMatchklarheit: "/kontakt?thema=Buchung+VIP-Matchklarheit+(799+%E2%82%AC)",
+  // Neu seit 07.09.2026: Kurs 1 als Live-Gruppe
+  kursKlartextStart: "/kontakt?thema=Buchung+Kurs+Klartext+Start+(149+%E2%82%AC)",
 } as const;
 
 export type StripeLinkKey = keyof typeof stripeLinks;

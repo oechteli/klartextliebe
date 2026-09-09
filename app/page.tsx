@@ -1,47 +1,58 @@
 import { Hero } from "@/components/sections/Hero";
 import { SocialProofBar } from "@/components/sections/SocialProofBar";
-import { WhatIsSection } from "@/components/sections/WhatIsSection";
-import { ProblemSection } from "@/components/sections/ProblemSection";
-import { SolutionSection } from "@/components/sections/SolutionSection";
+import { RightForYouSection } from "@/components/sections/RightForYouSection";
+import { AboutMonikaSection } from "@/components/sections/AboutMonikaSection";
+import { FreeStartSection } from "@/components/sections/FreeStartSection";
+import { CoursesSection } from "@/components/sections/CoursesSection";
 import { OfferSection } from "@/components/sections/OfferSection";
-// import { TestimonialsSection } from "@/components/sections/TestimonialsSection"; // ARCHIV: erfundene Stimmen, seit 02.09.2026 ersetzt
+import { MatchmakingSection } from "@/components/sections/MatchmakingSection";
 import { HowIWorkSection } from "@/components/sections/HowIWorkSection";
-import { CommunityPreview } from "@/components/sections/CommunityPreview";
-import { AnalysisPreview } from "@/components/sections/AnalysisPreview";
-import { MatchingPreview } from "@/components/sections/MatchingPreview";
-import { EventPreview } from "@/components/sections/EventPreview";
+import { YouTubeSection } from "@/components/sections/YouTubeSection";
 import { BlogPreview } from "@/components/sections/BlogPreview";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { CtaSection } from "@/components/sections/CtaSection";
 
+/*
+ * Startseite seit dem Relaunch 07.09.2026 (Vorbild chrissurel.com).
+ *
+ * Archiv der Reihenfolge bis 07.09.2026 (Komponenten bleiben im Repo, nur
+ * hier nicht mehr eingebunden):
+ *   Hero · SocialProofBar · WhatIsSection · ProblemSection · SolutionSection ·
+ *   OfferSection preview · HowIWorkSection · CommunityPreview ·
+ *   AnalysisPreview · MatchingPreview · EventPreview preview · BlogPreview ·
+ *   CtaSection
+ * Entscheidung: Community-, Matching- und Events-Vorschauen („in Vorbereitung")
+ * verschwinden von der Startseite. Die Seiten /community, /events, /marktplatz
+ * bleiben erreichbar.
+ */
 export default function HomePage() {
   return (
     <>
-      {/* A) Hero */}
+      {/* 1 Hero: Gesicht, Claim, ein Hauptbutton */}
       <Hero />
-      {/* B) Social Proof Strip */}
+      {/* 2 Vertrauensleiste (keine Zahlen, nur Haltung) */}
       <SocialProofBar />
-      {/* C) Was ist Klartext Liebe? */}
-      <WhatIsSection />
-      {/* D) Problemsektion */}
-      <ProblemSection />
-      {/* E) Lösungssektion */}
-      <SolutionSection />
-      {/* F) Coachingangebote Preview (3 Karten) */}
+      {/* 3 Du bist hier richtig, wenn … */}
+      <RightForYouSection />
+      {/* 4 Über Monika: die Kupplerin-Geschichte */}
+      <AboutMonikaSection />
+      {/* 5 Kostenlos starten (ohne Newsletter) */}
+      <FreeStartSection />
+      {/* 6 Die drei Kurse */}
+      <CoursesSection />
+      {/* 7 1:1 mit Monika (bestehende Formate) */}
       <OfferSection preview />
-      {/* G) So arbeite ich (ersetzt die frühere Testimonial-Sektion) */}
-      {/* <TestimonialsSection /> */}
+      {/* 8 Partnervermittlung, Stufe 1 */}
+      <MatchmakingSection />
+      {/* 9 So arbeite ich (Haltung, Grenzen, Krisenhinweis) */}
       <HowIWorkSection />
-      {/* H) Community Preview (in Vorbereitung) */}
-      <CommunityPreview />
-      {/* I) KI-Persönlichkeitsanalyse Preview */}
-      <AnalysisPreview />
-      {/* J) Kuratiertes Matching Preview (in Vorbereitung) */}
-      <MatchingPreview />
-      {/* K) Live-Treffen Preview (in Vorbereitung) */}
-      <EventPreview preview />
-      {/* L) Ratgeber-Vorschau */}
+      {/* 10 YouTube */}
+      <YouTubeSection />
+      {/* 11 Ratgeber */}
       <BlogPreview />
-      {/* M) CTA Abschluss */}
+      {/* 12 Kurz-FAQ */}
+      <FaqSection />
+      {/* 13 Abschluss: Erstgespräch */}
       <CtaSection />
     </>
   );

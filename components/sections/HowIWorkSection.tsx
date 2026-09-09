@@ -95,10 +95,13 @@ export function HowIWorkSection() {
                 Ich arbeite ohne Erfolgsquoten und ohne Vorher-nachher-Versprechen.
               </li>
               <li>
-                <strong className="text-ink-800">Keine Partnervermittlung.</strong>{" "}
-                Community, Events und kuratiertes Matching sind in Vorbereitung
-                und starten mit unserer Lernplattform – heute bekommst du
-                Coaching, nicht Vorschläge.
+                {/* alt (bis 07.09.2026): „Keine Partnervermittlung. Community, Events und
+                    kuratiertes Matching sind in Vorbereitung …" */}
+                <strong className="text-ink-800">Kein Partnerpool.</strong>{" "}
+                Ich stelle Menschen aus der Intensivbegleitung persönlich
+                jemandem vor, wenn ich in meinem Umfeld eine Passung sehe. Das ist
+                keine Datenbank und kein Versprechen. Community und Live-Treffen
+                folgen mit der Lernplattform.
               </li>
             </ul>
             <p className="mt-5 rounded-xl border border-cream-200 bg-cream-50 p-4 text-xs leading-relaxed text-ink-500">

@@ -25,6 +25,14 @@ const gruppen: { titel: string; fragen: Faq[] }[] = [
         a: "Klartext Liebe ist Singlecoaching und Datingberatung mit schriftlicher Profil- und Chat-Analyse – für reflektierte Singles, die mehr suchen als Swipen und Smalltalk. Der Ansatz: Klarheit, Selbstwert und ehrliche Kommunikation statt Dating-Tricks. Community, Live-Treffen und kuratiertes Matching sind in Vorbereitung und starten mit unserer Lernplattform.",
       },
       {
+        q: "Was sind die Klartext-Kurse?",
+        a: "Drei aufeinander aufbauende Kurse: „Klartext Start – Warum du noch Single bist" (Muster, Selbstbild, Plan), „Wirkung – Wie du gesehen wirst" (Stil, Profil, erste Sätze) und „Vom Date zur Beziehung" (Auswahl, Tempo, Bindung). Kurs 1 läuft als Live-Gruppe mit Monika: vier Abende à 90 Minuten per Video, höchstens acht Teilnehmende, Workbook, 149 €. Kurs 2 und 3 folgen als Videokurse, ihre Themen gibt es bis dahin im Einzelgespräch.",
+      },
+      {
+        q: "Vermittelt Klartext Liebe Partner?",
+        a: "Heute persönlich und nur für Menschen aus der Intensivbegleitung: Wenn Monika in ihrem Umfeld jemanden sieht, der passen könnte, fragt sie beide und stellt sie einander vor. Kein Pool, keine Datenbank, kein Versprechen. Eine eigene Vermittlung mit Aufnahmegespräch folgt, sobald genug Menschen dabei sind.",
+      },
+      {
         q: "Wie läuft die Zusammenarbeit ab?",
         a: "In vier Schritten: kostenloses Erstgespräch (ca. 20 Minuten), gemeinsame Wahl des passenden Angebots, persönliche Begleitung online per Video oder schriftlich, dann Umsetzung in deinem Alltag. Eine ausführliche Beschreibung findest du auf der Seite „So funktioniert's“.",
       },

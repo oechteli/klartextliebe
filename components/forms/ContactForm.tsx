@@ -21,6 +21,7 @@ const EMPFAENGER = "info@klartext-liebe.de";
 
 const ANLIEGEN_OPTIONEN = [
   "Kostenloses Erstgespräch",
+  "Kurs buchen",
   "Coaching",
   "Paargespräch",
   "Vormerkung Community",
@@ -40,6 +41,7 @@ function anliegenAusThema(thema: string): string {
   if (/vormerk.*event/i.test(thema)) return "Vormerkung Events";
   if (/vormerk.*match/i.test(thema)) return "Vormerkung Matching";
   if (/erstgespräch/i.test(thema)) return "Kostenloses Erstgespräch";
+  if (/kurs/i.test(thema)) return "Kurs buchen";
   if (/paar/i.test(thema)) return "Paargespräch";
   if (/community/i.test(thema)) return "Community-Zugang anfragen";
   if (/vip/i.test(thema)) return "VIP-Matchklarheit anfragen";

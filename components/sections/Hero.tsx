@@ -2,12 +2,19 @@ import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 
+/**
+ * Hero seit dem Relaunch 07.09.2026 (Vorbild chrissurel.com): Monikas Gesicht,
+ * ein Claim, ein Hauptbutton „Kostenlos starten".
+ *
+ * Archiv (bis 07.09.2026): Marken-Banner /brand/header.jpg über die ganze Breite
+ * (bleibt das OpenGraph-Bild), darunter zentriert die Überschrift
+ * „Dating für reflektierte Singles mit Tiefe." mit zwei Buttons
+ * (/starte-jetzt und Erstgespräch). Claim-Entscheidung 07.09.2026:
+ * „Klartext Liebe. Damit aus Suchen Finden wird."
+ */
 export function Hero() {
   return (
     <section className="relative overflow-hidden band-flaeche">
-      {/* Geschwungenes Farbband der Klartext-Familie (Stufe 3, 04.09.2026).
-          Selbst gezeichnet, liegt hinter dem Inhalt und ist fuer Vorlesegeraete
-          unsichtbar. */}
       <svg
         className="band band-warm"
         viewBox="0 0 1440 620"
@@ -29,11 +36,7 @@ export function Hero() {
           />
         </g>
       </svg>
-      {/* dezenter Marken-Hintergrund */}
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 bg-brand-soft"
-      />
+      <div aria-hidden className="absolute inset-0 -z-10 bg-brand-soft" />
       <div
         aria-hidden
         className="absolute -top-24 right-0 -z-10 h-72 w-72 rounded-full bg-brand-turquoise/20 blur-3xl"
@@ -43,59 +46,52 @@ export function Hero() {
         className="absolute -bottom-24 left-0 -z-10 h-72 w-72 rounded-full bg-brand-violet/20 blur-3xl"
       />
 
-      {/* Marken-Banner (Header) – über die ganze Breite */}
-      <div className="w-full">
-        <Image
-          src="/brand/header.jpg"
-          alt="Klartext Liebe – Singlecoaching für echte Verbindung"
-          width={1920}
-          height={1080}
-          priority
-          className="h-[190px] w-full object-cover object-center sm:h-[260px] lg:h-[340px]"
-        />
-      </div>
+      <div className="container-kl py-14 sm:py-20 lg:py-24">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr,1fr] lg:gap-16">
+          <div className="animate-fade-up text-center lg:text-left">
+            <Badge tone="brand" className="mb-6">
+              Singlecoaching · Kurse · Partnervermittlung
+            </Badge>
 
-      <div className="container-kl py-12 sm:py-16 lg:py-20">
-        <div className="mx-auto max-w-3xl text-center animate-fade-up">
-          <Badge tone="brand" className="mb-6">
-            ✨ Bewusste Partnerwahl statt oberflächlichem Dating
-          </Badge>
+            <h1 className="text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">
+              Klartext Liebe. Damit aus{" "}
+              <span className="akzentwort">Suchen</span>{" "}
+              <span className="akzentwort-3">Finden</span> wird.
+            </h1>
 
-          {/* alt (bis 04.09.2026): <span className="text-gradient">reflektierte Singles</span>
-              mit dem Tuerkis-Verlauf der frueheren Palette. Jetzt zwei Farben der
-              Klartext-Familie: Rose und Pflaume. */}
-          <h1 className="text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">
-            Dating für <span className="akzentwort">reflektierte Singles</span>{" "}
-            mit <span className="akzentwort-3">Tiefe</span>.
-          </h1>
+            <p className="mx-auto mt-6 max-w-xl text-lg text-ink-500 sm:text-xl lg:mx-0">
+              Ich bin Monika. Ich bringe seit Jahrzehnten Menschen zusammen und
+              sage dir ehrlich, was dich bisher aufgehalten hat: an deiner
+              Wirkung, deiner Auswahl, deiner Art zu reden.
+            </p>
 
-          {/* Archiv (bis 02.09.2026): „… Persönlichkeitsanalyse und kuratierte
-              Begegnungen für Menschen, …" – Begegnungen/Matching sind noch in
-              Vorbereitung, darum hier nur, was es heute gibt. */}
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-ink-500 sm:text-xl">
-            Klartext Liebe verbindet Singlecoaching, klare Kommunikation und
-            Persönlichkeitsanalyse für Menschen, die mehr suchen als Smalltalk,
-            Swipen und Spielchen.
-          </p>
+            <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row lg:justify-start">
+              <Button href="/kostenlos-starten" size="lg">
+                Kostenlos starten
+              </Button>
+              <Button href="/kurse" variant="secondary" size="lg">
+                Die Kurse
+              </Button>
+            </div>
 
-          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button href="/starte-jetzt" size="lg">
-              Starte jetzt – 3 Minuten, kostenlos →
-            </Button>
-            <Button
-              href="/kontakt?thema=Kostenloses+Erstgespräch"
-              variant="secondary"
-              size="lg"
-            >
-              Kostenloses Erstgespräch
-            </Button>
+            <p className="mt-6 text-sm text-ink-400">
+              Für Frauen und Männer. Ohne Tricks, ohne Garantieversprechen,
+              ohne Abo.
+            </p>
           </div>
 
-          <p className="mt-6 text-sm text-ink-400">
-            4 kurze Fragen, dann ist dein KI-Coach sofort für dich da – ohne
-            Termin, ohne Login. Wenn du tiefer gehen willst, übernimmt Monika
-            persönlich.
-          </p>
+          <div className="mx-auto w-full max-w-[380px] lg:mx-0 lg:justify-self-end">
+            <div className="mockup mockup-rechts aspect-[3/4]">
+              <Image
+                src="/brand/monika.png"
+                alt="Monika Oechtering, Gründerin von Klartext Liebe"
+                width={640}
+                height={853}
+                priority
+                className="h-full w-full object-cover object-top"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

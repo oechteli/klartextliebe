@@ -17,12 +17,13 @@ const OG_IMAGE = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  // alt (bis 07.09.2026): „Klartext Liebe – Dating für reflektierte Singles mit Tiefe"
   title: {
-    default: "Klartext Liebe – Dating für reflektierte Singles mit Tiefe",
+    default: "Klartext Liebe – Damit aus Suchen Finden wird",
     template: "%s · Klartext Liebe",
   },
   description:
-    "Klartext Liebe: Singlecoaching, Paargespräch, Datingberatung und Persönlichkeitsanalyse für reflektierte Menschen mit Tiefgang. Ehrlich, ohne Datingtricks, ohne Erfolgsgarantie. Community und kuratiertes Matching in Vorbereitung.",
+    "Klartext Liebe: Singlecoaching, Kurse und persönliche Partnervermittlung mit Monika Oechtering. Der ehrliche Blick von außen auf Wirkung, Auswahl und Kommunikation. Ohne Tricks, ohne Garantieversprechen, ohne Abo.",
   alternates: { canonical: "/" },
   keywords: [
     "Singlecoaching",
@@ -48,14 +49,14 @@ export const metadata: Metadata = {
     locale: "de_DE",
     url: SITE_URL,
     siteName: "Klartext Liebe",
-    title: "Klartext Liebe – Dating für reflektierte Singles mit Tiefe",
+    title: "Klartext Liebe – Damit aus Suchen Finden wird",
     description:
-      "Singlecoaching und Persönlichkeitsanalyse für Menschen, die mehr suchen als Smalltalk und Swipen. Orientierung statt Garantie.",
+      "Singlecoaching, Kurse und persönliche Partnervermittlung. Der ehrliche Blick von außen. Orientierung statt Garantie.",
     images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Klartext Liebe – Dating für reflektierte Singles mit Tiefe",
+    title: "Klartext Liebe – Damit aus Suchen Finden wird",
     description:
       "Singlecoaching für echte Verbindung. Orientierung statt Garantie.",
     images: [OG_IMAGE.url],
