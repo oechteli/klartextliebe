@@ -26,6 +26,10 @@ Keine Unterscheidung mehr zwischen Tages- und Wochenvideo. Alle Videos haben das
 
 **Falls sich das nach zwei Wochen zu viel anfühlt:** Geh auf vier oder fünf Videos pro Woche runter und behalte die Länge. Nicht umgekehrt. Vier gute lange Videos schlagen sieben gestreckte, weil YouTube misst, wie lange Menschen bleiben, und ein gestrecktes Video dich Reichweite kostet. Das ist deine Entscheidung, nicht meine — ich sage nur, an welcher Schraube du drehen solltest.
 
+**Ein Kniff:** Zwischen den Videos das Oberteil wechseln. Dann sieht man nicht, dass drei am selben Vormittag entstanden sind. Halstuch oder Jacke wechseln reicht schon.
+
+Wenn du an einem Tag keine Lust hast: nicht erzwingen. Ein Video weniger ist besser als eines, in dem man sieht, dass du keine Lust hattest.
+
 ## 1a. Warum mindestens acht Minuten
 
 Zwei Gründe, beide nachgeprüft am 09.09.2026:
@@ -44,10 +48,6 @@ Lange Videos halbieren den Weg. Das ist der eigentliche Grund für die Umstellun
 **Und es eilt ein bisschen:** Ab **Februar 2027** verdoppelt YouTube die Hürde für neue Kanäle auf **8.000 Wiedergabestunden**. Wer bis dahin im Partnerprogramm ist, bleibt bei den alten Bedingungen. Das ist kein Grund zur Hektik, aber ein guter Grund, jetzt anzufangen und nicht nächstes Jahr.
 
 **Was das nicht heißt:** Ein Video auf acht Minuten zu strecken, hilft nicht. Es schadet. Die Skripte in `VIDEOS-TAG-01-14.md` sind so gebaut, dass die Länge aus Inhalt entsteht: mehr Beispiele, eine Übung, ein Abschnitt zu den Grenzen. Wenn dir bei der Aufnahme der Stoff ausgeht, hör auf und lass das Video kürzer. Lieber sieben ehrliche Minuten als zehn dünne.
-
-**Ein Kniff:** Zwischen den Videos das Oberteil wechseln. Dann sieht man nicht, dass drei am selben Vormittag entstanden sind. Halstuch oder Jacke wechseln reicht schon.
-
-Wenn du an einem Tag keine Lust hast: nicht erzwingen. Ein Video weniger ist besser als eines, in dem man sieht, dass du keine Lust hattest.
 
 ## 2. Was du heute brauchst
 
