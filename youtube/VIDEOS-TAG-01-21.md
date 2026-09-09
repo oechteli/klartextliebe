@@ -1,3 +1,18 @@
+> **Nicht mehr aktuell. Bitte nicht danach aufnehmen.**
+>
+> Diese Fassung plant Videos mit vier bis sechs Minuten. Das war ein Fehler:
+> Werbung mitten im Video gibt es erst ab acht Minuten, und kurze Videos
+> sammeln die Wiedergabestunden fürs Partnerprogramm nur halb so schnell.
+>
+> **Gültig ist `VIDEOS-TAG-01-14.md`** — dieselben Themen, zu 14 Videos mit
+> je 8 bis 12 Minuten zusammengefasst.
+>
+> Diese Datei bleibt als Nachschlagewerk liegen. Einzelne Formulierungen und
+> Beispiele daraus sind weiter brauchbar, die Längen- und Zeitpläne nicht.
+> (Vermerkt am 09.09.2026)
+
+---
+
 # Klartext Liebe. Die ersten 14 Videos.
 
 Jeden Tag ein richtiges Video, quer, **vier bis sechs Minuten**. Keine Shorts. Einmal pro Woche ein längeres Video von acht bis zehn Minuten (Tag 1, Tag 7, Tag 14).

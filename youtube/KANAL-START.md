@@ -4,22 +4,46 @@ Stand: 09.09.2026 · Kanal @klartextliebe · Ziel: jeden Tag ein Video
 
 ## 1. Das Format: jeden Tag ein richtiges Video
 
-Keine Shorts. Jeden Tag ein Video im Querformat.
+Keine Shorts. Jeden Tag ein Video im Querformat, **jedes 8 bis 12 Minuten lang**.
 
 | | Wie oft | Länge |
 |---|---|---|
-| **Tagesvideo** (quer) | 6 pro Woche | 4 bis 6 Minuten |
-| **Wochenvideo** (quer) | 1 pro Woche | 8 bis 10 Minuten |
+| **Tagesvideo** (quer) | 7 pro Woche | 8 bis 12 Minuten |
 
-**Wichtig, damit du das durchhältst: Du nimmst nicht täglich auf.** Du nimmst an zwei Tagen pro Woche jeweils drei bis vier Videos hintereinander auf. Das dauert etwa eineinhalb Stunden pro Termin. YouTube kann Videos vorplanen, du lädst also einmal hoch und die Videos erscheinen automatisch jeden Tag.
+Keine Unterscheidung mehr zwischen Tages- und Wochenvideo. Alle Videos haben dasselbe Format und dieselbe Länge. Warum, steht im nächsten Abschnitt.
+
+**Wichtig, damit du das durchhältst: Du nimmst nicht täglich auf.** Du nimmst an zwei Tagen pro Woche jeweils drei bis vier Videos hintereinander auf. YouTube kann Videos vorplanen, du lädst also einmal hoch und die Videos erscheinen automatisch jeden Tag.
 
 **Vorschlag für die Woche:**
 
 | | |
 |---|---|
-| Dienstagvormittag | drei Tagesvideos aufnehmen |
-| Freitagvormittag | drei Tagesvideos plus das Wochenvideo |
+| Dienstagvormittag | drei Videos aufnehmen |
+| Freitagvormittag | vier Videos aufnehmen |
 | Sonntagabend | alle sieben hochladen und terminieren |
+
+**Was das an Zeit kostet, ehrlich gerechnet:** Sieben Videos à zehn Minuten sind rund siebzig Minuten fertiges Video pro Woche. Für die Aufnahme rechne etwa das Doppelte, also zweieinhalb Stunden pro Termin statt eineinhalb. Das ist deutlich mehr als beim alten Plan mit kurzen Videos.
+
+**Falls sich das nach zwei Wochen zu viel anfühlt:** Geh auf vier oder fünf Videos pro Woche runter und behalte die Länge. Nicht umgekehrt. Vier gute lange Videos schlagen sieben gestreckte, weil YouTube misst, wie lange Menschen bleiben, und ein gestrecktes Video dich Reichweite kostet. Das ist deine Entscheidung, nicht meine — ich sage nur, an welcher Schraube du drehen solltest.
+
+## 1a. Warum mindestens acht Minuten
+
+Zwei Gründe, beide nachgeprüft am 09.09.2026:
+
+**Erstens die Werbung.** Werbung mitten im Video (Mid-Roll) darf YouTube erst ab **8 Minuten Videolänge** schalten. Kürzere Videos bekommen nur Werbung davor und danach, also spürbar weniger Einnahmen pro Aufruf. Bis Mitte 2020 lag die Grenze bei 10 Minuten, seither bei 8.
+
+**Zweitens der Weg ins Partnerprogramm.** Um überhaupt Geld zu verdienen, brauchst du 1.000 Abonnenten und 4.000 Wiedergabestunden in 12 Monaten. 4.000 Stunden sind 240.000 Minuten. Wenn Menschen im Schnitt die Hälfte eines Videos schauen, brauchst du:
+
+| Videolänge | Nötige Aufrufe für 4.000 Stunden |
+|---|---|
+| 5 Minuten | rund 96.000 |
+| 10 Minuten | rund 48.000 |
+
+Lange Videos halbieren den Weg. Das ist der eigentliche Grund für die Umstellung.
+
+**Und es eilt ein bisschen:** Ab **Februar 2027** verdoppelt YouTube die Hürde für neue Kanäle auf **8.000 Wiedergabestunden**. Wer bis dahin im Partnerprogramm ist, bleibt bei den alten Bedingungen. Das ist kein Grund zur Hektik, aber ein guter Grund, jetzt anzufangen und nicht nächstes Jahr.
+
+**Was das nicht heißt:** Ein Video auf acht Minuten zu strecken, hilft nicht. Es schadet. Die Skripte in `VIDEOS-TAG-01-14.md` sind so gebaut, dass die Länge aus Inhalt entsteht: mehr Beispiele, eine Übung, ein Abschnitt zu den Grenzen. Wenn dir bei der Aufnahme der Stoff ausgeht, hör auf und lass das Video kürzer. Lieber sieben ehrliche Minuten als zehn dünne.
 
 **Ein Kniff:** Zwischen den Videos das Oberteil wechseln. Dann sieht man nicht, dass drei am selben Vormittag entstanden sind. Halstuch oder Jacke wechseln reicht schon.
 
