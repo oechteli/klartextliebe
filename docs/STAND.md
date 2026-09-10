@@ -3,6 +3,53 @@
 > Neueste Einträge oben. Jeder Eintrag: Datum, wer (Claude oder Codex), was
 > gemacht wurde, was daraus offen blieb.
 
+## 10.09.2026 — Claude (Preise, Syntaxfehler, Deploy weiter blockiert)
+
+Auf Monikas Anweisung selbständig entschieden und umgesetzt:
+
+**Sessionpakete angeglichen.** 3er-Paket 319 €, 10er-Paket 949 €, siehe
+`ENTSCHEIDUNGEN.md`. Geändert in `app/persoenliches-coaching/page.tsx` (Preis,
+Einheit, Buchungsthema, Metabeschreibung) und `app/coaching/page.tsx`. Die alten
+Werte 219 und 649 kommen im Code nicht mehr vor. Damit ist der Befund aus
+`PRUEFBERICHT.md` erledigt.
+
+**Syntaxfehler in `app/faq/page.tsx` behoben.** Zeile 29 mischte deutsche
+Anführungszeichen: geöffnet mit „, geschlossen mit einem geraden ". Das gerade
+Zeichen beendet die JavaScript-Zeichenkette und machte die Datei ungültig.
+`npx tsc --noEmit` meldete rund zwanzig Folgefehler. **Damit wäre jeder Build
+gescheitert** — das war ein stiller zweiter Blocker fürs Deploy, unabhängig von
+der verlorenen Wrangler-Anmeldung. Drei Zeichen ersetzt, Typprüfung jetzt
+fehlerfrei.
+
+Eine Suche über `app/`, `lib/` und `components/` fand 35 weitere gemischte
+Anführungszeichen, alle in Kommentaren und damit harmlos. Nicht angefasst.
+
+**Tag 14 des YouTube-Skripts** um die echten Angebote ergänzt: kostenloser
+Selbsttest und Erstgespräch, die neuen Paketpreise und der Kurs Klartext Start
+(149 €, vier Abende à 90 Minuten, höchstens acht Teilnehmende, Start Oktober).
+Der Kurs existiert tatsächlich, ich hatte ihn am 09.09. fälschlich für erfunden
+gehalten und gestrichen.
+
+**Zwei Korrekturen an früheren Annahmen:**
+
+1. Impressum und Datenschutz sind **nicht** Platzhalter. Sie sind befüllt und
+   live, mit vollständiger Anschrift und Kleinunternehmer-Hinweis. Der
+   entsprechende Punkt in `AUFTRAG.md` ist veraltet.
+2. Ein Push löst **kein** Deploy aus. Es gibt keine GitHub-Action, nur
+   `wrangler.toml`. Live geht die Seite nur über einen lokalen Build plus
+   `wrangler pages deploy`.
+
+**Deploy weiterhin offen, jetzt aus einem anderen Grund.** Laufwerk C: hatte
+heute zwischen 186 und 206 MB frei. Ein `npm run build` habe ich deshalb nicht
+gestartet: Wenn die Platte dabei vollläuft, werden Dateien beschädigt — genau so
+ist am 02.09. die Wrangler-Anmeldung verloren gegangen. Aufräumen kann nur
+Monika, hier wird nichts gelöscht. Sobald ein paar Gigabyte frei sind:
+`npm run build`, dann `npx wrangler login`, dann
+`npx wrangler pages deploy out --project-name klartext-liebe --branch main`.
+
+Der Relaunch vom 07.09. ist damit weiter nicht live; `klartext-liebe.de/kurse`
+gibt eine 404 zurück.
+
 ## 09.09.2026 — Claude (YouTube, Umstellung auf lange Videos)
 
 Monika hat darauf hingewiesen, dass Werbung mitten im Video erst ab einer

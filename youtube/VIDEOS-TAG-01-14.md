@@ -753,9 +753,11 @@ Jeden Tag ein Video, **8 bis 12 Minuten**, quer. Keine Shorts.
 - Wie ich arbeite: Ich frage viel, ich sage ehrlich, was mir auffällt, und ich urteile nicht über dich als Mensch
 - Warum ich zuerst frage und nicht sofort rate: Ein Foto oder ein Chat erzählt nicht dein ganzes Leben. Ich will wissen, wie du eine Situation erlebst, bevor ich etwas dazu sage
 - Der Unterschied zwischen Gruppe und Einzelgespräch: In der Gruppe hörst du, dass andere dasselbe erleben, und das entlastet oft mehr als jeder Rat. Im Einzelgespräch geht es nur um dich
-- **Was es kostet.** Sachlich und ohne Drumherum vorlesen: Erstgespräch kostenlos. Schriftliche Profil- und Chat-Analyse 79 Euro. Einzelgespräch 60 Minuten 119 Euro. Paargespräch 90 Minuten 169 Euro. Die beiden Programme 399 und 799 Euro
-- **Die Sessionpakete nennst du noch nicht.** Die Preise dafür sind intern nicht abgeschlossen. Lass sie im Video weg, bis das entschieden ist
+- **Was kostenlos ist**, und das sagst du zuerst: der Selbsttest mit dem KI-Coach, drei Minuten, ohne Anmeldung. Das Erstgespräch mit dir, etwa zwanzig Minuten. Und diese Videos. Ohne Newsletter, ohne Login
+- **Was es kostet.** Sachlich und ohne Drumherum vorlesen: Schriftliche Profil- und Chat-Analyse 79 Euro. Einzelgespräch 60 Minuten 119 Euro, im 3er-Paket 319 Euro, im 10er-Paket 949 Euro. Paargespräch 90 Minuten 169 Euro. Die beiden Programme 399 und 799 Euro
+- **Der Kurs Klartext Start, 149 Euro.** Vier Abende à 90 Minuten als Live-Gruppe per Video, höchstens acht Teilnehmende, mit Workbook und persönlichem Feedback. Die erste Gruppe startet im Oktober. Die Abende werden aufgezeichnet
 - Warum du die Preise überhaupt nennst: Wer sie im Video hört, muss nicht suchen und fühlt sich nicht in ein Verkaufsgespräch gelockt
+- Und ein Satz zur Einordnung: Kein Abo, keine Mitgliedschaft, keine Kündigungsfrist. Du kaufst, was du brauchst
 - Was ich nicht verspreche: dass du danach jemanden findest. Das hängt auch von Begegnungen und von Entscheidungen anderer Menschen ab
 - Was ich verspreche: dass du klarer siehst, was du beeinflussen kannst
 - Kein Druck: Das Erstgespräch ist dazu da, herauszufinden, ob es passt. Auch wenn die Antwort nein ist

@@ -275,7 +275,7 @@ export default function CoachingPage() {
             </Link>{" "}
             buchst du 60-Minuten-Sessions mit Monika per Chat, Telefon oder
             Video – einzeln (119 €, derselbe Preis wie das Einzelgespräch) oder
-            im 3er- (219 €) bzw. 10er-Paket (649 €), ohne Mitgliedschaft, ohne
+            im 3er- (319 €) bzw. 10er-Paket (949 €), ohne Mitgliedschaft, ohne
             Abo. Oder du{" "}
             <Link
               href="/starte-jetzt"

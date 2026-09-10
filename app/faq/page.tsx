@@ -26,7 +26,7 @@ const gruppen: { titel: string; fragen: Faq[] }[] = [
       },
       {
         q: "Was sind die Klartext-Kurse?",
-        a: "Drei aufeinander aufbauende Kurse: „Klartext Start – Warum du noch Single bist" (Muster, Selbstbild, Plan), „Wirkung – Wie du gesehen wirst" (Stil, Profil, erste Sätze) und „Vom Date zur Beziehung" (Auswahl, Tempo, Bindung). Kurs 1 läuft als Live-Gruppe mit Monika: vier Abende à 90 Minuten per Video, höchstens acht Teilnehmende, Workbook, 149 €. Kurs 2 und 3 folgen als Videokurse, ihre Themen gibt es bis dahin im Einzelgespräch.",
+        a: "Drei aufeinander aufbauende Kurse: „Klartext Start – Warum du noch Single bist“ (Muster, Selbstbild, Plan), „Wirkung – Wie du gesehen wirst“ (Stil, Profil, erste Sätze) und „Vom Date zur Beziehung“ (Auswahl, Tempo, Bindung). Kurs 1 läuft als Live-Gruppe mit Monika: vier Abende à 90 Minuten per Video, höchstens acht Teilnehmende, Workbook, 149 €. Kurs 2 und 3 folgen als Videokurse, ihre Themen gibt es bis dahin im Einzelgespräch.",
       },
       {
         q: "Vermittelt Klartext Liebe Partner?",
