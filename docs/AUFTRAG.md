@@ -21,19 +21,7 @@ Liste enthielt zwei Punkte, die längst erledigt waren.
 
 ### Blockiert, braucht Monika
 
-- [ ] **Platz auf Laufwerk C: schaffen.** Heute waren 186 bis 206 MB frei bei
-      238 GB Gesamtgröße. Solange das so ist, wird hier kein `npm run build`
-      gestartet: Läuft die Platte beim Bauen voll, werden Dateien beschädigt —
-      so ist am 02.09. die Wrangler-Anmeldung verloren gegangen. Für einen
-      ruhigen Build sollten ein bis zwei Gigabyte frei sein. **Gelöscht wird
-      hier nichts, das macht Monika selbst.**
-- [ ] **Deploy nachholen**, sobald Platz da ist. Der Relaunch vom 07.09. ist
-      nicht live, `klartext-liebe.de/kurse` gibt eine 404 zurück. Weg:
-      `npm run build`, dann `npx wrangler login`, dann
-      `npx wrangler pages deploy out --project-name klartext-liebe --branch main`.
-      Ein Push nach GitHub reicht **nicht** — es gibt keine GitHub-Action, nur
-      `wrangler.toml`. Am 10.09. gepusht und geprüft: Die Live-Seite änderte
-      sich nicht.
+_Derzeit nichts._
 
 ### Offen, inhaltlich
 
@@ -55,6 +43,10 @@ Liste enthielt zwei Punkte, die längst erledigt waren.
 - [x] ~~Impressum und Datenschutz befüllen~~ — **war nie offen.** Beide sind
       befüllt und live, mit vollständiger Anschrift, Kleinunternehmer-Hinweis
       und Haftungsausschluss. Am 10.09. auf der Live-Seite nachgeprüft
+- [x] ~~Deploy nachholen~~ — am 10.09.2026 erledigt. Monika hat Platz auf C:
+      geschaffen, Build lief durch, `wrangler pages deploy` ausgeführt. Der
+      Relaunch vom 07.09. ist live, alle neuen Seiten liefern HTTP 200
+- [x] ~~Platz auf Laufwerk C:~~ — am 10.09.2026 von Monika erledigt, 5,1 GB frei
 - [x] ~~YouTube-Einbettung~~ — `components/sections/YouTubeSection.tsx` und
       `app/youtube/page.tsx` sind gebaut, nur noch nicht live
 

@@ -3,7 +3,33 @@
 > Neueste Einträge oben. Jeder Eintrag: Datum, wer (Claude oder Codex), was
 > gemacht wurde, was daraus offen blieb.
 
-## 10.09.2026 — Claude (Preise, Syntaxfehler, Deploy weiter blockiert)
+## 10.09.2026 — Claude (Deploy erledigt, Relaunch ist live)
+
+Monika hat Platz auf C: geschaffen, 5,1 GB frei. Damit war der Build möglich.
+
+`npm run build` lief fehlerfrei durch, alle Seiten erzeugt, `out/` 5,7 MB. Im
+Build die neuen Preise geprüft (319 / 949, 106,33 / 94,90 pro Session), alte
+Werte kommen nicht mehr vor. Dann
+`npx wrangler pages deploy out --project-name klartext-liebe --branch main`.
+
+**Der Relaunch vom 07.09. ist live.** Nachgeprüft mit `curl` unter Umgehung des
+Zwischenspeichers: `/`, `/kurse`, `/kurse/klartext-start`, `/partnervermittlung`,
+`/youtube`, `/kostenlos-starten`, `/coaching`, `/impressum`, `/datenschutz`
+liefern alle HTTP 200. `/kurse` gab vorher eine 404. Die Paketpreise stehen auf
+`/persoenliches-coaching` und `/coaching`, der Kurs steht mit 149 €. Die Sitemap
+enthält kein localhost.
+
+**Merkposten fürs nächste Mal:** Direkt nach dem Deploy zeigte das Abruf-Werkzeug
+noch die alte Seite. Das war sein eigener Zwischenspeicher, nicht das Deploy.
+Zum Prüfen deshalb `curl` mit einem Zufallsparameter benutzen, nicht WebFetch.
+
+**Hinweis von Wrangler:** `wrangler.toml` fehlt das Feld
+`pages_build_output_dir`. Die Datei wird beim Deploy deshalb ignoriert. Das
+Deploy funktioniert trotzdem, weil das Verzeichnis auf der Kommandozeile steht.
+Nicht geändert, weil an einer funktionierenden Veröffentlichung nichts ohne Not
+gedreht wird.
+
+## 10.09.2026 — Claude (Preise, Syntaxfehler, Deploy vorbereitet)
 
 Auf Monikas Anweisung selbständig entschieden und umgesetzt:
 
