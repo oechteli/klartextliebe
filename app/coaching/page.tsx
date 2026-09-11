@@ -5,6 +5,7 @@ import { OfferSection } from "@/components/sections/OfferSection";
 import { DiscoveryCallBanner } from "@/components/sections/DiscoveryCallBanner";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
+import { stripeLinks } from "@/lib/stripe-links";
 
 export const metadata: Metadata = {
   title: "Coaching – Formate, Ablauf & Preise",
@@ -89,6 +90,7 @@ const formate = [
     dauer: "Schriftlich, ohne Termin",
     preis: "79 €",
     thema: "Buchung Profil & Chat-Analyse (79 €)",
+    link: stripeLinks.profilChatAnalyse as string | null,
   },
   {
     id: "einzelgespraech",
@@ -99,6 +101,7 @@ const formate = [
     dauer: "1 × 60 Minuten",
     preis: "119 €", // Altwert: 149 €
     thema: "Buchung Singlecoaching 1:1 (119 €)",
+    link: stripeLinks.singlecoaching as string | null,
     empfohlen: true,
   },
   {
@@ -110,6 +113,7 @@ const formate = [
     dauer: "1 × 90 Minuten",
     preis: "169 €",
     thema: "Buchung Paargespräch 90 Minuten (169 €)",
+    link: stripeLinks.paargespraech as string | null,
     neu: true,
   },
   {
@@ -121,6 +125,7 @@ const formate = [
     dauer: "3 Gespräche über mehrere Wochen",
     preis: "399 €",
     thema: "Buchung Dating-Klarheit-Paket (399 €)",
+    link: stripeLinks.datingKlarheit as string | null,
   },
   {
     id: "intensiv",
@@ -131,6 +136,8 @@ const formate = [
     dauer: "Mehrere Wochen, individuell",
     preis: "799 €",
     thema: "Buchung VIP-Matchklarheit (799 €)",
+    // Umfang wird im Erstgespräch geklärt, darum weiter übers Kontaktformular
+    link: null as string | null,
   },
 ];
 
@@ -248,16 +255,18 @@ export default function CoachingPage() {
                     </div>
                     <div>
                       <dt className="inline font-semibold text-ink-800">Buchung: </dt>
-                      <dd className="inline text-ink-500">per Kontaktformular</dd>
+                      <dd className="inline text-ink-500">
+                        {f.link ? "direkt online" : "nach dem Erstgespräch"}
+                      </dd>
                     </div>
                   </div>
                 </dl>
                 <div className="mt-5">
                   <Link
-                    href={`/kontakt?thema=${encodeURIComponent(f.thema)}`}
+                    href={f.link ?? `/kontakt?thema=${encodeURIComponent(f.thema)}`}
                     className="text-sm font-semibold text-brand-violet underline-offset-4 hover:underline"
                   >
-                    {f.name} anfragen →
+                    {f.name} {f.link ? "buchen" : "anfragen"} →
                   </Link>
                 </div>
               </Card>
@@ -294,11 +303,10 @@ export default function CoachingPage() {
         <div className="container-kl">
           <div className="rounded-2xl border border-brand-teal/20 bg-brand-teal/5 p-6 text-sm text-ink-600">
             <strong className="text-ink-800">So läuft die Buchung ab:</strong>{" "}
-            Klick auf den Button, kurze Nachricht über das Kontaktformular. Monika
-            meldet sich persönlich, in der Regel innerhalb von 24 Stunden, mit
-            den nächsten Schritten und dem Zahlungslink. Der Vertrag kommt erst
-            mit ihrer Bestätigung zustande – keine automatische Sofortbuchung,
-            keine Verlängerung.
+            Klick auf den Button und bezahl sicher über Stripe. Danach meldet
+            sich Monika persönlich, in der Regel innerhalb von 24 Stunden, und
+            ihr stimmt den Termin ab. Kein Abo, keine Verlängerung. Die
+            VIP-Matchklarheit buchst du nach einem kostenlosen Erstgespräch.
           </div>
 
           <div className="mt-6 rounded-2xl border border-cream-200 bg-white p-6 text-sm text-ink-600">

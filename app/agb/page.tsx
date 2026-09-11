@@ -57,23 +57,32 @@ export default function AgbPage() {
               <h2 className="text-lg font-semibold text-ink-900">3. Vertragsschluss</h2>
               <p className="leading-relaxed">
                 Die Darstellung der Leistungen auf der Website ist kein rechtlich bindendes
-                Angebot, sondern eine Einladung zur Anfrage. Die Kundin/der Kunde stellt
-                über das Kontaktformular oder per E-Mail eine unverbindliche Anfrage. Die
-                Anbieterin meldet sich daraufhin persönlich, in der Regel innerhalb von
-                24 Stunden, mit den nächsten Schritten. Der Vertrag kommt erst zustande,
-                wenn die Anbieterin die Buchung ausdrücklich bestätigt (z. B. per E-Mail
-                mit Auftragsbestätigung und Zahlungslink) oder mit der Leistung beginnt.
+                Angebot. Leistungen mit Buchungsknopf können direkt online gebucht werden:
+                Der Knopf führt zur Bezahlseite des Zahlungsdienstleisters Stripe. Mit
+                Abschluss des Bezahlvorgangs gibt die Kundin/der Kunde ein verbindliches
+                Angebot ab, das die Anbieterin mit der auf der Bezahlseite angezeigten
+                Bestätigung annimmt. Damit kommt der Vertrag zustande. Den Termin stimmen
+                beide Seiten danach gemeinsam ab; die Anbieterin meldet sich dazu in der
+                Regel innerhalb von 24 Stunden.
+              </p>
+              <p className="leading-relaxed">
+                Leistungen ohne Buchungsknopf (derzeit die VIP-Matchklarheit) sowie das
+                kostenlose Erstgespräch werden über das Kontaktformular oder per E-Mail
+                unverbindlich angefragt. Hier kommt der Vertrag erst zustande, wenn die
+                Anbieterin die Buchung ausdrücklich bestätigt (z. B. per E-Mail mit
+                Auftragsbestätigung und Zahlungslink) oder mit der Leistung beginnt.
               </p>
             </div>
 
             <div className="space-y-2">
               <h2 className="text-lg font-semibold text-ink-900">4. Preise und Zahlung</h2>
               <p className="leading-relaxed">
-                Es gelten die zum Zeitpunkt der Anfrage auf der Website ausgewiesenen
-                Preise. Alle Preise sind Endpreise in Euro. Die Zahlung erfolgt nach
-                Auftragsbestätigung über den mitgeteilten Zahlungsweg (z. B.
-                Zahlungslink). Sitzungen finden erst nach Zahlungseingang statt, sofern
-                nichts anderes vereinbart ist. Es besteht kein Abonnement und keine
+                Es gelten die zum Zeitpunkt der Buchung bzw. Anfrage auf der Website
+                ausgewiesenen Preise. Alle Preise sind Endpreise in Euro. Bei der
+                Online-Buchung wird der Betrag sofort über Stripe bezahlt. Bei
+                angefragten Leistungen erfolgt die Zahlung nach Auftragsbestätigung über
+                den mitgeteilten Zahlungsweg (z. B. Zahlungslink). Sitzungen finden erst
+                nach Zahlungseingang statt, sofern nichts anderes vereinbart ist. Es besteht kein Abonnement und keine
                 automatische Verlängerung; Pakete enden mit der letzten enthaltenen
                 Sitzung.
               </p>

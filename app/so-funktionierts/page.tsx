@@ -24,7 +24,7 @@ const schritte = [
     title: "Passendes Angebot wählen",
     zeit: "gemeinsam im Gespräch",
     // Altwert bis 02.09.2026: Singlecoaching 1:1 (149 €); Paargespräch neu
-    text: "Auf Basis des Erstgesprächs empfehlen wir das Format, das wirklich zu deinem Thema passt – von der schriftlichen Profil- & Chat-Analyse (79 €) über das Einzelgespräch (60 Min, 119 €) und das Paargespräch (90 Min, 169 €) bis zum Dating-Klarheit-Paket (399 €) oder der VIP-Matchklarheit (799 €). Du entscheidest in Ruhe; den Zahlungslink bekommst du erst danach.",
+    text: "Auf Basis des Erstgesprächs empfehlen wir das Format, das wirklich zu deinem Thema passt – von der schriftlichen Profil- & Chat-Analyse (79 €) über das Einzelgespräch (60 Min, 119 €) und das Paargespräch (90 Min, 169 €) bis zum Dating-Klarheit-Paket (399 €) oder der VIP-Matchklarheit (799 €). Du entscheidest in Ruhe und buchst dann direkt online.",
   },
   {
     nr: "3",
@@ -100,17 +100,17 @@ export default function SoFunktioniertsPage() {
           </div>
 
           <div className="mt-8 rounded-2xl border border-brand-teal/20 bg-brand-teal/5 p-6 text-sm text-ink-600">
-            <strong className="text-ink-800">Gut zu wissen:</strong> Die
-            Buchung läuft bewusst persönlich – erst Nachricht über das{" "}
+            <strong className="text-ink-800">Gut zu wissen:</strong> Du
+            buchst direkt online und bezahlst sicher über Stripe. Danach meldet
+            sich Monika persönlich, in der Regel innerhalb von 24 Stunden, und
+            ihr stimmt den Termin ab. Wer vorher Fragen hat, schreibt über das{" "}
             <Link
               href="/kontakt"
               className="font-medium text-brand-violet underline underline-offset-2"
             >
               Kontaktformular
             </Link>
-            , dann Rückmeldung mit den nächsten Schritten und dem
-            Zahlungslink. Es gibt keine automatische Sofortbuchung und keine
-            versteckten Kosten.
+            . Keine versteckten Kosten, kein Abo.
           </div>
         </div>
       </section>

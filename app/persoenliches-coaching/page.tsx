@@ -4,6 +4,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { stripeLinks } from "@/lib/stripe-links";
 
 export const metadata: Metadata = {
   title: "Persönliches Coaching – Sessions ohne Abo",
@@ -14,8 +15,8 @@ export const metadata: Metadata = {
 
 /**
  * Session-Pakete (Funnel-Angebot, Vorbild Relationship Hero – aber bewusst
- * OHNE Abo-Zwang). Noch keine Stripe-Links: Alle CTAs führen auf das
- * bestehende Kontaktformular („Session anfragen – Antwort innerhalb von 24 h").
+ * OHNE Abo-Zwang). Seit 11.09.2026 direkt über Stripe buchbar.
+ * Bis dahin führten alle CTAs aufs Kontaktformular („Session anfragen").
  */
 const pakete = [
   {
@@ -35,6 +36,7 @@ const pakete = [
     ],
     highlight: false,
     thema: "Session anfragen – Einzelsession (119 €)", // Altwert: 89 €
+    link: stripeLinks.singlecoaching,
   },
   {
     id: "dreier",
@@ -50,6 +52,7 @@ const pakete = [
     ],
     highlight: true,
     thema: "Session anfragen – 3er-Paket (319 €)",
+    link: stripeLinks.paket3,
   },
   {
     id: "zehner",
@@ -65,6 +68,7 @@ const pakete = [
     ],
     highlight: false,
     thema: "Session anfragen – 10er-Paket (949 €)",
+    link: stripeLinks.paket10,
   },
 ];
 
@@ -86,13 +90,13 @@ const versprechen = [
 const ablauf = [
   {
     step: "1",
-    title: "Session anfragen",
-    desc: "Kurze Nachricht über das Kontaktformular – welches Paket, worum es grob geht.",
+    title: "Session buchen",
+    desc: "Paket wählen und direkt online bezahlen, sicher über Stripe. Kein Konto, kein Abo.",
   },
   {
     step: "2",
     title: "Antwort innerhalb von 24 h",
-    desc: "Monika meldet sich persönlich mit Terminvorschlägen und dem Zahlungslink.",
+    desc: "Monika meldet sich persönlich mit Terminvorschlägen.",
   },
   {
     step: "3",
@@ -170,14 +174,14 @@ export default function PersoenlichesCoachingPage() {
                 </ul>
                 <div className="mt-auto pt-6">
                   <Button
-                    href={`/kontakt?thema=${encodeURIComponent(paket.thema)}`}
+                    href={paket.link}
                     variant={paket.highlight ? "primary" : "outline"}
                     className="w-full"
                   >
-                    Session anfragen
+                    Jetzt buchen
                   </Button>
                   <p className="mt-2 text-center text-xs text-ink-400">
-                    Antwort innerhalb von 24 h
+                    Termin stimmen wir nach der Buchung ab
                   </p>
                 </div>
               </Card>

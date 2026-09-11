@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 };
 
 const ablauf = [
-  ["Anfrage", "Du schreibst kurz über das Kontaktformular. Ich melde mich in der Regel innerhalb von 24 Stunden."],
-  ["Kurzes Gespräch", "15 Minuten per Telefon oder Video: Passt der Kurs zu dir? Wenn nicht, sage ich es."],
-  ["Zahlung", "Du bekommst einen Zahlungslink. Kein Abo, keine Verlängerung, Rechnung per Mail."],
+  ["Anmeldung", "Du meldest dich direkt online an und bezahlst sicher über Stripe. Kein Abo, keine Verlängerung, Rechnung per Mail."],
+  ["Rückmeldung", "Ich melde mich in der Regel innerhalb von 24 Stunden mit den Terminen der vier Abende."],
+  ["Vorher unsicher?", "Schreib mir über das Kontaktformular, 15 Minuten per Telefon oder Video reichen: Passt der Kurs zu dir? Wenn nicht, sage ich es."],
   ["Los geht's", "Workbook vorab, dann vier Abende in kleiner Runde. Aufzeichnung für dich zum Nachschauen."],
 ];
 

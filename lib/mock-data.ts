@@ -52,7 +52,7 @@ export const offers: Offer[] = [
     price: "169 €",
     description:
       "90 Minuten zu zweit mit Monika, online per Video: wenn ihr aneinander vorbeiredet, im Kreis streitet oder klären wollt, wie es weitergeht. Moderiert, ohne Schuldzuweisung, mit klaren nächsten Schritten.",
-    cta: "Paargespräch anfragen",
+    cta: "Paargespräch buchen",
     stripeKey: "paargespraech",
     features: [
       "90 Minuten für euch beide",

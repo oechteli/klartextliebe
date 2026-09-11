@@ -11,6 +11,23 @@ Markdown-Dateien. Beide laufen über ihre Abo-Anmeldung, nicht über API-Guthabe
 Kein Framework (LangGraph, CrewAI, n8n, OpenRouter), weil diese ausnahmslos
 API-Schlüssel brauchen und damit Guthaben verbrauchen würden.
 
+## 11.09.2026 — Direkt online buchen statt Anfrage
+
+Von Monika entschieden: Die Buchungsknöpfe führen direkt zu Stripe, der Vertrag
+entsteht mit dem Bezahlen. Vorher: Anfrage übers Kontaktformular, Vertrag erst
+mit Monikas Bestätigung. Grund: Kein Umweg über das Kontaktformular, das nur
+über das Mailprogramm der Besucherin funktioniert.
+
+Ausnahme **VIP-Matchklarheit (799 €)**: bleibt beim Erstgespräch, weil der
+Umfang dort geklärt wird. Den Zahlungslink schickt Monika danach
+(`vipMatchklarheitZahlung` in `lib/stripe-links.ts`).
+
+Stripe-Konto: **ACAMINDO**, nicht ein eigenes Klartext-Konto. Von Monika so
+entschieden, obwohl Bezahlseite und Kontoauszug dann „ACAMINDO" zeigen.
+
+AGB §3 und §4 entsprechend angepasst, beide Wege sind beschrieben. **Nicht
+anwaltlich geprüft.**
+
 ## 10.09.2026 — Sessionpakete angeglichen
 
 3er-Paket **319 €** (106,33 € pro Session), 10er-Paket **949 €** (94,90 € pro

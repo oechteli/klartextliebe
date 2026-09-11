@@ -3,6 +3,43 @@
 > Neueste Einträge oben. Jeder Eintrag: Datum, wer (Claude oder Codex), was
 > gemacht wurde, was daraus offen blieb.
 
+## 11.09.2026 — Claude (Stripe angebunden, Direktbuchung live)
+
+**Acht Payment Links angelegt**, selbst im Stripe-Dashboard über Monikas
+Chrome, jeweils nach dem Anlegen in der Stripe-Übersicht kontrolliert. Liste und
+alle Einstellungen: `docs/STRIPE-LINKS.md`. Konto ACAMINDO auf Monikas
+Entscheidung.
+
+Zwei Umwege unterwegs:
+- Das Häkchen „AGB akzeptieren" gibt Stripe nur frei, wenn im Konto eine
+  AGB-Adresse steht — die gälte dann für alle Marken im Konto. Nicht geändert.
+  Stattdessen ein Pflichtfeld nur für diese Links.
+- Auswahlfelder brauchen mindestens zwei Optionen; mit einer leeren lehnt Stripe
+  den Link ab. Daraus wurde die Frage „Sofort beginnen oder erst nach der
+  Widerrufsfrist" — genau die, an der das Widerrufsrisiko hängt.
+
+Beim Kurs schließt der Link nach 8 Buchungen (höchstens acht Teilnehmende) und
+zeigt dann einen Hinweis aufs Einzelgespräch, keine Warteliste.
+
+Eine Bezahlseite als Kundin angesehen (nichts eingegeben): Produktname mit
+„Klartext Liebe", Pflichtfeld, Knopf „Buchen". Oben und im Tab steht
+„ACAMINDO".
+
+**Website auf Direktbuchung umgestellt** (Monikas Entscheidung). Geändert:
+`lib/stripe-links.ts`, `lib/kurse.ts`, `lib/mock-data.ts`,
+`app/coaching`, `app/persoenliches-coaching`, `app/kurse`, `app/faq`,
+`app/so-funktionierts`, `components/sections/FaqSection.tsx` und **AGB §3 und
+§4**. Jede Ersetzung per Skript mit Prüfung auf genau einen Treffer. VIP bleibt
+beim Kontaktformular. Die Datenschutzerklärung nannte Stripe schon (Abschnitt 7).
+
+Typprüfung sauber, Build fehlerfrei, deployt. Live nachgeprüft: Startseite 3,
+`/coaching` 4, `/persoenliches-coaching` 3, `/kurse/klartext-start` 1
+Stripe-Links; die alte Formulierung „Zahlungslink"/„keine Sofortbuchung" steht
+auf keiner Seite mehr.
+
+**Offen, nur Monika:** Stripe-Auszahlungen ausgesetzt (Bankverbindung),
+Buchungs-Benachrichtigung prüfen, Testbuchung, anwaltliche Durchsicht AGB.
+
 ## 10.09.2026 — Claude (Deploy erledigt, Relaunch ist live)
 
 Monika hat Platz auf C: geschaffen, 5,1 GB frei. Damit war der Build möglich.

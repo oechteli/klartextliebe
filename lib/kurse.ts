@@ -69,7 +69,8 @@ export const kurse: Kurs[] = [
     format:
       "Live-Gruppe: 4 Abende à 90 Minuten per Video, höchstens 8 Teilnehmende, Workbook, persönliches Feedback von Monika. Die Abende werden aufgezeichnet.",
     buchbar: true,
-    buchungsLink: "/kontakt?thema=Buchung+Kurs+Klartext+Start+(149+%E2%82%AC)",
+    // Bis 11.09.2026: "/kontakt?thema=Buchung+Kurs+Klartext+Start+(149+%E2%82%AC)"
+    buchungsLink: "https://book.stripe.com/14A5kE5xA2PZ9rN8u7ak012",
     hinweis:
       "Erste Gruppe: Start im Oktober 2026. Die genauen Abende legen wir gemeinsam mit den Teilnehmenden fest.",
   },

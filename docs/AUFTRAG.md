@@ -21,13 +21,20 @@ Liste enthielt zwei Punkte, die längst erledigt waren.
 
 ### Blockiert, braucht Monika
 
-_Derzeit nichts._
+- [ ] **Stripe-Auszahlungen sind ausgesetzt.** Stripe verlangt eine
+      aktualisierte Bankverbindung. Buchungen gehen ein, das Geld kommt aber
+      nicht aufs Konto. Einstellungen → Unternehmen → Kontostatus. Bankdaten
+      trägt nur Monika ein
+- [ ] **Benachrichtigung bei Buchung prüfen.** Die Website verspricht Rückmeldung
+      innerhalb von 24 Stunden. Das klappt nur, wenn Stripe Monika bei jeder
+      Zahlung eine E-Mail schickt (Profil → Kommunikationseinstellungen)
+- [ ] **Eine echte Testbuchung** über den 79-€-Link und danach in Stripe
+      erstatten. Prüft den ganzen Weg bis zur Bestätigung und zur E-Mail
+- [ ] AGB §3 und §4 anwaltlich ansehen lassen, ebenso das Pflichtfeld „Beginn
+      der Leistung" in den Stripe-Links (siehe `STRIPE-LINKS.md`)
 
 ### Offen, inhaltlich
 
-- [ ] Stripe Payment Links in `lib/stripe-links.ts` eintragen. Heute zeigen alle
-      Buchungsknöpfe aufs Kontaktformular, Monika bestätigt und schickt den
-      Zahlungslink von Hand
 - [ ] Kontaktformular echt absenden lassen. Die Seite ist ein statischer Export
       (`output: "export"` in `next.config.mjs`), es gibt keine Serverroute. Das
       Formular fällt deshalb immer auf eine vorausgefüllte E-Mail im
@@ -43,6 +50,9 @@ _Derzeit nichts._
 - [x] ~~Impressum und Datenschutz befüllen~~ — **war nie offen.** Beide sind
       befüllt und live, mit vollständiger Anschrift, Kleinunternehmer-Hinweis
       und Haftungsausschluss. Am 10.09. auf der Live-Seite nachgeprüft
+- [x] ~~Stripe Payment Links eintragen~~ — am 11.09.2026. Acht Links angelegt,
+      sieben auf der Website verbaut, alle Buchungsknöpfe führen direkt zu
+      Stripe. VIP bleibt beim Erstgespräch. Übersicht: `STRIPE-LINKS.md`
 - [x] ~~Deploy nachholen~~ — am 10.09.2026 erledigt. Monika hat Platz auf C:
       geschaffen, Build lief durch, `wrangler pages deploy` ausgeführt. Der
       Relaunch vom 07.09. ist live, alle neuen Seiten liefern HTTP 200

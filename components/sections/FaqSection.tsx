@@ -28,7 +28,7 @@ const fragen = [
   },
   {
     q: "Wie buche ich?",
-    a: "Über das Kontaktformular. Ich melde mich in der Regel innerhalb von 24 Stunden mit den nächsten Schritten und dem Zahlungslink. Kein Abo, keine automatische Verlängerung.",
+    a: "Direkt online beim jeweiligen Angebot, bezahlt wird sicher über Stripe. Danach melde ich mich in der Regel innerhalb von 24 Stunden, um den Termin abzustimmen. Kein Abo, keine automatische Verlängerung.",
   },
 ];
 

@@ -68,7 +68,7 @@ const gruppen: { titel: string; fragen: Faq[] }[] = [
       },
       {
         q: "Wie buche und bezahle ich?",
-        a: "Bewusst persönlich statt anonym: Du schreibst eine kurze Nachricht über das Kontaktformular, Monika meldet sich innerhalb von 24 Stunden mit den nächsten Schritten und dem Zahlungslink. Es gibt keine automatische Sofortbuchung und keine automatischen Verlängerungen.",
+        a: "Direkt online: Du klickst beim Angebot auf den Buchungsknopf und bezahlst sicher über Stripe. Danach meldet sich Monika innerhalb von 24 Stunden, um den Termin abzustimmen. Die VIP-Matchklarheit buchst du nach einem kostenlosen Erstgespräch. Kein Abo, keine automatischen Verlängerungen.",
       },
       {
         q: "Übernimmt die Krankenkasse die Kosten?",
