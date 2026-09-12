@@ -12,6 +12,7 @@ const columns = [
       { href: "/kurse", label: "Kurse" },
       { href: "/coaching", label: "1:1 Coaching" },
       { href: "/persoenliches-coaching", label: "Einzelne Sessions" },
+      { href: "/partnervermittlung", label: "Partnervermittlung" },
       { href: "/so-funktionierts", label: "So funktioniert's" },
       { href: "/analyse", label: "Persönlichkeitsanalyse" },
       { href: "/community", label: "Community (in Vorbereitung)" },
@@ -67,7 +68,7 @@ export function Footer() {
               Damit aus Suchen Finden wird.
             </p>
             <p className="mt-1 text-sm text-ink-400">
-              Singlecoaching, Kurse und ehrliche Datingberatung.
+              Singlecoaching, Kurse und persönliche Vermittlung.
             </p>
           </div>
 

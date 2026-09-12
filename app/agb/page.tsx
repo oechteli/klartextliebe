@@ -36,7 +36,7 @@ export default function AgbPage() {
                 Die Anbieterin bietet Singlecoaching und Datingberatung an, insbesondere:
                 schriftliche Profil- und Chat-Analysen, 1:1-Coachinggespräche (per Chat,
                 Telefon oder Video), Coaching-Pakete mit mehreren Sitzungen sowie Sessionpakete
-                ohne Mitgliedschaft. Community und Live-Treffen befinden
+                ohne Mitgliedschaft. Community, Live-Treffen und kuratiertes Matching befinden
                 sich in Vorbereitung und sind erst dann Vertragsgegenstand, wenn sie auf der
                 Website als verfügbar gekennzeichnet sind; Vormerkungen sind unverbindlich und
                 begründen keinen Anspruch.
@@ -173,14 +173,15 @@ export default function AgbPage() {
             </div>
 
             <div className="space-y-2">
-              <h2 className="text-lg font-semibold text-ink-900">9. Community und Live-Treffen (sobald verfügbar)</h2>
+              <h2 className="text-lg font-semibold text-ink-900">9. Community und kuratiertes Matching (sobald verfügbar)</h2>
               <p className="leading-relaxed">
-                Sobald Community und Live-Treffen starten, gilt ergänzend: respektvoller
+                Sobald Community und kuratiertes Matching starten, gilt ergänzend: respektvoller
                 Umgang, keine Weitergabe fremder persönlicher Daten, kein kommerzielles
                 Anwerben. Die Anbieterin kann Teilnehmende bei Verstößen ausschließen;
                 bereits bezahlte, noch nicht erbrachte Leistungen werden in diesem Fall
                 anteilig erstattet, außer der Ausschluss beruht auf einem vorsätzlichen
-                Verstoß.
+                Verstoß. Ein Anspruch auf eine bestimmte Anzahl von Matching-Vorschlägen
+                besteht nur, soweit ausdrücklich vereinbart.
               </p>
             </div>
 

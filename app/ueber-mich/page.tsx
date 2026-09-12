@@ -18,6 +18,7 @@ export default function UeberMichPage() {
     "Datingberatung",
     "Kommunikationsanalyse",
     "Persönlichkeitsanalyse",
+    "Kuratiertes Matching (in Vorbereitung)",
   ];
 
   return (

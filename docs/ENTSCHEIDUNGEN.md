@@ -11,6 +11,30 @@ Markdown-Dateien. Beide laufen über ihre Abo-Anmeldung, nicht über API-Guthabe
 Kein Framework (LangGraph, CrewAI, n8n, OpenRouter), weil diese ausnahmslos
 API-Schlüssel brauchen und damit Guthaben verbrauchen würden.
 
+## 12.09.2026 (später am Tag) — Entschärfung zurückgenommen
+
+Monika hat entschieden, die Website in den ursprünglichen Zustand zurückzusetzen.
+Begründung von ihr: Das Gewerbe soll über Peter und eine LLC angemeldet werden,
+und eine andere Auskunft habe ergeben, dass das Anbieten einer Partnersuche
+unproblematisch sei.
+
+Umgesetzt: `app`, `components` und `lib` bitgenau auf den Stand des Tags
+`stand-vor-entschaerfung-2026-09-12` zurückgesetzt, gebaut, deployt, live
+geprüft. Die Stripe-Anbindung vom 11.09. ist davon nicht berührt.
+
+**Von Claude angemerkt, nicht ausgeräumt:**
+- Partnervermittlung bleibt nach § 38 GewO anmeldepflichtig. Die Anmeldung fehlt
+  weiterhin, auch die fürs Coaching (eingetragen ist nur Sprachschule Durlach).
+- Steht Peter nur formal als Gewerbetreibender, während Monika die Tätigkeit
+  ausübt, ist das ein Strohmanngeschäft. § 35 Abs. 7a GewO erlaubt es, eine
+  Untersagung auf vertretungsberechtigte Personen und Betriebsleiter zu
+  erstrecken.
+- Eine LLC ändert nichts an der deutschen Anmeldepflicht, wenn von Karlsruhe
+  aus gearbeitet wird (Ort der Geschäftsleitung, § 10 AO).
+
+Die Entscheidung liegt bei Monika. Die ausgearbeitete entschärfte Fassung liegt
+im Commit `0dec304` und kann jederzeit wieder eingespielt werden.
+
 ## 12.09.2026 — Keine Partnervermittlung, solange das Gewerbe fehlt
 
 Partnervermittlung ist nach § 38 GewO ein überwachungsbedürftiges Gewerbe:

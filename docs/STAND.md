@@ -3,6 +3,23 @@
 > Neueste Einträge oben. Jeder Eintrag: Datum, wer (Claude oder Codex), was
 > gemacht wurde, was daraus offen blieb.
 
+## 12.09.2026 — Claude (Entschärfung auf Wunsch zurückgenommen)
+
+Monika hat die Entschärfung rückgängig machen lassen, siehe
+`ENTSCHEIDUNGEN.md`. `git checkout stand-vor-entschaerfung-2026-09-12 -- app
+components lib`, danach Typprüfung sauber, Build fehlerfrei, deployt.
+
+Live geprüft: Startseiten-Abschnitt, `/partnervermittlung` und `/marktplatz`
+zeigen wieder die ursprünglichen Texte, der Navigationseintrag ist zurück. Die
+vier Stripe-Buchungsknöpfe auf `/coaching` sind unverändert erhalten.
+
+Die Doku wurde **nicht** zurückgesetzt, damit nachvollziehbar bleibt, was
+geprüft und was entschieden wurde.
+
+**Weiterhin offen und von Claude benannt:** Es besteht nach wie vor keine
+Gewerbeanmeldung, weder fürs Coaching noch für die Vermittlung. Die
+entschärfte Fassung liegt fertig im Commit `0dec304` bereit.
+
 ## 12.09.2026 — Claude (Partnervermittlung von der Website genommen)
 
 Monika kam mit der Sorge, ohne Gewerbeerlaubnis Ärger zu bekommen.

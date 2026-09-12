@@ -1,71 +1,96 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
+import { MatchmakingSection } from "@/components/sections/MatchmakingSection";
+import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
 
 export const metadata: Metadata = {
-  title: "Partnervermittlung? Die gibt es hier nicht.",
+  title: "Partnervermittlung – persönlich statt per Algorithmus",
   alternates: { canonical: "/partnervermittlung" },
   description:
-    "Klartext Liebe ist Singlecoaching und Datingberatung. Eine Partnervermittlung gehört nicht zum Angebot: keine Kartei, keine Vorschläge, keine Vermittlung.",
+    "Monika stellt Menschen persönlich einander vor: heute für Kundinnen und Kunden der Intensivbegleitung, später als eigene Vermittlung mit Aufnahmegespräch. Kein Pool, kein Versprechen.",
 };
 
 /**
- * Bis 12.09.2026 stand hier ein Angebot „Partnervermittlung" in zwei Stufen.
- * Herausgenommen, weil Partnervermittlung nach § 38 GewO ein
- * überwachungsbedürftiges Gewerbe ist und die Gewerbeanmeldung dafür fehlt.
- * Die alte Fassung liegt im Git-Tag stand-vor-entschaerfung-2026-09-12.
- * Die Seite bleibt bestehen, damit Suchende eine klare Antwort finden.
+ * Partnervermittlung, Stufe 1 (Relaunch 07.09.2026).
+ * Stufe 2 (eigene Vermittlung mit Bewerbung, Aufnahmegespräch, Aufnahmegebühr
+ * und Erfolgsvereinbarung) folgt, sobald genug Menschen dabei sind. Rechtlich
+ * dann zu beachten: § 656 BGB, Art. 9 DSGVO, eigene AGB.
  */
+const stufen = [
+  {
+    badge: "Heute",
+    tone: "brand" as const,
+    titel: "Vorstellung aus meinem Umfeld",
+    text: "Wer mit mir in der Intensivbegleitung arbeitet, den kenne ich gut: Werte, Lebensphase, Art zu reden, Wünsche. Wenn ich in meinem Umfeld jemanden sehe, der passen könnte, frage ich beide und stelle euch vor, wenn ihr wollt.",
+    punkte: ["Persönlich, nicht per Datenbank", "Nur mit Zustimmung beider Seiten", "Keine Zusatzkosten in der Intensivbegleitung", "Keine Quote, kein Versprechen"],
+  },
+  {
+    badge: "Später",
+    tone: "soon" as const,
+    titel: "Eigene Vermittlung mit Aufnahmegespräch",
+    text: "Sobald genug Menschen dabei sind, öffne ich die Vermittlung als eigenes Angebot: Bewerbung, persönliches Aufnahmegespräch, klare Regeln, faire Vergütung. Erst dann steht hier ein Formular.",
+    punkte: ["Aufnahme nur nach Gespräch", "Diskretion als Grundregel", "Eigene AGB und Datenschutzregeln", "Kein Start vor der ersten Kursgruppe"],
+  },
+];
+
 export default function PartnervermittlungPage() {
   return (
     <>
       <PageHero
-        eyebrow="Klartext"
-        title="Ich vermittle keine Partner."
-        subtitle="Diese Frage bekomme ich oft, deshalb steht die Antwort hier so deutlich: Klartext Liebe ist Coaching und Datingberatung. Eine Partnervermittlung ist es nicht."
+        eyebrow="Partnervermittlung"
+        title="Ich stelle Menschen einander vor. Seit Jahrzehnten."
+        subtitle="Man nannte mich die Kupplerin, lange bevor es Klartext Liebe gab. Was ich damals im Freundeskreis gemacht habe, mache ich heute für die Menschen, mit denen ich arbeite."
       />
 
       <section className="section">
         <div className="container-kl">
-          <div className="mx-auto max-w-2xl space-y-8">
-            <div>
-              <h2 className="text-xl font-bold text-ink-900">Was ich nicht mache</h2>
-              <ul className="mt-4 space-y-2 text-ink-600">
-                <li>Keine Kartei und keine Datenbank mit Singles.</li>
-                <li>Keine Vorschläge, wen du treffen sollst.</li>
-                <li>Keine Vermittlung, weder heute noch geplant.</li>
-              </ul>
-            </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {stufen.map((s) => (
+              <Card key={s.titel} className="!p-6 sm:!p-8">
+                <Badge tone={s.tone}>{s.badge}</Badge>
+                <h2 className="mt-3 text-xl font-bold text-ink-900">{s.titel}</h2>
+                <p className="mt-3 text-sm leading-relaxed text-ink-600">{s.text}</p>
+                <ul className="mt-5 space-y-2">
+                  {s.punkte.map((p) => (
+                    <li key={p} className="flex items-start gap-2 text-sm text-ink-700">
+                      <span className="mt-0.5 text-brand-turquoise">✓</span>
+                      <span>{p}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
 
-            <div>
-              <h2 className="text-xl font-bold text-ink-900">Was ich mache</h2>
-              <p className="mt-4 leading-relaxed text-ink-600">
-                Ich schaue mit dir darauf, warum es bisher nicht klappt: wie du
-                wirkst, für wen du dich immer wieder entscheidest und wie du
-                redest, wenn es darauf ankommt. Die Menschen findest du selbst.
-                Aber du gehst ihnen anders entgegen.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-brand-teal/20 bg-brand-teal/5 p-6 text-sm text-ink-600">
-              Man nannte mich früher die Kupplerin, weil ich im Freundeskreis
-              gern Menschen zusammengebracht habe. Das war und ist privat: unter
-              Bekannten, ohne Geld, ohne Auftrag. Ein Angebot von Klartext Liebe
-              ist es nicht.
-            </div>
-
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Button href="/coaching">Coaching ansehen</Button>
-              <Button
-                href="/kontakt?thema=Kostenloses+Erstgespräch"
-                variant="secondary"
-              >
-                Kostenloses Erstgespräch
+          <div className="mt-10 rounded-3xl bg-brand-soft p-8 text-center sm:p-10">
+            <h2 className="text-2xl font-bold text-ink-900">Der Weg dorthin führt über das Kennenlernen</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-ink-600">
+              Ich stelle niemanden vor, den ich nicht kenne. Darum beginnt jede
+              Vermittlung mit Coaching: Erst verstehe ich, wer du bist und wen
+              du suchst. Dann halte ich die Augen offen.
+            </p>
+            <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Button href="/coaching#vip-matchklarheit">Intensivbegleitung ansehen</Button>
+              <Button href="/kontakt?thema=Kostenloses+Erstgespräch" variant="secondary">
+                Erst unverbindlich sprechen
               </Button>
             </div>
+            <p className="mt-5 text-xs text-ink-400">
+              Der frühere Plan eines kuratierten Matchings mit Vormerkung bleibt
+              unter{" "}
+              <Link href="/marktplatz" className="underline underline-offset-2">
+                Kuratiertes Matching
+              </Link>{" "}
+              nachlesbar.
+            </p>
           </div>
         </div>
       </section>
+
+      <MatchmakingSection />
     </>
   );
 }

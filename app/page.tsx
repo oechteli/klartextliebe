@@ -5,6 +5,7 @@ import { AboutMonikaSection } from "@/components/sections/AboutMonikaSection";
 import { FreeStartSection } from "@/components/sections/FreeStartSection";
 import { CoursesSection } from "@/components/sections/CoursesSection";
 import { OfferSection } from "@/components/sections/OfferSection";
+import { MatchmakingSection } from "@/components/sections/MatchmakingSection";
 import { HowIWorkSection } from "@/components/sections/HowIWorkSection";
 import { YouTubeSection } from "@/components/sections/YouTubeSection";
 import { BlogPreview } from "@/components/sections/BlogPreview";
@@ -41,8 +42,8 @@ export default function HomePage() {
       <CoursesSection />
       {/* 7 1:1 mit Monika (bestehende Formate) */}
       <OfferSection preview />
-      {/* 8 Partnervermittlung: am 12.09.2026 entfernt, solange das Gewerbe
-          nach § 38 GewO nicht angemeldet ist. Bauteil bleibt im Projekt. */}
+      {/* 8 Partnervermittlung, Stufe 1 */}
+      <MatchmakingSection />
       {/* 9 So arbeite ich (Haltung, Grenzen, Krisenhinweis) */}
       <HowIWorkSection />
       {/* 10 YouTube */}

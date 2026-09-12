@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s · Klartext Liebe",
   },
   description:
-    "Klartext Liebe: Singlecoaching, Kurse und Datingberatung mit Monika Oechtering. Der ehrliche Blick von außen auf Wirkung, Auswahl und Kommunikation. Ohne Tricks, ohne Garantieversprechen, ohne Abo.",
+    "Klartext Liebe: Singlecoaching, Kurse und persönliche Partnervermittlung mit Monika Oechtering. Der ehrliche Blick von außen auf Wirkung, Auswahl und Kommunikation. Ohne Tricks, ohne Garantieversprechen, ohne Abo.",
   alternates: { canonical: "/" },
   keywords: [
     "Singlecoaching",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     siteName: "Klartext Liebe",
     title: "Klartext Liebe – Damit aus Suchen Finden wird",
     description:
-      "Singlecoaching, Kurse und Datingberatung. Der ehrliche Blick von außen. Orientierung statt Garantie.",
+      "Singlecoaching, Kurse und persönliche Partnervermittlung. Der ehrliche Blick von außen. Orientierung statt Garantie.",
     images: [OG_IMAGE],
   },
   twitter: {

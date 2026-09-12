@@ -27,6 +27,7 @@ export function WhatIsSection() {
               <Badge tone="turquoise">YouTube-Kanal</Badge>
               <Badge tone="brand">Singlecoaching</Badge>
               <Badge tone="soon">Community (in Vorbereitung)</Badge>
+              <Badge tone="soon">Kuratiertes Matching (in Vorbereitung)</Badge>
             </div>
           </div>
 

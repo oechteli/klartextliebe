@@ -27,7 +27,10 @@ Liste enthielt zwei Punkte, die längst erledigt waren.
       Datingberatung. Wenn die Partnervermittlung wiederkommen soll, gleich
       mit eintragen (§ 38 GewO, keine Erlaubnis, nur Anmeldung plus
       Zuverlässigkeitsprüfung). Danach lässt sich die Website mit dem Git-Tag
-      `stand-vor-entschaerfung-2026-09-12` wieder herstellen
+      `stand-vor-entschaerfung-2026-09-12` wieder herstellen.
+      **Stand 12.09.2026:** Monika plant die Anmeldung über Peter und eine LLC.
+      Die Website steht wieder im ursprünglichen Zustand, die Anmeldung fehlt
+      weiterhin. Entschärfte Fassung liegt im Commit `0dec304` bereit
 
 - [ ] **Stripe-Auszahlungen sind ausgesetzt.** Stripe verlangt eine
       aktualisierte Bankverbindung. Buchungen gehen ein, das Geld kommt aber

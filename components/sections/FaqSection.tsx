@@ -20,7 +20,7 @@ const fragen = [
   },
   {
     q: "Vermittelst du Partner?",
-    a: "Nein. Ich mache Coaching und Datingberatung, keine Partnervermittlung. Ich führe keine Kartei und mache keine Vorschläge.",
+    a: "Heute persönlich und nur für Menschen aus der Intensivbegleitung, die ich gut kenne. Kein Pool, kein Versprechen. Eine eigene Vermittlung folgt, wenn genug Menschen dabei sind.",
   },
   {
     q: "Ist das Therapie?",

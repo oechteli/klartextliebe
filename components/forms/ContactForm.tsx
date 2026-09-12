@@ -26,6 +26,7 @@ const ANLIEGEN_OPTIONEN = [
   "Paargespräch",
   "Vormerkung Community",
   "Vormerkung Events",
+  "Vormerkung Matching",
   "Community-Zugang anfragen",
   "VIP-Matchklarheit anfragen",
   "Events",
@@ -38,6 +39,7 @@ export type Anliegen = (typeof ANLIEGEN_OPTIONEN)[number];
 function anliegenAusThema(thema: string): string {
   if (/vormerk.*community/i.test(thema)) return "Vormerkung Community";
   if (/vormerk.*event/i.test(thema)) return "Vormerkung Events";
+  if (/vormerk.*match/i.test(thema)) return "Vormerkung Matching";
   if (/erstgespräch/i.test(thema)) return "Kostenloses Erstgespräch";
   if (/kurs/i.test(thema)) return "Kurs buchen";
   if (/paar/i.test(thema)) return "Paargespräch";

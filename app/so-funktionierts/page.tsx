@@ -36,7 +36,7 @@ const schritte = [
     nr: "4",
     title: "Klarheit & Umsetzung",
     zeit: "dein Alltag, deine Schritte",
-    text: "Du gehst mit konkreten Erkenntnissen und nächsten Schritten in dein Dating-Leben. Community und Live-Treffen sind in Vorbereitung – wer möchte, merkt sich unverbindlich vor. Kein Abo, keine versteckten Verlängerungen.",
+    text: "Du gehst mit konkreten Erkenntnissen und nächsten Schritten in dein Dating-Leben. Community, Live-Treffen und kuratiertes Matching sind in Vorbereitung – wer möchte, merkt sich unverbindlich vor. Kein Abo, keine versteckten Verlängerungen.",
   },
 ];
 

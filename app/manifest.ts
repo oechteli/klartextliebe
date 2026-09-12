@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Klartext Liebe",
     short_name: "Klartext Liebe",
     description:
-      "Singlecoaching, Persönlichkeitsanalyse und Kurse für reflektierte Singles mit Tiefe.",
+      "Singlecoaching, Persönlichkeitsanalyse, Community und kuratierte Begegnungen für reflektierte Singles mit Tiefe.",
     start_url: "/",
     display: "standalone",
     background_color: "#FDFCFA",
