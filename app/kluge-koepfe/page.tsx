@@ -69,7 +69,7 @@ const steps = [
   {
     step: "3",
     title: "Bewusster in Verbindung",
-    desc: "Du erkennst schneller, wer zu dir passt, und gehst klarer in Beziehung. Ein kuratiertes Matching ist in Vorbereitung.",
+    desc: "Du erkennst schneller, wer zu dir passt, und gehst klarer in Beziehung.",
   },
 ];
 

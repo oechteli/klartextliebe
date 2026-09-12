@@ -157,12 +157,7 @@ export const solutions: FeatureItem[] = [
     description: "Geplant: Austausch mit reflektierten Singles auf Augenhöhe.",
     icon: "🤝",
   },
-  {
-    title: "Kuratierte Matchvorschläge (in Vorbereitung)",
-    description: "Geplant: Orientierung statt endlosem Swipen – werte- und resonanzbasiert.",
-    icon: "✨",
-  },
-  {
+    {
     title: "Deep-Talk-Events (in Vorbereitung)",
     description: "Geplant: echte Begegnungen online und in Städten.",
     icon: "🏙️",

@@ -3,6 +3,43 @@
 > Neueste Einträge oben. Jeder Eintrag: Datum, wer (Claude oder Codex), was
 > gemacht wurde, was daraus offen blieb.
 
+## 12.09.2026 — Claude (Partnervermittlung von der Website genommen)
+
+Monika kam mit der Sorge, ohne Gewerbeerlaubnis Ärger zu bekommen.
+Nachgeprüft: **Eine Erlaubnis gibt es für Partnervermittlung nicht.** § 38 GewO
+verlangt nur die Gewerbeanmeldung, danach prüft das Amt die Zuverlässigkeit.
+Ihre Annahme war an dieser Stelle falsch, die Sorge trotzdem berechtigt, weil
+gar keine passende Gewerbeanmeldung besteht: eingetragen ist nur Sprachschule
+Durlach, die 2025 beendet wurde. Damit fehlt die Anmeldung auch fürs Coaching,
+das seit dem 11.09. live verkauft wird. Darauf hingewiesen.
+
+Vor den Änderungen Git-Tag `stand-vor-entschaerfung-2026-09-12` gesetzt und
+gepusht. Ein zusätzliches Cloudflare-Projekt als Kopie habe ich **nicht**
+angelegt und begründet: Jede Veröffentlichung bleibt bei Cloudflare dauerhaft
+erreichbar (Stand vom 11.09.: `91d82242.klartext-liebe.pages.dev`), und eine
+zweite öffentliche Kopie genau der strittigen Inhalte widerspricht dem Ziel.
+
+**28 Änderungen in 17 Dateien**, dazu zwei neu geschriebene Seiten. Entfernt:
+Navigationseinträge, der Startseiten-Abschnitt „Ich stelle dir Menschen vor",
+„Partnervermittlung" aus Hero, Seitentitel und Manifest, alle Badges und
+Listeneinträge „Kuratiertes Matching (in Vorbereitung)", die Vormerkung
+„Matching" im Kontaktformular, die Matching-Passagen in AGB § 2 und § 9 sowie in
+der Datenschutzerklärung.
+
+`/partnervermittlung` und `/marktplatz` **nicht gelöscht**, sondern neu
+geschrieben: Beide sagen jetzt klar, dass es keine Vermittlung und kein Matching
+gibt. So finden Suchende eine ehrliche Antwort statt einer 404.
+
+Die Bauteile `MatchmakingSection.tsx` und `MatchingPreview.tsx` liegen
+unverändert im Projekt, werden aber nirgends mehr eingebunden und landen nicht
+im Build.
+
+Typprüfung sauber, Build fehlerfrei, deployt. Live geprüft auf acht Seiten: null
+Werbestellen, kein Navigationslink, die neuen Aussagen stehen.
+
+**Offen für Monika:** Gewerbeanmeldung beim Gewerbeamt Karlsruhe (Coaching und,
+wenn gewollt, Partnervermittlung), Rücksprache mit der Steuerberaterin.
+
 ## 11.09.2026 — Claude (Stripe angebunden, Direktbuchung live)
 
 **Acht Payment Links angelegt**, selbst im Stripe-Dashboard über Monikas

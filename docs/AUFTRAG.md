@@ -21,6 +21,14 @@ Liste enthielt zwei Punkte, die längst erledigt waren.
 
 ### Blockiert, braucht Monika
 
+- [ ] **Gewerbe anmelden.** Eingetragen ist nur Sprachschule Durlach (beendet
+      2025). Klartext Liebe verkauft seit dem 11.09. live Coaching. Ummeldung
+      oder Neuanmeldung beim Gewerbeamt Karlsruhe, Tätigkeiten Coaching und
+      Datingberatung. Wenn die Partnervermittlung wiederkommen soll, gleich
+      mit eintragen (§ 38 GewO, keine Erlaubnis, nur Anmeldung plus
+      Zuverlässigkeitsprüfung). Danach lässt sich die Website mit dem Git-Tag
+      `stand-vor-entschaerfung-2026-09-12` wieder herstellen
+
 - [ ] **Stripe-Auszahlungen sind ausgesetzt.** Stripe verlangt eine
       aktualisierte Bankverbindung. Buchungen gehen ein, das Geld kommt aber
       nicht aufs Konto. Einstellungen → Unternehmen → Kontostatus. Bankdaten

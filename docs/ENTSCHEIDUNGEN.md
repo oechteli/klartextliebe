@@ -11,6 +11,28 @@ Markdown-Dateien. Beide laufen über ihre Abo-Anmeldung, nicht über API-Guthabe
 Kein Framework (LangGraph, CrewAI, n8n, OpenRouter), weil diese ausnahmslos
 API-Schlüssel brauchen und damit Guthaben verbrauchen würden.
 
+## 12.09.2026 — Keine Partnervermittlung, solange das Gewerbe fehlt
+
+Partnervermittlung ist nach § 38 GewO ein überwachungsbedürftiges Gewerbe:
+Gewerbeanmeldung nötig, danach prüft das Amt die Zuverlässigkeit über
+Führungszeugnis und Gewerbezentralregister. Eine **Erlaubnis gibt es nicht** —
+es kann also auch keine verweigert werden. Angemeldet ist bisher nur
+Sprachschule Durlach.
+
+Von Monika entschieden: Alles, was eine Vermittlung anbietet oder ankündigt,
+kommt von der Website, bis die Gewerbeanmeldung steht. Das betrifft auch das
+angekündigte „kuratierte Matching", denn auch eine Ankündigung ist Werbung.
+
+Nicht betroffen und geblieben: die Kupplerin-Geschichte als Lebenslauf, der
+Vergleich mit Partnervermittlungen im FAQ, Community und Live-Treffen als „in
+Vorbereitung".
+
+Eine Anmeldung im Ausland wurde geprüft und verworfen: Die Tätigkeit wird von
+Karlsruhe aus ausgeübt, damit gilt hier deutsches Gewerberecht unabhängig vom
+Sitz der Gesellschaft.
+
+Rückweg: Git-Tag `stand-vor-entschaerfung-2026-09-12`.
+
 ## 11.09.2026 — Direkt online buchen statt Anfrage
 
 Von Monika entschieden: Die Buchungsknöpfe führen direkt zu Stripe, der Vertrag

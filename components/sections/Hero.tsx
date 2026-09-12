@@ -50,7 +50,7 @@ export function Hero() {
         <div className="grid items-center gap-10 lg:grid-cols-[1.15fr,1fr] lg:gap-16">
           <div className="animate-fade-up text-center lg:text-left">
             <Badge tone="brand" className="mb-6">
-              Singlecoaching · Kurse · Partnervermittlung
+              Singlecoaching · Kurse · Datingberatung
             </Badge>
 
             <h1 className="text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl">

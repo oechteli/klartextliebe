@@ -17,7 +17,6 @@ const primaryItems = [
   { href: "/ueber-mich", label: "Über mich" },
   { href: "/kurse", label: "Kurse" },
   { href: "/coaching", label: "1:1 Coaching" },
-  { href: "/partnervermittlung", label: "Partnervermittlung" },
   { href: "/youtube", label: "YouTube" },
   { href: "/blog", label: "Ratgeber" },
 ];

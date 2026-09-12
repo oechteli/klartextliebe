@@ -76,10 +76,10 @@ export default function DatenschutzPage() {
 
             <div className="space-y-3">
               <h2 className="text-lg font-semibold text-ink-900">
-                5. Vormerkungen (Community, Live-Treffen, Matching)
+                5. Vormerkungen (Community, Live-Treffen)
               </h2>
               <p className="leading-relaxed">
-                Community, Live-Treffen und kuratiertes Matching befinden sich in Vorbereitung.
+                Community und Live-Treffen befinden sich in Vorbereitung.
                 Wenn Sie sich über das Kontaktformular dafür vormerken, verarbeiten wir Ihre
                 Angaben (Name, E-Mail-Adresse und Ihre Nachricht) ausschließlich, um Sie zu
                 benachrichtigen, sobald das jeweilige Angebot startet, und um Ihre Nachricht zu
@@ -143,8 +143,7 @@ export default function DatenschutzPage() {
                 Für Nutzerkonten und Profile wird <strong>Supabase</strong> mit EU-Serverstandort
                 (Frankfurt) eingesetzt. Gespeichert werden E-Mail-Adresse, verschlüsseltes
                 Passwort und freiwillig eingegebene Profildaten. Profildaten sind zunächst
-                privat und werden erst nach ausdrücklicher Freigabe im Matching-Bereich
-                sichtbar. Rechtsgrundlage: Art. 6 Abs. 1 lit. a und b DSGVO.
+                privat und werden nicht veröffentlicht. Rechtsgrundlage: Art. 6 Abs. 1 lit. a und b DSGVO.
               </p>
             </div>
 

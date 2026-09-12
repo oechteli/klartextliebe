@@ -30,7 +30,7 @@ const gruppen: { titel: string; fragen: Faq[] }[] = [
       },
       {
         q: "Vermittelt Klartext Liebe Partner?",
-        a: "Heute persönlich und nur für Menschen aus der Intensivbegleitung: Wenn Monika in ihrem Umfeld jemanden sieht, der passen könnte, fragt sie beide und stellt sie einander vor. Kein Pool, keine Datenbank, kein Versprechen. Eine eigene Vermittlung mit Aufnahmegespräch folgt, sobald genug Menschen dabei sind.",
+        a: "Nein. Klartext Liebe ist Coaching und Datingberatung. Es gibt keine Partnervermittlung, keine Kartei und keine Vorschläge – weder heute noch geplant.",
       },
       {
         q: "Wie läuft die Zusammenarbeit ab?",
@@ -106,7 +106,7 @@ const gruppen: { titel: string; fragen: Faq[] }[] = [
     ],
   },
   {
-    titel: "Community, Analyse & Matching",
+    titel: "Community, Analyse & Live-Treffen",
     fragen: [
       {
         q: "Gibt es die Community schon?",
@@ -121,8 +121,8 @@ const gruppen: { titel: string; fragen: Faq[] }[] = [
         a: "Du reichst dein Datingprofil oder einen anonymisierten Chatverlauf ein und bekommst schriftliches, konkretes Feedback: was gut wirkt, wo Gespräche kippen und was du beim nächsten Mal anders machen kannst. Ein guter Einstieg, wenn Kontakte immer an derselben Stelle abbrechen.",
       },
       {
-        q: "Was ist das kuratierte Matching?",
-        a: "Der Plan: keine Swipe-Plattform, sondern Profile, die persönlich nach Tiefe bewertet werden – Werte, Lebensphase, Kommunikationsstil, Beziehungsziel – und passende Menschen, die einander vorgestellt werden. Das Matching ist in Vorbereitung und startet erst, wenn genug Menschen vorgemerkt sind, damit es ehrlich funktioniert. Die VIP-Matchklarheit ist bis dahin ein reines Coaching-Paket.",
+        q: "Gibt es ein kuratiertes Matching?",
+        a: "Nein. Diese Idee ist vom Tisch. Klartext Liebe hilft dir dabei, selbst klarer zu sehen, zu kommunizieren und auszuwählen – die Menschen findest du selbst.",
       },
     ],
   },
