@@ -3,6 +3,23 @@
 > Neueste Einträge oben. Jeder Eintrag: Datum, wer (Claude oder Codex), was
 > gemacht wurde, was daraus offen blieb.
 
+## 19.09.2026 — Claude (Konzept Kennenlern-Spiel)
+
+Neue Produktidee von Monika: ein Spiel für Singles, die sich gerade
+kennenlernen, mit Challenges über sieben Tage. Konzept mit vollständigem
+Fragenkatalog in `docs/KONZEPT-KENNENLERN-SPIEL.md`. Marke: Klartext Liebe
+(von Monika entschieden). Nichts davon ist umgesetzt, an der Website wurde
+nichts geändert.
+
+Zweite Meinung von ChatGPT eingeholt (`docs/zweite-meinung/2026-09-19-1804.md`,
+Urteil zur ersten Fassung „nicht freigeben"). Alle 15 Befunde eingearbeitet,
+Übersicht in Abschnitt 12 des Konzepts. Wichtigste Änderungen: getrennte
+Zugänge für beide Spielenden, Widerrufs- und Datenschutzkonzept, Löschung bei
+Inaktivität, Sicherheitshinweis vor Spielbeginn, weichere Coach-Texte.
+
+**Offen:** acht Entscheidungen für Monika (Abschnitt 11), darunter Name, Preis
+und die rechtliche Prüfung von AGB, Widerruf und Datenschutz vor dem Start.
+
 ## 12.09.2026 — Claude (Entschärfung auf Wunsch zurückgenommen)
 
 Monika hat die Entschärfung rückgängig machen lassen, siehe
