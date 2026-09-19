@@ -41,10 +41,11 @@ Kommunikation.
 
 ## 2. Zielgruppe
 
-- Singles ab 18, die gerade mit jemandem schreiben oder die ersten Dates hatten
-- vor allem Menschen ab 35, die wieder daten und merken, dass sich der Ton
-  verändert hat
+- Singles ab 18, jeden Alters, die gerade mit jemandem schreiben oder die
+  ersten Dates hatten (von Monika am 19.09.2026 festgelegt: für alle, keine
+  Altersgruppe)
 - Menschen, die sich eher schüchtern oder unsicher im Schreiben fühlen
+- Menschen, die Tiefe suchen und sich über Gedanken und Gespräche verlieben
 
 Einer lädt ein, der andere macht mit. Beide brauchen kein Konto und keine App.
 
